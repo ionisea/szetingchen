@@ -35,7 +35,7 @@
  *
  */
 
-drawLine(84, 100, 250, 0, 'red')
+drawLine(84, 100, 0, 250, 'red')
 
 //drawCircle(width/2, height/2, 25, 'black');
 
