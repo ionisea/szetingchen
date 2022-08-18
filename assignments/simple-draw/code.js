@@ -35,15 +35,15 @@
  *
  */
 
-drawLine(0, 0, width, height, 'red')
+drawLine(84, 100, width, height, 'red')
 
-drawCircle(width/2, height/2, 25, 'black');
+//drawCircle(width/2, height/2, 25, 'black');
 
-drawRect(50, 50, 0, 0, 'black');
+//drawRect(50, 50, 0, 0, 'black');
 
-drawFilledCircle(width - 100, height - 100, 50, 'blue');
+//drawFilledCircle(width - 100, height - 100, 50, 'blue');
 
-drawFilledRect(5, height - 20, 0, 0, 'purple');
+//drawFilledRect(5, height - 20, 0, 0, 'purple');
 
 //drawFilledCircle(width - 400, height - 500, 50, 'blue');
 
