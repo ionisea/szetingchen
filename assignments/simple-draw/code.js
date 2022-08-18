@@ -43,6 +43,6 @@ drawRect(50, 50, 0, 0, 'black');
 
 drawFilledCircle(width - 100, height - 100, 50, 'blue');
 
-drawFilledRect(5, height - 20, 45, 15, 'purple');
+drawFilledRect(5, height - 20, 0, 0, 'purple');
 
 drawFilledCircle(width - 400, height - 500, 50, 'blue');
