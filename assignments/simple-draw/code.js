@@ -49,4 +49,4 @@ drawFilledCircle(width - 400, height - 500, 50, 'blue');
 
 drawLine(0, 90, 300, 90, 'red')
 
-drawLine(300, 300, 300, 0, 'red')
+drawLine(250, 300, 250, 0, 'red')
