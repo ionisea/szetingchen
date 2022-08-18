@@ -46,3 +46,7 @@ drawFilledCircle(width - 100, height - 100, 50, 'blue');
 drawFilledRect(5, height - 20, 0, 0, 'purple');
 
 drawFilledCircle(width - 400, height - 500, 50, 'blue');
+
+drawLine(0, 90, width, height, 'red')
+
+drawLine(0, 0, width, height, 'red')
