@@ -36,4 +36,13 @@
  */
 
 drawLine(0, 0, 500, 600, 'black')
+drawLine(0, 0, 505, 600, 'black')
 drawLine(0, 0, 510, 600, 'black')
+drawLine(0, 0, 515, 600, 'black')
+drawLine(0, 0, 520, 600, 'black')
+drawLine(0, 0, 525, 600, 'black')
+drawLine(0, 0, 530, 600, 'black')
+drawLine(0, 0, 535, 600, 'black')
+drawLine(0, 0, 540, 600, 'black')
+drawLine(0, 0, 545, 600, 'black')
+drawLine(0, 0, 550, 600, 'black')
