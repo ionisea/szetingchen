@@ -36,3 +36,4 @@
  */
 
 drawLine(0, 0, 500, 600, 'black')
+drawLine(0, 0, 501, 600, 'black')
