@@ -35,18 +35,6 @@
  *
  */
 
-drawLine(50, 100, 250, 300, 'black')
-
-//drawCircle(width/2, height/2, 25, 'black');
-
-//drawRect(50, 50, 0, 0, 'black');
-
-//drawFilledCircle(width - 100, height - 100, 50, 'blue');
-
-//drawFilledRect(5, height - 20, 0, 0, 'purple');
-
-//drawFilledCircle(width - 400, height - 500, 50, 'blue');
-
-drawLine(50, 100, 250, 100, 'pink')
+drawLine(0, 0, 500, 500, 'black')
 
 drawLine(250, 300, 250, 100, 'pink')
