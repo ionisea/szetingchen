@@ -35,6 +35,4 @@
  *
  */
 
-drawLine(0, 0, 500, 500, 'black')
-
-drawLine(250, 300, 250, 100, 'pink')
+drawLine(0, 0, 500, 600, 'black')
