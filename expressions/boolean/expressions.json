@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Doing well?",
+    "answer": "enoughSleep && keepingUp",
+    "correct": true
+  },
+  {
+    "name": "Energetic?",
+    "answer": "enoughSleep &&! justWorkedOut",
+    "correct": true
+  },
+  {
+    "name": "Dragging?",
+    "answer": "lotsOfWork &&! enoughSleep",
+    "correct": true
+  },
+  {
+    "name": "Super beat?",
+    "answer": "enoughSleep ==! eatenEnough",
+    "correct": false
+  },
+  {
+    "name": "Super beat?",
+    "answer": "enoughSleep === eatenEnough",
+    "correct": false
+  },
+  {
+    "name": "Super beat?",
+    "answer": "enoughSleep ||! eatenEnough",
+    "correct": false
+  },
+  {
+    "name": "Super beat?",
+    "answer": "enoughSleep || eatenEnough",
+    "correct": false
+  },
+  {
+    "name": "Super beat?",
+    "answer": "enoughSleep && eatenEnough",
+    "correct": false
+  },
+  {
+    "name": "Super beat?",
+    "answer": "enoughSleep &&! eatenEnough",
+    "correct": false
+  },
+  {
+    "name": "Super beat?",
+    "answer": "! enoughSleep &&! eatenEnough",
+    "correct": true
+  },
+  {
+    "name": "Can go to prom?",
+    "answer": "isSenior || invitedBySenior",
+    "correct": true
+  },
+  {
+    "name": "Having fun?",
+    "answer": "done ||! fun",
+    "correct": true
+  },
+  {
+    "name": "Not feeling it?",
+    "answer": "fun || tired",
+    "correct": false
+  },
+  {
+    "name": "Not feeling it?",
+    "answer": "! fun || tired",
+    "correct": true
+  },
+  {
+    "name": "Time to sleep?",
+    "answer": "sleepy && dark",
+    "correct": false
+  },
+  {
+    "name": "Time to sleep?",
+    "answer": "sleepy &&! dark",
+    "correct": false
+  },
+  {
+    "name": "Time to sleep?",
+    "answer": " !sleepy &&! dark",
+    "correct": false
+  },
+  {
+    "name": "Time to sleep?",
+    "answer": " !sleepy && dark",
+    "correct": false
+  },
+  {
+    "name": "Time to sleep?",
+    "answer": "! sleepy ||! dark",
+    "correct": true
+  }
+]
