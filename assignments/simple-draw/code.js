@@ -35,3 +35,7 @@
  *
  */
 
+const midX = width/2
+const midY = height/2
+
+drawLine (width, height, midX, midY, black, 2)
