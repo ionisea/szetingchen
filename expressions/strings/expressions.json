@@ -82,5 +82,11 @@
     "answer": "s.substring(1)",
     "correct": true,
     "timestamp": 1661378333540
+  },
+  {
+    "name": "First three",
+    "answer": "s.substring(0,3)",
+    "correct": true,
+    "timestamp": 1661378348899
   }
 ]
