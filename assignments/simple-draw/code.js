@@ -45,4 +45,4 @@ const endX = width
 const endY = height
 
 drawLine (width, height, midX, midY, 'black', 2)
-drawLine (midX, startY, midX, midY, 'black', 2)
+drawLine (midX, endY, midX, midY, 'black', 2)
