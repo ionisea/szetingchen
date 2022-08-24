@@ -37,5 +37,11 @@
 
 const midX = width/2
 const midY = height/2
+const threeX = width/3
+const threeY = height/3
+const startX = width*0
+const startY = height*0
+const endX = width
+const endY = height
 
 drawLine (width, height, midX, midY, 'black', 2)
