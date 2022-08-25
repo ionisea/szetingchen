@@ -46,4 +46,4 @@ const endY = height
 
 drawLine (width, height, midX, midY, 'black', 2)
 drawLine (2*threeX, endY, midX, midY, 'black', 2)
-drawLine (endX, 2*threeY, midX, midY, 'black', 2)
+drawLine (4*threeX, endY, midX, midY, 'black', 2)
