@@ -4,5 +4,11 @@
     "answer": "'foobar'",
     "correct": true,
     "timestamp": 1661550193478
+  },
+  {
+    "name": "Indexing",
+    "answer": "'f'",
+    "correct": true,
+    "timestamp": 1661550198478
   }
 ]
