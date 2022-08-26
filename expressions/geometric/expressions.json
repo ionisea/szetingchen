@@ -10,5 +10,11 @@
     "answer": "w*h",
     "correct": false,
     "timestamp": 1661551678667
+  },
+  {
+    "name": "Perimeter of a rectangle",
+    "answer": "2*(w+h)",
+    "correct": true,
+    "timestamp": 1661551691059
   }
 ]
