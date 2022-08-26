@@ -28,5 +28,11 @@
     "answer": "w*h",
     "correct": true,
     "timestamp": 1661551697299
+  },
+  {
+    "name": "Area of a triangle",
+    "answer": "(1/2)*(b*h)",
+    "correct": true,
+    "timestamp": 1661551713660
   }
 ]
