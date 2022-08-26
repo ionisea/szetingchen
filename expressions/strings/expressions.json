@@ -52,5 +52,11 @@
     "answer": "'foobar'",
     "correct": true,
     "timestamp": 1661550665613
+  },
+  {
+    "name": "Concatenate (smoosh) strings",
+    "answer": "s1+s2",
+    "correct": true,
+    "timestamp": 1661550671246
   }
 ]
