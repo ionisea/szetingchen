@@ -1,0 +1,1 @@
+drawFilledRect(0,0,height,width,'black')
