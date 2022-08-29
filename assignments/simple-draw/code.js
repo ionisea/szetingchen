@@ -2,7 +2,7 @@ const gap = 4;
 
 drawFilledRect(0, 0, width, height, 'white');
 
-for (let y = height/3, x = 0; width - x > 1; y -= gap) {
+for (let y = 2*height/3, x = 0; width - x > 1; y -= gap) {
     x = y > 0 ? 0 : width * -y / (height - y);
     drawLine(x, Math.max(y, 0), width, height, 'black');
 }
