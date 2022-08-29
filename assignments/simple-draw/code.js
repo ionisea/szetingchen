@@ -1,4 +1,4 @@
-const gap = 2;
+const gap = 4;
 
 drawFilledRect(0, 0, width, height, 'white');
 
