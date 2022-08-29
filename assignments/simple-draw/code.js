@@ -1,1 +1,1 @@
-drawFilledRect(0,0,height,width,'black')
+drawFilledRect(0,0,width,height,'black')
