@@ -89,5 +89,12 @@
     "answer": "enoughSleep &&! justWorkedOut",
     "correct": true,
     "timestamp": 1661896160419
+  },
+  {
+    "name": "Can pay attention?",
+    "canonical": "!hungry && interested",
+    "answer": "! hungry && interested",
+    "correct": true,
+    "timestamp": 1661896183603
   }
 ]
