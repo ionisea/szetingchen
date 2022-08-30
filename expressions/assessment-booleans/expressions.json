@@ -19,5 +19,12 @@
     "answer": "! storeOpen || linesTooLong",
     "correct": true,
     "timestamp": 1661895931955
+  },
+  {
+    "name": "Time to sleep?",
+    "canonical": "!sleepy || !dark",
+    "answer": "! sleepy ||! dark",
+    "correct": true,
+    "timestamp": 1661895978869
   }
 ]
