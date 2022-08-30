@@ -26,5 +26,12 @@
     "answer": "s.toUpperCase()",
     "correct": true,
     "timestamp": 1661896303727
+  },
+  {
+    "name": "Concatenate (smoosh) strings",
+    "canonical": "s1 + s2",
+    "answer": "s1+s2",
+    "correct": true,
+    "timestamp": 1661896308735
   }
 ]
