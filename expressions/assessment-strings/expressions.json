@@ -5,5 +5,12 @@
     "answer": "s.substring(s.length-1, s.length)",
     "correct": true,
     "timestamp": 1661896258374
+  },
+  {
+    "name": "Length",
+    "canonical": "s.length",
+    "answer": "s.length",
+    "correct": true,
+    "timestamp": 1661896270878
   }
 ]
