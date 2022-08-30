@@ -103,5 +103,12 @@
     "answer": "s[0]",
     "correct": true,
     "timestamp": 1661896791134
+  },
+  {
+    "name": "lower case",
+    "canonical": "s.toLowerCase()",
+    "answer": "s.toLowerCase()",
+    "correct": true,
+    "timestamp": 1661896801670
   }
 ]
