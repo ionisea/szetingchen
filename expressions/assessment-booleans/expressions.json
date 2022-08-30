@@ -40,5 +40,12 @@
     "answer": "isSenior || invitedBySenior",
     "correct": true,
     "timestamp": 1661896026574
+  },
+  {
+    "name": "Lighting a fire?",
+    "canonical": "fireLit || !haveMatches",
+    "answer": "fireLit ||! haveMatches",
+    "correct": true,
+    "timestamp": 1661896044694
   }
 ]
