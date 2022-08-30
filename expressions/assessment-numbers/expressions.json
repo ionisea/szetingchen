@@ -54,5 +54,12 @@
     "answer": "a+b",
     "correct": true,
     "timestamp": 1661895793992
+  },
+  {
+    "name": "Difference",
+    "canonical": "a - b",
+    "answer": "a-b",
+    "correct": true,
+    "timestamp": 1661895796601
   }
 ]
