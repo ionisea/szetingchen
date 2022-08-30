@@ -103,5 +103,12 @@
     "answer": "inTheClass || isProctor",
     "correct": true,
     "timestamp": 1661896194843
+  },
+  {
+    "name": "Doing well?",
+    "canonical": "enoughSleep && keepingUp",
+    "answer": "enoughSleep && keepingUp",
+    "correct": true,
+    "timestamp": 1661896214852
   }
 ]
