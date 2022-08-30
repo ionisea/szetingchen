@@ -47,5 +47,12 @@
     "answer": "fireLit ||! haveMatches",
     "correct": true,
     "timestamp": 1661896044694
+  },
+  {
+    "name": "Wait for a sale?",
+    "canonical": "!storeOpen || !isASale",
+    "answer": "! storeOpen ||! isASale",
+    "correct": true,
+    "timestamp": 1661896074246
   }
 ]
