@@ -5,5 +5,12 @@
     "answer": "! fun || tired",
     "correct": true,
     "timestamp": 1661895882162
+  },
+  {
+    "name": "Super beat?",
+    "canonical": "!enoughSleep && !eatenEnough",
+    "answer": "! enoughSleep &&! eatenEnough",
+    "correct": true,
+    "timestamp": 1661895913803
   }
 ]
