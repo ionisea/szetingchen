@@ -5,5 +5,12 @@
     "answer": "Math.PI*4",
     "correct": true,
     "timestamp": 1661895735766
+  },
+  {
+    "name": "Ratio",
+    "canonical": "a / b",
+    "answer": "a/b",
+    "correct": true,
+    "timestamp": 1661895743463
   }
 ]
