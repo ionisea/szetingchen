@@ -26,5 +26,12 @@
     "answer": "Math.abs(a-b)",
     "correct": true,
     "timestamp": 1661895764848
+  },
+  {
+    "name": "Sally's even more apples",
+    "canonical": "6432 - 4000",
+    "answer": "2432",
+    "correct": true,
+    "timestamp": 1661895776022
   }
 ]
