@@ -61,5 +61,12 @@
     "answer": "done ||! fun",
     "correct": true,
     "timestamp": 1661896094488
+  },
+  {
+    "name": "Ready for some football?",
+    "canonical": "fast && strong",
+    "answer": "fast && strong",
+    "correct": true,
+    "timestamp": 1661896102137
   }
 ]
