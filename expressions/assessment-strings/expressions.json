@@ -54,5 +54,12 @@
     "answer": "s[0].toUpperCase + s[1].toUpperCase + s[2].toUpperCase + s.substring(3,s.length)",
     "correct": false,
     "timestamp": 1661896382201
+  },
+  {
+    "name": "Capitalize first three",
+    "canonical": "s.substring(0,3).toUpperCase() + s.substring(3).toLowerCase()",
+    "answer": "s[0].toUpperCase() + s[1].toUpperCase() + s[2].toUpperCase()+ s.substring(3,s.length)",
+    "correct": false,
+    "timestamp": 1661896406778
   }
 ]
