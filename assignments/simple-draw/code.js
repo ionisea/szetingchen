@@ -31,4 +31,4 @@ const gradient=(clr0,clr1)=> { // takes 2 24bit ints
         drawFilledRect (i, 0, 1, height, convert(lerp(clr1,clr0,i/width),16))
     }
 }
-gradient(0x008080,0x30d5c8)//call
+gradient(0x00ffff,0xff0000)//call
