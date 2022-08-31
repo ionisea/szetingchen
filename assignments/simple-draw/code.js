@@ -1,34 +1,34 @@
-const lerp = (a, b, amount) => {//0xrrggbb hex linear interpolate
-    const ar = a >> 16,
-          ag = a >> 8 & 0xff,
-          ab = a & 0xff,
-
-          br = b >> 16,
-          bg = b >> 8 & 0xff,
-          bb = b & 0xff,
-
-          rr = ar + amount * (br - ar),
-          rg = ag + amount * (bg - ag),
-          rb = ab + amount * (bb - ab);
-
-    return (rr << 16) + (rg << 8) + (rb | 0);
+/*
+ * Interpolate between two colors by interpolating the red, 
+ * green, and blue components individually.
+ */
+const lerp = (a, b, amount) => {
+    let r = 0;
+    for (let i = 0; i < 3; i++) {
+        const ac = a >> (i * 8) & 0xff;
+        const bc = b >> (i * 8) & 0xff;
+        r |= interpolate(ac, bc, amount) << (i * 8);
+    };
+    return r;
 };
-const convert = (a,base)=> { //int -> str
-    let e=""
-    let b=""
-    while (a>0) {
-        let c=a%base
-        c=c==10?"A":c==11?"B":c==12?"C":c==13?"D":c==14?"E":c==15?"F":c
-        b=(c+b)
-        a=Math.floor(a/base)
+
+/*
+ * Linear interpolation between two values.
+ */
+const interpolate = (a, b, amount) => a + amount * (b - a);
+
+/*
+ * Convert a numeric value to an hex color string.
+ */
+const rgb = (a) => `#${a.toString(16).padStart(6, '0')}`;
+
+/*
+ * Fill the drawing area with a gradient.
+ */
+const gradient = (clr0, clr1) => {
+    for (let i = 0; i < width; i++) {
+        drawFilledRect(i, 0, 1, height, rgb(lerp(clr0, clr1, i / width)));
     }
-    while (b.length<6)b="0"+b
-    return "#"+b
-}
-const gradient=(clr0,clr1)=> { // takes 2 24bit ints
-    drawFilledRect (0, 0, width, height, convert(clr0,16))
-    for (var i=0;i<width;i++) {
-        drawFilledRect (i, 0, 1, height, convert(lerp(clr1,clr0,i/width),16))
-    }
-}
-gradient(0x00ffff,0xff0000)//call
+};
+
+gradient(0xff0000, 0x0000ff);
