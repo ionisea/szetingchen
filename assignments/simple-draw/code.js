@@ -1,1 +1,1 @@
-drawFilledRect (0, 0, length, width, '140,255,200')
+drawFilledRect (0, 0, length, width, 'aquamarine')
