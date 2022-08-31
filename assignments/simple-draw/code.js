@@ -1,1 +1,1 @@
-drawFilledRect (0, 0, length, width, 'aquamarine')
+drawFilledRect (0, 0, length, width, 'rgba(115,215,255)')
