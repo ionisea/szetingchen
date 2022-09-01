@@ -19,5 +19,12 @@
     "answer": "s1+s2",
     "correct": true,
     "timestamp": 1662069265136
+  },
+  {
+    "name": "Capitalize",
+    "canonical": "s[0].toUpperCase() + s.substring(1).toLowerCase()",
+    "answer": "s[0].toUpperCase()+s.substring(1,s.length).toLowerCase()",
+    "correct": true,
+    "timestamp": 1662069308241
   }
 ]
