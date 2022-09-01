@@ -1,1 +1,1 @@
-drawFilledRect (0, 0, 200,200, 'rgba(115,215,255,1)')
+drawFilledRect (0, 0, length,200, 'rgba(115,215,255,1)')
