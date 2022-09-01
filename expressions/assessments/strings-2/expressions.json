@@ -5,5 +5,12 @@
     "answer": "s.substring(3,s.length)",
     "correct": false,
     "timestamp": 1662069245937
+  },
+  {
+    "name": "Last three",
+    "canonical": "s.substring(s.length - 3)",
+    "answer": "s.substring(s.length-3,s.length)",
+    "correct": true,
+    "timestamp": 1662069261633
   }
 ]
