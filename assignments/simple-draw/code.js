@@ -4,5 +4,5 @@ while (rect>= 2*height/3) {
   drawLine (0, rect, width, rect, 'rgba(0,128,0, 1', 0)
   var rect = rect - 1
   drawLine (0, rect, width, rect, 'rgba(0,128,0, 1', 0)
-  var rect = rect - 4
+  var rect = rect - 2
 }
