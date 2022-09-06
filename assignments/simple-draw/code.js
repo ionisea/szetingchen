@@ -10,7 +10,7 @@ while (rect>= 2*height/3) {
   }
 }
 drawFilledCircle (0,0, 100,'rgba(250,220,15,1)')
-var rays = 1000
+var rays = 500
 while (rays >= width-width/8) {
   drawLine (0, 0, rays, height, 'red', 1)
   var rays = rays - 1
