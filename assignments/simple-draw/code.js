@@ -9,4 +9,4 @@ while (rect>= 2*height/3) {
    var rect = rect - 1
   }
 }
-drawFilledCircle (0,0, 100,'black')
+drawFilledCircle (0,0, 100,'rgba(250,253,15,1)')
