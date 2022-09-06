@@ -26,5 +26,5 @@ function manhattanDistance (a,b,c,d) {
   return Math.abs(a-c)+Math.abs(b-d)
 }
 function euclideanDistance (a,b,c,d) {
-  return Math.sqrt((Math.abs(a-c))**2+(Math.abs(b-d))**2
+  return Math.sqrt((Math.abs(a-c))**2)+((Math.abs(b-d))**2)
 }
