@@ -16,3 +16,9 @@ function mod (a,b) {
 function averageOfTwo (a,b) {
   return (a+b)/2
 }
+function averageOfThree (a,b,c) {
+  return (a+b+c)/3
+}
+function distance (a,b) {
+  return Math.abs(a-b)
+}
