@@ -28,3 +28,5 @@ function manhattanDistance (a,b,c,d) {
 function euclideanDistance (a,b,c,d) {
   return Math.sqrt(((Math.abs(a-c))**2)+((Math.abs(b-d))**2))
 }
+
+//That was fun, I like this kind of thing
