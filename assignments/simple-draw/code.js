@@ -1,23 +1,34 @@
-drawFilledRect (0, 0, width, height, 'teal'); // use the red text to change the colors
-var shithead = 1000
-while (shithead >-200000) {
-    drawLine(0, shithead, width, height, 'maroon'); //you can do it here as well
-   // change the -x number to change the distance between circles, turn positive and funny little page crash
-    var shithead = shithead -4 //<- here!
+const lerp = (a, b, amount) => {//0xrrggbb hex linear interpolate
+    const ar = a >> 16,
+          ag = a >> 8 & 0xff,
+          ab = a & 0xff,
+
+          br = b >> 16,
+          bg = b >> 8 & 0xff,
+          bb = b & 0xff,
+
+          rr = ar + amount * (br - ar),
+          rg = ag + amount * (bg - ag),
+          rb = ab + amount * (bb - ab);
+
+    return (rr << 16) + (rg << 8) + (rb | 0);
+};
+const convert = (a,base)=> { //int -> str
+    let e=""
+    let b=""
+    while (a>0) {
+        let c=a%base
+        c=c==10?"A":c==11?"B":c==12?"C":c==13?"D":c==14?"E":c==15?"F":c
+        b=(c+b)
+        a=Math.floor(a/base)
+    }
+    while (b.length<6)b="0"+b
+    return "#"+b
 }
-//var fujkYou = 0
-//while (fujkYou <100000){
-  //  drawLine(0, fujkYou, width, height, 'maroon'); //you can do it here as well
-   // change the -x number to change the distance between circles, turn positive and funny little page crash
-  //  var fujkYou = fujkYou +10 //<- here!
-//}
-//drawFilledCircle (width/2, height/2, 150)
-
-// un mong us code dont touch vvvvv
-
-//drawFilledCircle (width/2,height/3, 100, "white")
-//drawFilledRect (width/2 - 100, height/2 - 100, 200, 200, 'white');
-//drawFilledRect (width/2 + 100, height/2 - 100, 50, 130, 'white');
-//drawFilledRect (width/2 - 100, height/2 + 100, 60, 80, 'white');
-//drawFilledRect (width/2 + 40, height/2 + 100, 60, 80, 'white');
-//drawFilledRect (width/2 - 90, height/2 - 100, 100, 60, 'teal');
+const gradient=(clr0,clr1)=> { // takes 2 24bit ints
+    drawFilledRect (0, 0, width, height, convert(clr0,16))
+    for (var i=0;i<width;i++) {
+        drawFilledRect (i, 0, 1, height, convert(lerp(clr1,clr0,i/width),16))
+    }
+}
+gradient(0x597d35,0xed7117)//call
