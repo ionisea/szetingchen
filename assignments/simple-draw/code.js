@@ -15,7 +15,7 @@ while (rays >= width-width/7) {
   drawLine (0, 0, rays, height, 'rgba(242,242,37,.1', 1)
   var rays = rays - 1
 }
-var rays2 = 200
+var rays2 = 100
 while (rays2 >= width*0) {
   drawLine (0, 0, rays2, height, 'rgba(242,242,37,.1', 1)
   var rays2 = rays2 - 1
