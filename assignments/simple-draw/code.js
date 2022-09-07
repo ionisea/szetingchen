@@ -1,28 +1,23 @@
-drawFilledRect (0, 0, 500,600, 'rgba(115,215,255,1)')
-drawFilledRect (0,(2*height/3)+(height/6), width, (2*height/3), 'rgba(0, 64, 0, 1')
-var rect = 1000
-while (rect>= 2*height/3) {
-  drawLine (0, rect, width, rect, 'rgba(0,128,0, 1', 0)
-  var rect = rect - 2
-  while (rect >= 3*height/4){
-  drawLine (0, rect, width, rect, 'rgba(0,128,0, 1', 0)
-   var rect = rect - 1
-  }
+drawFilledRect (0, 0, width, height, 'teal'); // use the red text to change the colors
+var shithead = 1000
+while (shithead >-200000) {
+    drawLine(0, shithead, width, height, 'maroon'); //you can do it here as well
+   // change the -x number to change the distance between circles, turn positive and funny little page crash
+    var shithead = shithead -4 //<- here!
 }
+//var fujkYou = 0
+//while (fujkYou <100000){
+  //  drawLine(0, fujkYou, width, height, 'maroon'); //you can do it here as well
+   // change the -x number to change the distance between circles, turn positive and funny little page crash
+  //  var fujkYou = fujkYou +10 //<- here!
+//}
+//drawFilledCircle (width/2, height/2, 150)
 
-var rays = 500
-while (rays >= width-2*width/7) {
-  drawLine (0, 0, rays, height, 'rgba(242,242,37,.1', 1)
-  var rays = rays - 1
-}
-var rays2 = 125
-while (rays2 >= width*0) {
-  drawLine (0, 0, rays2, height, 'rgba(242,242,37,.1', 1)
-  var rays2 = rays2 - 1
-}
-var rays3 = 3000
-while (rays3 >= 3*width) {
-  drawLine (0, 0, rays3, height, 'rgba(242,242,37,.018', 1)
-  var rays3 = rays3 - 1
-}
-drawFilledCircle (0,0, 100,'rgba(250,220,15,1)')
+// un mong us code dont touch vvvvv
+
+//drawFilledCircle (width/2,height/3, 100, "white")
+//drawFilledRect (width/2 - 100, height/2 - 100, 200, 200, 'white');
+//drawFilledRect (width/2 + 100, height/2 - 100, 50, 130, 'white');
+//drawFilledRect (width/2 - 100, height/2 + 100, 60, 80, 'white');
+//drawFilledRect (width/2 + 40, height/2 + 100, 60, 80, 'white');
+//drawFilledRect (width/2 - 90, height/2 - 100, 100, 60, 'teal');
