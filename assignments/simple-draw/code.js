@@ -32,4 +32,4 @@ drawFilledRect (width/2 - 100, height/2 - 100, 200, 200, 'red');
 drawFilledRect (width/2 + 100, height/2 - 100, 50, 130, 'red');
 drawFilledRect (width/2 - 100, height/2 + 100, 60, 80, 'red');
 drawFilledRect (width/2 + 40, height/2 + 100, 60, 80, 'red');
-drawFilledRect (width/2 - 90, height/2 - 100, 110, 60, 'white');
+drawFilledRect (width/2 - 85, height/2 - 100, 110, 60, 'white');
