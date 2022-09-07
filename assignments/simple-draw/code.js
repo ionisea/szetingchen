@@ -26,3 +26,10 @@ while (rays3 >= 3*width) {
   var rays3 = rays3 - 1
 }
 drawFilledCircle (0,0, 100,'rgba(250,220,15,1)')
+
+drawFilledCircle (width/2,height/3, 100, "white")
+drawFilledRect (width/2 - 100, height/2 - 100, 200, 200, 'white');
+drawFilledRect (width/2 + 100, height/2 - 100, 50, 130, 'white');
+drawFilledRect (width/2 - 100, height/2 + 100, 60, 80, 'white');
+drawFilledRect (width/2 + 40, height/2 + 100, 60, 80, 'white');
+drawFilledRect (width/2 - 90, height/2 - 100, 100, 60, 'teal');
