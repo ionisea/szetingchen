@@ -1,34 +1,28 @@
-const lerp = (a, b, amount) => {//0xrrggbb hex linear interpolate
-    const ar = a >> 16,
-          ag = a >> 8 & 0xff,
-          ab = a & 0xff,
-
-          br = b >> 16,
-          bg = b >> 8 & 0xff,
-          bb = b & 0xff,
-
-          rr = ar + amount * (br - ar),
-          rg = ag + amount * (bg - ag),
-          rb = ab + amount * (bb - ab);
-
-    return (rr << 16) + (rg << 8) + (rb | 0);
-};
-const convert = (a,base)=> { //int -> str
-    let e=""
-    let b=""
-    while (a>0) {
-        let c=a%base
-        c=c==10?"A":c==11?"B":c==12?"C":c==13?"D":c==14?"E":c==15?"F":c
-        b=(c+b)
-        a=Math.floor(a/base)
-    }
-    while (b.length<6)b="0"+b
-    return "#"+b
+drawFilledRect (0, 0, 500,600, 'rgba(115,215,255,1)')
+drawFilledRect (0,(2*height/3)+(height/6), width, (2*height/3), 'rgba(0, 64, 0, 1')
+var rect = 1000
+while (rect>= 2*height/3) {
+  drawLine (0, rect, width, rect, 'rgba(0,128,0, 1', 0)
+  var rect = rect - 2
+  while (rect >= 3*height/4){
+  drawLine (0, rect, width, rect, 'rgba(0,128,0, 1', 0)
+   var rect = rect - 1
+  }
 }
-const gradient=(clr0,clr1)=> { // takes 2 24bit ints
-    drawFilledRect (0, 0, width, height, convert(clr0,16))
-    for (var i=0;i<width;i++) {
-        drawFilledRect (i, 0, 1, height, convert(lerp(clr1,clr0,i/width),16))
-    }
+
+var rays = 500
+while (rays >= width-2*width/7) {
+  drawLine (0, 0, rays, height, 'rgba(242,242,37,.1', 1)
+  var rays = rays - 1
 }
-gradient(0x597d35,0xfe0000)//call
+var rays2 = 125
+while (rays2 >= width*0) {
+  drawLine (0, 0, rays2, height, 'rgba(242,242,37,.1', 1)
+  var rays2 = rays2 - 1
+}
+var rays3 = 3000
+while (rays3 >= 3*width) {
+  drawLine (0, 0, rays3, height, 'rgba(242,242,37,.018', 1)
+  var rays3 = rays3 - 1
+}
+drawFilledCircle (0,0, 100,'rgba(250,220,15,1)')
