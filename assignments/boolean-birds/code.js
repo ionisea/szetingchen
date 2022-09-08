@@ -50,5 +50,5 @@ const eatsMice = (isBirdRed, isBirdSpotted) => {
 }
 
 const isRed = (Flobby, Bloggy, FLibble, Globby) => {
-  return isBirdRed
+  return Flobby||Bloggy
 }
