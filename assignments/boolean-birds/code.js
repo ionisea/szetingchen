@@ -49,7 +49,7 @@ const eatsMice = (isBirdRed, isBirdSpotted) => {
   return !isBirdRed||!isBirdSpotted
 }
 
-function isRed (Flobby, Bloggy, Flibble, Globby) {
+function isRed (b1, b2, b3, b4) {
   b1 = Flobby
   b2 = Bloggy
   b3 = Flibble
