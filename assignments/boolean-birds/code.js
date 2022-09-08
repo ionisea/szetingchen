@@ -36,3 +36,7 @@ const isGlobbyBird = (isBirdRed, isBirdSpotted) => {
 const eatsWorms = (isBirdRed, isBirdSpotted) => {
   return isBirdRed||isBirdSpotted
 }
+
+const eatsNuts = (isBirdRed, isBirdSpotted) => {
+  return isBirdRed
+}
