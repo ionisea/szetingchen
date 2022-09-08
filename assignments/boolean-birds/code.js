@@ -32,3 +32,7 @@ const isFlibbleBird = (isBirdRed, isBirdSpotted) => {
 const isGlobbyBird = (isBirdRed, isBirdSpotted) => {
   return !isBirdRed&&!isBirdSpotted
 }
+
+const eatsWorms = (isBirdRed, isBirdSpotted) => {
+  return isBirdRed||isBirdSpotted
+}
