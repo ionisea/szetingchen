@@ -20,3 +20,7 @@
 const isFlobbyBird = (isBirdRed, isBirdSpotted) => {
   return isBirdRed&&isBirdSpotted
 }
+
+function isBloggyBird (isBirdRed, isBirdSpotted) {
+  return isBirdRed&&!isBirdSpotted
+}
