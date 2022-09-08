@@ -22,8 +22,8 @@ while (rays2 >= width*0) {
 }
 var rays3 = 3000
 while (rays3 >= 3*width) {
-  drawLine (0, 0, rays3, height, 'rgba(242,242,37,.018', 1)
-  var rays3 = rays3 - 1
+  drawLine (0, 0, rays3, height, 'rgba(242,242,37,.1', 1)
+  var rays3 = rays3 - 5
 }
 drawFilledCircle (0,0, 100,'rgba(250,220,15,1)')
 
