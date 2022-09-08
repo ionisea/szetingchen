@@ -50,9 +50,9 @@ const eatsMice = (isBirdRed, isBirdSpotted) => {
 }
 
 function isRed (b1, b2, b3, b4) {
-  b1 = Flobby
-  b2 = Bloggy
-  b3 = Flibble
-  b4 = Globby
+  b1 = 'Flobby'
+  b2 = 'Bloggy'
+  b3 = 'Flibble'
+  b4 = 'Globby'
   return b1 || b2 &&! b3 &&! b4
 }
