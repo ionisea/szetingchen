@@ -18,5 +18,5 @@
  */
 
 const isFlobbyBird = (isBirdRed, isBirdSpotted) {
-  return isBirdRed&&isBirdSpotted
+return isBirdRed&&isBirdSpotted
 }
