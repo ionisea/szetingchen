@@ -60,3 +60,7 @@ const isSpotted = (bird) => {
 const isNotRed = (bird) => {
   return bird === 'Flibble' || bird === 'Globby'
 }
+
+const isNotSpotted = (bird) => {
+  return bird === 'Flobby' || bird === 'Globby'
+}
