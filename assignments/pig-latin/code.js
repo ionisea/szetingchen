@@ -33,6 +33,6 @@
 // operator works.
 
 const pigLatin = (s) => {
-  var v = s.search(/[aeiou]/))
+  var v = s.search(/[aeiou]/)
   return s.substring(v,s.length) + s.substring(0,v) + 'ay'
 }
