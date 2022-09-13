@@ -29,5 +29,5 @@ const h = height
 
 const circles = 1
 //const drawCircles = (circles) => {
-  drawFilledCircle (w/2, h/2, width/1, 'red')
+  drawFilledCircle (w/2, h/2, width/2, 'red')
 //}
