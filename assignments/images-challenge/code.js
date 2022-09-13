@@ -23,3 +23,11 @@
  *
  *  clear()
  */
+
+const w = width
+const l = length
+
+var circles = 1
+const drawCircles = (circles) => {
+  drawCircle (w, l, w/circles, red)
+}
