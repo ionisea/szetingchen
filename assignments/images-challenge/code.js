@@ -24,7 +24,7 @@
  *  clear()
  */
 
-const bigness = 4
+const bigness = 100
 var dist = bigness*2
 while (dist < width){
   var dist = dist+bigness*2
