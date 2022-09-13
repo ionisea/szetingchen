@@ -24,10 +24,15 @@
  *  clear()
  */
 
-const w = width
-const h = height
-
-var circles = 1
-const drawCircles = (circles) => {
-  drawFilledCircle (w/2, h/2, w/circles+1, 'red')
+const bigness = 17
+var dist = bigness*2
+while (dist < width){
+  var dist = dist+bigness*2
+}
+const center = width-dist
+var dist=center
+var dist = dist+bigness*2
+while (dist < width){ 
+drawFilledCircle(dist-center/2, height/2, bigness, 'red')
+var dist = dist+bigness*2
 }
