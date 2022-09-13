@@ -28,6 +28,6 @@ const w = width
 const l = length
 
 const circles = 1
-//const drawCircles = (circles) => {
-drawCircle (0, 0, 2, red)
-//}
+const drawCircles = (circles) => {
+  drawCircle (0, 0, width/circles, 'red')
+}
