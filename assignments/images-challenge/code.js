@@ -29,5 +29,5 @@ const l = length
 
 //const circles = 1
 //const drawCircles = (circles) => {
-  drawFilledCircle (w/2, l/2, 200, 'red')
+  drawFilledCircle (w/2, l*2, 200, 'red')
 //}
