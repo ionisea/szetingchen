@@ -7,6 +7,6 @@ while (dist < width){
 const center = width-dist
 dist = center+diameter
 while (dist < width){ 
-  drawFilledCircle(dist-center/2, height/2, bigness, 'red')
+  drawFilledCircle(dist-center/2, height/2, radius, 'red')
   dist = dist+diameter
 }
