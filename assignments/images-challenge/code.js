@@ -1,5 +1,4 @@
-const bigness = 23
-const radius = bigness*2
+const radius = 23
 let dist = radius
 while (dist < width){
   dist = dist+radius
