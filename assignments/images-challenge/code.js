@@ -4,6 +4,6 @@ const dist = Math.floor(width/diameter)*diameter
 const extra = width-dist
 let x = 0
 while (x < width-extra){ 
-  drawFilledCircle(x+extra+radius, height/2, radius, 'red')
+  drawFilledCircle(x+radius, height/2, radius, 'red')
   x += diameter
 }
