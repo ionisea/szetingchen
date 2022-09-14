@@ -2,7 +2,7 @@ const radius = 23
 const diameter = 2*radius
 let dist = diameter
 while (dist < width){
-  dist = dist+diameter
+  dist += diameter
 }
 const center = width-dist
 dist = center+diameter
