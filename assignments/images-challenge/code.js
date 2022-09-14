@@ -1,9 +1,6 @@
 const radius = 23
 const diameter = 2*radius
-let dist = diameter
-while (dist < width){
-  dist += diameter
-}
+const dist = Math.floor(width/diameter)*diameter
 const center = width-dist
 dist = center+diameter
 while (dist < width){ 
