@@ -24,7 +24,7 @@
  *  clear()
  */
 
-const bigness = 100
+const bigness = 23
 let dist = bigness*2
 while (dist < width){
   dist = dist+bigness*2
