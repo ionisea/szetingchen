@@ -14,10 +14,10 @@ lineOfCircles (radius);
 */
 const fillWithCircles = (radius) => {
   const diameter = 2*radius
-  const dist = Math.floor(width/diameter*diameter)
+  const dist = Math.floor(width/diameter)*diameter
   const extra = width-dist
   let x = 0
   while (x < width-extra) {
-    drawCircle(x+radius+extra/2, height+radius, radius, 'blue')
+    drawCircle(x+radius+extra/2, height, radius, 'blue', lineWidth=1)
   }
 }
