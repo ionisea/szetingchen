@@ -19,5 +19,5 @@ const lineOfCircles = (radius) => {
   while (x < width-extra){ 
   drawFilledCircle(x+radius+extra/2, height/2, radius, 'red')
   x += diameter
-}
+  }
 }
