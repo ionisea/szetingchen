@@ -22,3 +22,4 @@ const fillWithCircles = (radius) => {
     x += diameter
   }
 }
+fillWithCircles (radius);
