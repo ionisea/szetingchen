@@ -10,7 +10,7 @@ while (x < width-extra){
 }
 */
 
-const lineOfCircles = (29) => {
+const lineOfCircles = () => {
   let radius = 29
   let diameter = 2*radius
   let dist = Math.floor(width/diameter)*diameter
@@ -19,4 +19,5 @@ const lineOfCircles = (29) => {
   while (x < width-extra){ 
   drawFilledCircle(x+radius+extra/2, height/2, radius, 'red')
   x += diameter
+  }
 }
