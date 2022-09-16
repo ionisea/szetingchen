@@ -19,7 +19,7 @@ const fillWithCircles = (radius) => {
   const ydist = Math.floor(height/diameter)*diameter
   const yextra = height-ydist
   let y = 0
-  while (y < height) {
+  while (y < height-yextra) {
     let x = 0
     while (x < width-xextra) {
       drawCircle(x+radius+xextra/2, y+radius+yextra/2, radius, 'blue')
