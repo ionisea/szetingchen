@@ -12,6 +12,12 @@ const lineOfCircles = (radius) => {
 }
 lineOfCircles (radius);
 */
+
+const lineOfAltCircles = (radius) => {
+  lineOfCircles (radius);
+}
+
+/*
 const fillWithCircles = (radius) => {
   const diameter = 2*radius
   const xdist = Math.floor(width/diameter)*diameter
@@ -29,3 +35,4 @@ const fillWithCircles = (radius) => {
   }
 }
 fillWithCircles (radius);
+*/
