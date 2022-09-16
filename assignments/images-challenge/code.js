@@ -57,6 +57,6 @@ fillWithCircles (radius);
 */
 
 const concentricCircles = (amountCircles) => {
-  drawCircle (width/2, height/2, width/2, 'red')
+  drawFilledCircle (width/2, height/2, width/2, 'red')
 }
 concentricCircles (amountCircles);
