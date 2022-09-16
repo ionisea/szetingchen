@@ -19,9 +19,9 @@ const lineOfAltCircles = (radius) => {
   const dist = Math.floor(width / diameter) * diameter
   const extra = width - dist
   let x = 0
-  while (x < width-extra){
-    drawFilledCircle (x+radius+extra/2, height/2, radius, 'red')
-    drawFilledCircle (x+3*radius+extra/2, height/2, radius, 'blue')
+  while (x < width - extra) {
+    drawFilledCircle(x + radius + extra / 2, height / 2, radius, 'red')
+    drawFilledCircle(x + 3 * radius + extra / 2, height / 2, radius, 'blue')
     x += diameter
   }
 }
