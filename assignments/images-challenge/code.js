@@ -1,4 +1,4 @@
-let radius = 20
+//let radius = 20
 let amountCircles = 10
 
 /*
