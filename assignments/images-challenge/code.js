@@ -1,9 +1,6 @@
 let radius = 14
 
-const lineOfAltCircles = (radius) => {
-  lineOfCircles (radius);
-}
-
+/*
 const lineOfCircles = (radius) => {
   const diameter = 2*radius
   const dist = Math.floor(width/diameter)*diameter
@@ -14,8 +11,20 @@ const lineOfCircles = (radius) => {
     x += diameter
   }
 }
-//lineOfCircles (radius);
-lineOfAltCircles (radius);
+lineOfCircles (radius);
+*/
+
+const lineOfAltCircles = (radius) => {
+  const diameter = 2 * radius
+  const dist = Math.floor(width / diameter) * diameter
+  const extra = width - dist
+  let x = 0
+  while (x < width-extra){
+    drawFilledCircle (x+radius+extra/2, height/2, radius, 'red')
+    drawFilledCircle (x+3*radius+extra/2, height/2, radius, 'blue')
+    x += diameter
+  }
+}
 
 /*
 const fillWithCircles = (radius) => {
