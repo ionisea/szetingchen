@@ -18,7 +18,7 @@ const fillWithCircles = (radius) => {
   const xextra = width-xdist
   const ydist = Math.floor(height/diameter)*diameter
   const yextra = height-ydist
-  let y = 0
+  let y = yextra/2
   while (y < height) {
     let x = 0
     while (x < width-xextra) {
