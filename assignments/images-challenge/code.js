@@ -1,4 +1,4 @@
-let radius = 20
+let radius = 23
 /*
 const lineOfCircles = (radius) => {
   const diameter = 2*radius
