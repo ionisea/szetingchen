@@ -1,4 +1,5 @@
-let radius = 20
+//let radius = 20
+let amountCircles = 10
 
 /*
 const lineOfCircles = (radius) => {
@@ -14,6 +15,7 @@ const lineOfCircles = (radius) => {
 lineOfCircles (radius);
 */
 
+/*
 const lineOfAltCircles = (radius) => {
   const diameter = 2 * radius
   const dist = Math.floor(width / diameter) * diameter
@@ -32,6 +34,8 @@ const lineOfAltCircles = (radius) => {
   }
 }
 lineOfAltCircles (radius);
+*/
+
 /*
 const fillWithCircles = (radius) => {
   const diameter = 2*radius
@@ -51,3 +55,8 @@ const fillWithCircles = (radius) => {
 }
 fillWithCircles (radius);
 */
+
+const concentricCircles = (amountCircles) => {
+  drawCircle (width/2, height/2, width/2, 'red')
+}
+concentricCircles (amountCircles);
