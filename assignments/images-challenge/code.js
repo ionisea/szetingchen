@@ -22,7 +22,7 @@ const fillWithCircles = (radius) => {
   while (y < height) {
     let x = 0
     while (x < width-xextra) {
-      drawCircle(x+radius+xextra/2, height/2, radius, 'blue')
+      drawCircle(x+radius+xextra/2, y+radius+yextra/2, radius, 'blue')
       x += diameter
     }
     y += diameter
