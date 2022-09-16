@@ -18,10 +18,14 @@ const lineOfAltCircles = (radius) => {
   const diameter = 2 * radius
   const dist = Math.floor(width / diameter) * diameter
   const extra = width - dist
+  let color = 'red'
   let x = 0
   while (x < width - extra) {
-    drawFilledCircle(x + radius + extra / 2, height / 2, radius, 'red')
-    drawFilledCircle(x + 3 * radius + extra / 2, height / 2, radius, 'blue')
+    if (color == 'red') {
+    drawFilledCircle(x + radius + extra / 2, height / 2, radius, 'blue')
+    } else {
+    drawFilledCircle(x + 3 * radius + extra / 2, height / 2, radius, 'red')
+    }
     x += diameter
   }
 }
