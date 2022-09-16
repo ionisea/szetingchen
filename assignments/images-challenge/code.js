@@ -22,9 +22,9 @@ const lineOfAltCircles = (radius) => {
   let x = 0
   while (x < width - extra) {
     if (color == 'red') {
-    drawFilledCircle(x + radius + extra / 2, height / 2, radius, 'blue')
+    drawFilledCircle(x + radius + extra / 2, height / 2, radius, 'red')
     } else {
-    drawFilledCircle(x + 3 * radius + extra / 2, height / 2, radius, 'red')
+    drawFilledCircle(x + 3 * radius + extra / 2, height / 2, radius, 'blue')
     }
     x += diameter
   }
