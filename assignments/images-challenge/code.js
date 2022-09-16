@@ -18,7 +18,7 @@ const lineOfAltCircles = (radius) => {
   const diameter = 2 * radius
   const dist = Math.floor(width / diameter) * diameter
   const extra = width - dist
-  let color = 'red'
+  let color = 'blue'
   let x = 0
   while (x < width - extra) {
     if (color === 'red') {
