@@ -21,7 +21,7 @@ const lineOfAltCircles = (radius) => {
   let color = 'red'
   let x = 0
   while (x < width - extra) {
-    if (color == 'red') {
+    if (color === 'red') {
     drawFilledCircle(x + radius + extra / 2, height / 2, radius, 'red')
     color = 'blue'
     } else {
