@@ -25,7 +25,7 @@ const lineOfAltCircles = (radius) => {
     x += diameter
   }
 }
-
+lineOfAltCircles (radius);
 /*
 const fillWithCircles = (radius) => {
   const diameter = 2*radius
