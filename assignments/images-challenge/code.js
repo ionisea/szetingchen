@@ -25,8 +25,7 @@ const lineOfAltCircles = (radius) => {
   while (x < width - extra) {
     if (color === 'red') {
     color = 'blue'
-    } 
-    else{
+    } else {
     color = 'red'
     }
     drawFilledCircle(x + radius + extra / 2, height / 2, radius, color)
@@ -58,7 +57,18 @@ fillWithCircles (radius);
 
 const concentricCircles = (amountCircles) => {
   drawFilledCircle (width/2, height/2, width/2, 'blue')
-  let radiuses = Math.floor((width/2)/amountCircles)
-  return radiuses
+  const radiuses = Math.floor((width/2)/(amountCircles-1))
+  let p = 0
+  let color = 'red'
+  let x = 0
+  while (x < width/2) {
+    if (color === 'red') {
+      color = 'blue'
+    } else {
+      color = 'red'
+    }
+    drawFilledCircle(width/2, height/2, width/2-p, color)
+    p += radiuses
+  }
 }
 concentricCircles (amountCircles);
