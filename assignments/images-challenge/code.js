@@ -27,7 +27,7 @@ const lineOfAltCircles = (radius) => {
     else{
     color = 'red'
     }
-    drawFilledCircle(x + radius + extra / 2, height / 2, radius, 'red')
+    drawFilledCircle(x + radius + extra / 2, height / 2, radius, color)
     x += diameter
   }
 }
