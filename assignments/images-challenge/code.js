@@ -1,5 +1,6 @@
-//let radius = 20
-let amountCircles = 3
+let radius = 20
+//let amountCircles = 3
+let probability = 0.2
 
 /*
 const lineOfCircles = (radius) => {
@@ -55,6 +56,30 @@ const fillWithCircles = (radius) => {
 fillWithCircles (radius);
 */
 
+const fillWithCirclesRand = (radius, probability) => {
+  const diameter = 2*radius
+  const xdist = Math.floor(width/diameter)*diameter
+  const xextra = width-xdist
+  const ydist = Math.floor(height/diameter)*diameter
+  const yextra = height-ydist
+  let y = 0
+  while (y < height-yextra) {
+    let x = 0
+    while (x < width-xextra) {
+      let rand = Math.random()
+      if (rand <= probability) {
+        drawFilledCircle(x+radius+xextra/2, y+radius+yextra/2, radius, 'blue')
+      } else {
+        drawCircle(x+radius+xextra/2, y+radius+yextra/2, radius, 'blue')
+      x += diameter
+      }
+      y += diameter
+    }
+  }
+}
+fillWithCirclesRand (radius, probability);
+
+/*
 const concentricCircles = (amountCircles) => {
   drawFilledCircle (width/2, height/2, width/2, 'blue')
   const radiuses = (width/2)/(amountCircles)
@@ -72,3 +97,4 @@ const concentricCircles = (amountCircles) => {
   }
 }
 concentricCircles (amountCircles);
+*/
