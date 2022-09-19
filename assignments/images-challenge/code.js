@@ -63,7 +63,7 @@ const concentricCircles = (amountCircles) => {
   let x = 0
   while (x < width/2) {
     if (color === 'red') {
-      color = 'blue'
+      color = 'white'
     } else {
       color = 'red'
     }
