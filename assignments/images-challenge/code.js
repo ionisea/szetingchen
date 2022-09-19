@@ -1,5 +1,5 @@
 //let radius = 20
-let amountCircles = 24
+let amountCircles = 9
 
 /*
 const lineOfCircles = (radius) => {
