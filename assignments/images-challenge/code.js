@@ -71,10 +71,10 @@ const fillWithCirclesRand = (radius, probability) => {
         drawCircle(x+radius+xextra/2, y+radius+yextra/2, radius, 'blue')
       } else {
         drawFilledCircle(x+radius+xextra/2, y+radius+yextra/2, radius, 'blue')
+      }
       x += diameter
       }
-      y += diameter
-    }
+    y += diameter
   }
 }
 fillWithCirclesRand (radius, probability);
