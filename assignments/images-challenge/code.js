@@ -68,9 +68,9 @@ const fillWithCirclesRand = (radius, probability) => {
     while (x < width-xextra) {
       let rand = Math.random()
       if (rand > probability) {
-        drawFilledCircle(x+radius+xextra/2, y+radius+yextra/2, radius, 'blue')
-      } else {
         drawCircle(x+radius+xextra/2, y+radius+yextra/2, radius, 'blue')
+      } else {
+        drawFilledCircle(x+radius+xextra/2, y+radius+yextra/2, radius, 'blue')
       x += diameter
       }
       y += diameter
