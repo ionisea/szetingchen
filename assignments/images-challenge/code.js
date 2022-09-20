@@ -1,6 +1,6 @@
-let radius = 10
+let radius = 23
 //let amountCircles = 3
-let probability = 0.5
+let probability = 0.3
 
 /*
 const lineOfCircles = (radius) => {
