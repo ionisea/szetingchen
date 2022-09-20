@@ -1,7 +1,7 @@
 //let radius = 23
-let amountCircles = 16
+//let amountCircles = 16
 //let probability = 0.3
-//let n = 8
+let n = 8
 
 /*
 const lineOfCircles = (radius) => {
@@ -82,7 +82,7 @@ const fillWithCirclesRand = (radius, probability) => {
 fillWithCirclesRand (radius, probability);
 */
 
-
+/*
 const concentricCircles = (amountCircles) => {
   drawFilledCircle (width/2, height/2, width/2, 'blue')
   const radiuses = (width/2)/(amountCircles)
@@ -100,12 +100,12 @@ const concentricCircles = (amountCircles) => {
   }
 }
 concentricCircles (amountCircles);
+*/
 
 
-/*
 const checkerboard = (n) => {
   const squareSide = width/n
-  drawFilledRect ()
+  const heightextra = (height-width)/2
+  drawFilledRect (0, heightextra, width, width+heightextra, 'red')
 }
 checkerboard (n);
-*/
