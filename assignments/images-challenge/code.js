@@ -103,6 +103,6 @@ concentricCircles (amountCircles);
 */
 
 const checkerboard = (n) => {
-  drawSquare (200*n, 200*n, 0, 0, 'red')
+  drawRect (200*n, 200*n, 0, 0, 'red')
 }
 checkerboard (n);
