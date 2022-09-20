@@ -1,5 +1,5 @@
 //let radius = 23
-let amountCircles = 150
+let amountCircles = 16
 //let probability = 0.3
 //let n = 8
 
