@@ -108,4 +108,4 @@ const checkerboard = (n) => {
   drawFilledRect ()
 }
 checkerboard (n);
-/*
+*/
