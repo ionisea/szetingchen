@@ -109,7 +109,7 @@ const checkerboard = (n) => {
   drawFilledRect (0, heightextra, width, width, 'red')
   let x = 0
   while (x < width) {
-    drawFilledRect (0, heightextra, 0+squareSide, heightextra+squareSide)
+    drawFilledRect (0, heightextra, 0+squareSide, heightextra+squareSide, 'blue')
     x += squareSide
   }
 }
