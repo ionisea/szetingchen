@@ -107,5 +107,10 @@ const checkerboard = (n) => {
   const squareSide = width/n
   const heightextra = (height-width)/2
   drawFilledRect (0, heightextra, width, width, 'red')
+  let x = 0
+  while (x < width) {
+    drawFilledRect (0, heightextra, 0+squareSide, heightextra+squareSide)
+    x += squareSide
+  }
 }
 checkerboard (n);
