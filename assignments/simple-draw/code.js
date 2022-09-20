@@ -1,46 +1,35 @@
-/*
- * This code is running in an environment with five functions defined:
- *
- *  drawLine(x1, y1, x2, y2, color, lineWidth)
- *
- *    Draws a line from x1,y1 to x2,y2 using the give color. The fifth argument,
- *    lineWidth, is optional and defaults to 1.
- *
- *  drawCircle(x, y, r, color, lineWidth=1)
- *
- *    Draws a circle centered at x,y with radius r using the given color. The
- *    fith argument, lineWidth, is optional and defaults to 1.
- *
- *  drawRect(x, y, width, height, color, lineWidth=1)
- *
- *    Draws a rectangle starting at x,y with the given width, height, and color.
- *    Positive widths go to the right and negative to the left; positive heights
- *    go down and negative heights go up. The sixth argument, lineWidth, is
- *    optional and defaults to 1.
- *
- *  drawFilledRect(x, y, width, height, color)
- *
- *    Draws a filled rectangle starting at x,y with the given width, height, and
- *    color. Positive widths go to the right and negative to the left; positive
- *    heights go down and negative heights go up.
- *
- *  drawFilledCircle(x, y, r, color)
- *
- *    Draws a filled circle centered at x,y with radius r using the given color.
- *
- * There are also a couple variables that might be useful:
- *
- *  width - the width of the drawing area.
- *  height - the height of the drawing area.
- *
- */
+drawFilledRect (0, 0, 500,600, 'rgba(115,215,255,1)')
+drawFilledRect (0,(2*height/3)+(height/6), width, (2*height/3), 'rgba(0, 64, 0, 1')
+let rect = 1000
+while (rect>= 2*height/3) {
+  drawLine (0, rect, width, rect, 'rgba(0,128,0, 1', 0)
+  rect -= 2
+  while (rect >= 3*height/4){
+  drawLine (0, rect, width, rect, 'rgba(0,128,0, 1', 0)
+  rect --
+  }
+}
 
-drawLine(0, 0, width, height, 'red')
+let rays = 500
+while (rays >= width-2*width/7) {
+  drawLine (0, 0, rays, height, 'rgba(242,242,37,.1', 1)
+  rays --
+}
+let rays2 = 125
+while (rays2 >= width*0) {
+  drawLine (0, 0, rays2, height, 'rgba(242,242,37,.1', 1)
+  rays2 --
+}
+let rays3 = 3000
+while (rays3 >= 3*width) {
+  drawLine (0, 0, rays3, height, 'rgba(242,242,37,.1', 1)
+  rays3 -= 6
+}
+drawFilledCircle (0,0, 100,'rgba(250,220,15,1)')
 
-drawCircle(width/2, height/2, 10, 'blue');
-
-drawRect(50, 50, 60, 40, 'black');
-
-drawFilledCircle(width - 50, height - 50, 50, 'red');
-
-drawFilledRect(5, height - 20, 45, 15, 'purple');
+drawFilledCircle (width/2,height/3, 100, "red")
+drawFilledRect (width/2 - 100, height/2 - 100, 200, 200, 'red');
+drawFilledRect (width/2 + 100, height/2 - 100, 50, 130, 'red');
+drawFilledRect (width/2 - 100, height/2 + 100, 60, 80, 'red');
+drawFilledRect (width/2 + 40, height/2 + 100, 60, 80, 'red');
+drawFilledRect (width/2 - 85, height/2 - 100, 125, 60, 'white');
