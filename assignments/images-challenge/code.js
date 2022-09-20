@@ -106,6 +106,6 @@ concentricCircles (amountCircles);
 const checkerboard = (n) => {
   const squareSide = width/n
   const heightextra = (height-width)/2
-  drawFilledRect (0, heightextra, width, heightextra, 'red')
+  drawFilledRect (0, heightextra, width, width, 'red')
 }
 checkerboard (n);
