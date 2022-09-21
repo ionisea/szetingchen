@@ -24,11 +24,10 @@
  *  clear()
  */
 
-let radius = 12
+//let radius = 23
 //let amountCircles = 16
 //let probability = 0.3
-//let n = 9 //keep even
-
+let n = 9 //keep even
 
 const lineOfCircles = (radius) => {
   const diameter = 2*radius
@@ -40,10 +39,8 @@ const lineOfCircles = (radius) => {
     x += diameter
   }
 }
-lineOfCircles (radius);
+//lineOfCircles (radius);
 
-
-/*
 const lineOfAltCircles = (radius) => {
   const diameter = 2 * radius
   const dist = Math.floor(width / diameter) * diameter
@@ -60,10 +57,8 @@ const lineOfAltCircles = (radius) => {
     x += diameter
   }
 }
-lineOfAltCircles (radius);
-*/
+//lineOfAltCircles (radius);
 
-/*
 const fillWithCircles = (radius) => {
   const diameter = 2*radius
   const xdist = Math.floor(width/diameter)*diameter
@@ -80,10 +75,8 @@ const fillWithCircles = (radius) => {
     y += diameter
   }
 }
-fillWithCircles (radius);
-*/
+//fillWithCircles (radius);
 
-/*
 const fillWithCirclesRand = (radius, probability) => {
   const diameter = 2*radius
   const xdist = Math.floor(width/diameter)*diameter
@@ -105,10 +98,8 @@ const fillWithCirclesRand = (radius, probability) => {
     y += diameter
   }
 }
-fillWithCirclesRand (radius, probability);
-*/
+//fillWithCirclesRand (radius, probability);
 
-/*
 const concentricCircles = (amountCircles) => {
   drawFilledCircle (width/2, height/2, width/2, 'blue')
   const radiuses = (width/2)/(amountCircles)
@@ -125,10 +116,8 @@ const concentricCircles = (amountCircles) => {
     p += radiuses
   }
 }
-concentricCircles (amountCircles);
-*/
+//concentricCircles (amountCircles);
 
-/*
 const checkerboard = (n) => {
   const squareSide = width / n
   const heightextra = (height - width) / 2
@@ -152,4 +141,3 @@ const checkerboard = (n) => {
   }
 }
 checkerboard(n);
-*/
