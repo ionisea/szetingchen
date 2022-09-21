@@ -23,6 +23,7 @@
  *
  *  clear()
  */
+
 //let radius = 23
 //let amountCircles = 16
 //let probability = 0.3
@@ -135,7 +136,7 @@ const checkerboard = (n) => {
   let x = 0
   while (x < width) {
     drawFilledRect (0, heightextra, squareSide, squareSide, 'blue')
-    x += 243/81*squareSide
+    x += 2*squareSide
   }
 }
 checkerboard (n);
