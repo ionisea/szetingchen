@@ -147,8 +147,8 @@ const checkerboard = (n) => {
         drawFilledRect(x2 + 0, y + heightextra, squareSide, squareSide, 'blue')
         x2 += 2 * squareSide
       }  
+      y += squareSide
     } 
-    y += squareSide
   }
 }
 checkerboard(n);
