@@ -24,7 +24,7 @@
  *  clear()
  */
 
-let radius = 23
+let radius = 12
 //let amountCircles = 16
 //let probability = 0.3
 //let n = 9 //keep even
