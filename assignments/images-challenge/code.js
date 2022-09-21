@@ -138,4 +138,4 @@ const checkerboard = (n) => {
     y += squareSide
   }
 }
-checkerboard(18);
+checkerboard(76);
