@@ -135,12 +135,12 @@ const checkerboard = (n) => {
   drawFilledRect (0, heightextra, width, width, 'red')
   let y = 0
   while (y < width) {
-    let x = squareSide
+    let x = 0
     while (x < width) {
       drawFilledRect (x+0, y+heightextra, squareSide, squareSide, 'blue')
       x += 2*squareSide
     }
-    y += 2*squareSide
+    y += squareSide
   } 
 }
 checkerboard (n);
