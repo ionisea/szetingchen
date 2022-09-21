@@ -130,6 +130,8 @@ const checkerboard = (n) => {
       x1 += 2 * squareSide
     }
     y += squareSide
+
+    y += squareSide
   }
 }
 checkerboard(76);
