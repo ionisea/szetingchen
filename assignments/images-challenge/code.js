@@ -130,23 +130,25 @@ concentricCircles (amountCircles);
 
 
 const checkerboard = (n) => {
-  const squareSide = width/n
-  const heightextra = (height-width)/2
-  drawFilledRect (0, heightextra, width, width, 'red')
+  const squareSide = width / n
+  const heightextra = (height - width) / 2
+  drawFilledRect(0, heightextra, width, width, 'red')
   let y = 0
   while (y < width) {
     let x1 = 0
-    while (x1 < width-heightextra) {
-      drawFilledRect (x1+0, y+heightextra, squareSide, squareSide, 'blue')
-      x1 += 2*squareSide
+    while (x1 < width - heightextra) {
+      drawFilledRect(x1 + 0, y + heightextra, squareSide, squareSide, 'blue')
+      x1 += 2 * squareSide
     }
     y += squareSide
-    let x2 = squareSide
-    while (x2 < width) {
-      drawFilledRect (x2+0, y+heightextra, squareSide, squareSide, 'blue')
-      x2 += 2*squareSide
-    }
+    if (Math.floor(n/2) < n/2){
+      let x2 = squareSide
+      while (x2 < width) {
+        drawFilledRect(x2 + 0, y + heightextra, squareSide, squareSide, 'blue')
+        x2 += 2 * squareSide
+      }
+    } 
     y += squareSide
-  } 
+  }
 }
-checkerboard (n);
+checkerboard(n);
