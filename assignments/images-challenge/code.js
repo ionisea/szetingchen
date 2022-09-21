@@ -119,7 +119,7 @@ const concentricCircles = (amountCircles) => {
 //concentricCircles (amountCircles);
 
 const checkerboard = (n) => {
-  const squareSide = width / n / 2;
+  const squareSide = width / n;
   const heightextra = (height - width) / 2
   drawFilledRect(0, heightextra, width, width, 'red')
   let y = 0
