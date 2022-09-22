@@ -114,13 +114,13 @@ const concentricCircles = (amountCircles) => {
 //concentricCircles (13);
 
 const checkerboard = (n) => {
-  const squareSide = width / n;
+  const squareSide = width / n + 0;
   const heightextra = (height - width) / 2
-  drawFilledRect(0, heightextra, width, width, 'red')
+  drawFilledRect(0, heightextra + 0, width, width, 'red')
   let startpos = 0
   for (let y = 0; y < width-squareSide/(squareSide+1); y += squareSide) {
     for (let x = startpos; x < width; x += 2 * squareSide) {
-      drawFilledRect(x + 0, y + heightextra, squareSide, squareSide, 'blue')
+      drawFilledRect(x + 0, y + heightextra, squareSide + 0, squareSide, 'blue')
     }
     if (startpos == 0) {
       startpos += squareSide
@@ -129,10 +129,4 @@ const checkerboard = (n) => {
     }
   }
 }
-//checkerboard(200);
-
-const notReallyCurved = (lines) => {
-  drawLine (0, height-width, width, height-width)
-  return lines
-}
-notReallyCurved (2);
+checkerboard(200);
