@@ -132,8 +132,6 @@ const checkerboard = (n) => {
     }
     if (startpos > 0) {
       startpos + squareSide
-    } else {
-      startpos
     }
     y += squareSide
   }
