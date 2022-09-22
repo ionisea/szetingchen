@@ -125,4 +125,4 @@ const checkerboard = (n) => {
     startpos += squareSide
   }
 }
-checkerboard(9);
+checkerboard(height);
