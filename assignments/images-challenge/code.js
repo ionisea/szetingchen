@@ -24,11 +24,6 @@
  *  clear()
  */
 
-//let radius = 23
-//let amountCircles = 16
-//let probability = 0.3
-//let n = 7 //keep even
-
 const lineOfCircles = (radius) => {
   const diameter = 2*radius
   const dist = Math.floor(width/diameter)*diameter
@@ -39,7 +34,7 @@ const lineOfCircles = (radius) => {
     x += diameter
   }
 }
-//lineOfCircles (radius);
+//lineOfCircles (23);
 
 const lineOfAltCircles = (radius) => {
   const diameter = 2 * radius
@@ -57,7 +52,7 @@ const lineOfAltCircles = (radius) => {
     x += diameter
   }
 }
-//lineOfAltCircles (radius);
+//lineOfAltCircles (23);
 
 const fillWithCircles = (radius) => {
   const diameter = 2*radius
@@ -75,7 +70,7 @@ const fillWithCircles = (radius) => {
     y += diameter
   }
 }
-//fillWithCircles (radius);
+//fillWithCircles (23);
 
 const fillWithCirclesRand = (radius, probability) => {
   const diameter = 2*radius
@@ -98,7 +93,7 @@ const fillWithCirclesRand = (radius, probability) => {
     y += diameter
   }
 }
-//fillWithCirclesRand (radius, probability);
+//fillWithCirclesRand (23, 0.2);
 
 const concentricCircles = (amountCircles) => {
   drawFilledCircle (width/2, height/2, width/2, 'blue')
@@ -116,7 +111,7 @@ const concentricCircles = (amountCircles) => {
     p += radiuses
   }
 }
-//concentricCircles (amountCircles);
+//concentricCircles (13);
 
 const checkerboard = (n) => {
   const squareSide = width / n;
@@ -124,10 +119,8 @@ const checkerboard = (n) => {
   drawFilledRect(0, heightextra, width, width, 'red')
   let startpos = 0
   for (let y = 0; y < width; y += squareSide) {
-    let x1 = startpos
-    while (x1 < width) {
+    for (let x = startpos; x < width; x += 2*squareSide) {
       drawFilledRect(x1 + 0, y + heightextra, squareSide, squareSide, 'blue')
-      x1 += 2 * squareSide
     }
     startpos += squareSide
   }
