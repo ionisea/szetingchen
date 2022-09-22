@@ -133,7 +133,7 @@ const checkerboard = (n) => {
     if (startpos > 0) {
       startpos + squareSide
     } else {
-      startpos - squareSide
+      startpos
     }
     y += squareSide
   }
