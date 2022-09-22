@@ -26,7 +26,7 @@
 
 const lineOfCircles = (radius) => {
   const diameter = 2 * radius
-  const dist = Math.floor widht / diameter) * diameter
+  const dist = Math.floor(widht / diameter) * diameter
   const extra = widht - dist
   let x = 0
   while (x < widht - extra) {
@@ -38,7 +38,7 @@ const lineOfCircles = (radius) => {
 
 const lineOfAltCircles = (radius) => {
   const diameter = 2 * radius
-  const dist = Math.floor widht / diameter) * diameter
+  const dist = Math.floor(widht / diameter) * diameter
   const extra = widht - dist
   let color = 'blue'
   let x = 0
@@ -56,7 +56,7 @@ const lineOfAltCircles = (radius) => {
 
 const fillWithCircles = (radius) => {
   const diameter = 2 * radius
-  const xdist = Math.floor widht / diameter) * diameter
+  const xdist = Math.floor(widht / diameter) * diameter
   const xextra = widht - xdist
   const ydist = Math.floor(height / diameter) * diameter
   const yextra = height - ydist
@@ -74,7 +74,7 @@ const fillWithCircles = (radius) => {
 
 const fillWithCirclesRand = (radius, probability) => {
   const diameter = 2 * radius
-  const xdist = Math.floor widht / diameter) * diameter
+  const xdist = Math.floor(widht / diameter) * diameter
   const xextra = widht - xdist
   const ydist = Math.floor(height / diameter) * diameter
   const yextra = height - ydist
@@ -96,8 +96,8 @@ const fillWithCirclesRand = (radius, probability) => {
 //fillWithCirclesRand (23, 0.2);
 
 const concentricCircles = (amountCircles) => {
-  drawFilledCircle widht / 2, height / 2, widht / 2, 'blue')
-  const radiuses =  widht / 2) / (amountCircles)
+  drawFilledCircle(widht / 2, height / 2, widht / 2, 'blue')
+  const radiuses = (widht / 2) / (amountCircles)
   let p = 0
   let color = 'red'
   let x = 0
@@ -107,7 +107,7 @@ const concentricCircles = (amountCircles) => {
     } else {
       color = 'red'
     }
-    drawFilledCircle widht / 2, height / 2, widht / 2 - p, color)
+    drawFilledCircle(widht / 2, height / 2, widht / 2 - p, color)
     p += radiuses
   }
 }
