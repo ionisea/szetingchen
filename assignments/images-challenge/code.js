@@ -111,7 +111,7 @@ const concentricCircles = (amountCircles) => {
     p += radiuses
   }
 }
-concentricCircles (13);
+//concentricCircles (13);
 
 const checkerboard = (n) => {
   const squareSide = width / n;
@@ -125,4 +125,4 @@ const checkerboard = (n) => {
     startpos += squareSide
   }
 }
-//checkerboard(9);
+checkerboard(9);
