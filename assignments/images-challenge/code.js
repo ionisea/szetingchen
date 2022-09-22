@@ -122,7 +122,11 @@ const checkerboard = (n) => {
     for (let x = startpos; x < width; x += 2 * squareSide) {
       drawFilledRect(x + 0, y + heightextra, squareSide, squareSide, 'blue')
     }
-    startpos += squareSide
+    if (startpos == 0) {
+      startpos += squareSide
+    } else {
+      startpos -= squareSide
+    }
   }
 }
 checkerboard(78);
