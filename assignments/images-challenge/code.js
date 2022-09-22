@@ -130,7 +130,11 @@ const checkerboard = (n) => {
       drawFilledRect(x1 + 0, y + heightextra, squareSide, squareSide, 'blue')
       x1 += 2 * squareSide
     }
-    startpos += squareSide
+    if (startpos > 0) {
+      startpos - squareSide
+    } else {
+      startpos + squareSide
+    }
     y += squareSide
   }
 }
