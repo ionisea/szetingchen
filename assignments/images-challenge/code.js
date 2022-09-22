@@ -129,5 +129,4 @@ const checkerboard = (n) => {
     }
   }
 }
-checkerboard(20);
- ;
+//checkerboard(20);
