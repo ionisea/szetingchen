@@ -125,4 +125,4 @@ const checkerboard = (n) => {
     startpos += squareSide
   }
 }
-checkerboard(34);
+checkerboard(3100);
