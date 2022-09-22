@@ -132,6 +132,7 @@ const checkerboard = (n) => {
     }
     startpos += squareSide
     y += squareSide
+    startpos -= squareSide
   }
 }
 checkerboard(9);
