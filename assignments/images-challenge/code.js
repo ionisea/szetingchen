@@ -131,9 +131,10 @@ const checkerboard = (n) => {
 }
 //checkerboard(20);
 
-notReallyCurved = (lines) => {
+const notReallyCurved = (lines) => {
   const draw = width/lines
   for (let i = 0; i < width; i += draw) {
     drawLine (width, height-(height-width)/2, 0, i)
   }
 }
+notReallyCurved (10);
