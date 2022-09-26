@@ -136,7 +136,7 @@ const checkerboard = (n) => {
     const widthextra = (width - height) / 2
     drawFilledRect(widthextra, 0, height, height, 'red')
     let startpos = 0
-    for (let x = 0; x < height - squareSide / (squareSide + 1); y += squareSide) {
+    for (let x = 0; x < height - squareSide / (squareSide + 1); x += squareSide) {
       for (let y = startpos; y < height; y += 2 * squareSide) {
         drawFilledRect(x + widthextra, y, squareSide, squareSide, 'blue')
       }
