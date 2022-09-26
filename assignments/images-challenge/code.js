@@ -125,6 +125,7 @@ const concentricCircles = (amountCircles) => {
       }
       drawFilledCircle(width / 2, height / 2, width / 2 - p, color)
       p += radiuses
+    }
   }
 }
 concentricCircles(13);
