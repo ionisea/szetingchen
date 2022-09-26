@@ -93,7 +93,7 @@ const fillWithCirclesRand = (radius, probability) => {
     y += diameter
   }
 }
-//fillWithCirclesRand (23, 0.2);
+fillWithCirclesRand (23, 0.2);
 
 const concentricCircles = (amountCircles) => {
   drawFilledCircle(width / 2, height / 2, width / 2, 'blue')
@@ -129,7 +129,7 @@ const checkerboard = (n) => {
     }
   }
 }
-checkerboard(8);
+//checkerboard(8);
 
 const notReallyCurved = (lines) => {
   const draw = width/lines
