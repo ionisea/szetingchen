@@ -128,7 +128,7 @@ const concentricCircles = (amountCircles) => {
     }
   }
 }
-concentricCircles(13);
+//concentricCircles(13);
 
 const checkerboard = (n) => {
   if (height <= width) {
@@ -163,7 +163,7 @@ const checkerboard = (n) => {
     }
   }
 }
-//checkerboard(8);
+checkerboard(8);
 
 const notReallyCurved = (lines) => {
   const draw = width / lines
