@@ -163,7 +163,7 @@ const checkerboard = (n) => {
     }
   }
 }
-checkerboard(11);
+checkerboard(110);
 
 const notReallyCurved = (lines) => {
   const draw = width / lines
