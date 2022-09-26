@@ -96,31 +96,47 @@ const fillWithCirclesRand = (radius, probability) => {
 //fillWithCirclesRand (23, 0.2);
 
 const concentricCircles = (amountCircles) => {
-  drawFilledCircle(width / 2, height / 2, height / 2, 'blue')
-  const radiuses = (height / 2) / (amountCircles)
-  let p = 0
-  let color = 'red'
-  let x = 0
-  while (x < height / 2) {
-    if (color === 'red') {
-      color = 'blue'
-    } else {
-      color = 'red'
+  if (height <= width) {
+    drawFilledCircle(width / 2, height / 2, height / 2, 'blue')
+    const radiuses = (height / 2) / (amountCircles)
+    let p = 0
+    let color = 'red'
+    let x = 0
+    while (x < height / 2) {
+      if (color === 'red') {
+        color = 'blue'
+      } else {
+        color = 'red'
+      }
+      drawFilledCircle(width / 2, height / 2, height / 2 - p, color)
+      p += radiuses
     }
-    drawFilledCircle(width / 2, height / 2, height / 2 - p, color)
-    p += radiuses
+  } else {
+    drawFilledCircle(width / 2, height / 2, width / 2, 'blue')
+    const radiuses = (width / 2) / (amountCircles)
+    let p = 0
+    let color = 'red'
+    let x = 0
+    while (x < width / 2) {
+      if (color === 'red') {
+        color = 'blue'
+      } else {
+        color = 'red'
+      }
+      drawFilledCircle(width / 2, height / 2, width / 2 - p, color)
+      p += radiuses
   }
 }
-concentricCircles (13);
+concentricCircles(13);
 
 const checkerboard = (n) => {
   const squareSide = width / n;
   const heightextra = (height - width) / 2
   drawFilledRect(0, heightextra + 0, width, width, 'red')
   let startpos = 0
-  for (let y = 0; y < width-squareSide/(squareSide+1); y += squareSide) {
+  for (let y = 0; y < width - squareSide / (squareSide + 1); y += squareSide) {
     for (let x = startpos; x < width; x += 2 * squareSide) {
-      drawFilledRect(x , y + heightextra, squareSide, squareSide, 'blue')
+      drawFilledRect(x, y + heightextra, squareSide, squareSide, 'blue')
     }
     if (startpos == 0) {
       startpos += squareSide
@@ -132,9 +148,9 @@ const checkerboard = (n) => {
 //checkerboard(8);
 
 const notReallyCurved = (lines) => {
-  const draw = width/lines
-  for (let i = (height-width)/2; i < width; i += draw) {
-    drawLine (width, height-(height-width)/2, 0, i-draw)
+  const draw = width / lines
+  for (let i = (height - width) / 2; i < width; i += draw) {
+    drawLine(width, height - (height - width) / 2, 0, i - draw)
   }
 }
 //notReallyCurved (20);
