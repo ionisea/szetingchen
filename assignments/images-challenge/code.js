@@ -34,7 +34,7 @@ const lineOfCircles = (radius) => {
     x += diameter
   }
 }
-//lineOfCircles (23);
+lineOfCircles (23);
 
 const lineOfAltCircles = (radius) => {
   const diameter = 2 * radius
@@ -93,7 +93,7 @@ const fillWithCirclesRand = (radius, probability) => {
     y += diameter
   }
 }
-fillWithCirclesRand (23, 0.2);
+//fillWithCirclesRand (23, 0.2);
 
 const concentricCircles = (amountCircles) => {
   drawFilledCircle(width / 2, height / 2, width / 2, 'blue')
