@@ -114,12 +114,12 @@ const concentricCircles = (amountCircles) => {
 //concentricCircles (13);
 
 const checkerboard = (n) => {
-  const squareSide = width / n;
-  const heightextra = (height - width) / 2
-  drawFilledRect(0, heightextra + 0, width, width, 'red')
+  const squareSide = height / n;
+  const heightextra = (width - height) / 2
+  drawFilledRect(0, heightextra + 0, height, height, 'red')
   let startpos = 0
-  for (let y = 0; y < width-squareSide/(squareSide+1); y += squareSide) {
-    for (let x = startpos; x < width; x += 2 * squareSide) {
+  for (let y = 0; y < height-squareSide/(squareSide+1); y += squareSide) {
+    for (let x = startpos; x < height; x += 2 * squareSide) {
       drawFilledRect(x , y + heightextra, squareSide, squareSide, 'blue')
     }
     if (startpos == 0) {
