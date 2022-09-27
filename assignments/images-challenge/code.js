@@ -163,8 +163,8 @@ const checkerboard = (n) => {
     }
   }
 }
-checkerboard(110);
+checkerboard(10);
 
 const notReallyCurved = (lines) => {
-  
+
 }
