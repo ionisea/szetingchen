@@ -101,8 +101,7 @@ const concentricCircles = (amountCircles) => {
     const radiuses = (height / 2) / (amountCircles)
     let p = 0
     let color = 'red'
-    let x = 0
-    while (x < height / 2) {
+    while (p < height / 2) {
       if (color === 'red') {
         color = 'blue'
       } else {
@@ -116,8 +115,7 @@ const concentricCircles = (amountCircles) => {
     const radiuses = (width / 2) / (amountCircles)
     let p = 0
     let color = 'red'
-    let x = 0
-    while (x < width / 2) {
+    while (p < width / 2) {
       if (color === 'red') {
         color = 'blue'
       } else {
@@ -128,7 +126,7 @@ const concentricCircles = (amountCircles) => {
     }
   }
 }
-//concentricCircles(13);
+concentricCircles(13);
 
 const checkerboard = (n) => {
   if (height <= width) {
@@ -170,4 +168,4 @@ const notReallyCurved = (lines) => {
     drawLine(0, height - (position * (height / lines)), height - (position * (height / lines)), height, 0)
   }
 }
-notReallyCurved(50);
+//notReallyCurved(50);
