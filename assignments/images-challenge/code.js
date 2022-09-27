@@ -172,4 +172,4 @@ const notReallyCurved = (lines) => {
     }
   }
 }
-notReallyCurved (5);
+notReallyCurved (10);
