@@ -168,7 +168,7 @@ const checkerboard = (n) => {
 const notReallyCurved = (lines) => {
   if (height <= width) {
     for (let position = 0; position != lines; position++) {
-      drawLine(0, height - (position * (height/lines)), position * (height/lines)-height, height)
+      drawLine(0, height - (position * (height/lines)), position * (height/lines), height)
     }
   }
 }
