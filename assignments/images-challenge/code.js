@@ -134,4 +134,4 @@ const notReallyCurved = (lines) => {
     drawLine(0, height - (position * (height / lines)), height - (position * (height / lines)), height, 0)
   }
 }
-notReallyCurved(50);
+notReallyCurved(25);
