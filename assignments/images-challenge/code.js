@@ -73,11 +73,11 @@ const concentricCircles = (amountCircles) => {
   let flipValue1;
   let flipValue2;
   if (width >= height) {
-    flipValue1 = width
-    flipValue2 = height
-  } else {
     flipValue1 = height
     flipValue2 = width
+  } else {
+    flipValue1 = width
+    flipValue2 = height
   }
   drawFilledCircle(width / 2, height / 2, flipValue1 / 2, 'blue')
   const radiuses = (flipValue1 / 2) / (amountCircles)
