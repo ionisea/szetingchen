@@ -70,34 +70,25 @@ const fillWithCirclesRand = (radius, probability) => {
 //fillWithCirclesRand (23, 0.2);
 
 const concentricCircles = (amountCircles) => {
-  if (height <= width) {
-    drawFilledCircle(width / 2, height / 2, height / 2, 'blue')
-    const radiuses = (height / 2) / (amountCircles)
-    let p = 0
-    let color = 'red'
-    while (p < height / 2) {
-      if (color === 'red') {
-        color = 'blue'
-      } else {
-        color = 'red'
-      }
-      drawFilledCircle(width / 2, height / 2, height / 2 - p, color)
-      p += radiuses
-    }
+  if (width >= height) {
+    var flipValue1 = height
+    var flipValue2 = width
   } else {
-    drawFilledCircle(width / 2, height / 2, width / 2, 'blue')
-    const radiuses = (width / 2) / (amountCircles)
-    let p = 0
-    let color = 'red'
-    while (p < width / 2) {
-      if (color === 'red') {
-        color = 'blue'
-      } else {
-        color = 'red'
-      }
-      drawFilledCircle(width / 2, height / 2, width / 2 - p, color)
-      p += radiuses
+    var flipValue1 = width
+    var flipValue2 = height
+  }
+  drawFilledCircle(width / 2, height / 2, flipValue1 / 2, 'blue')
+  const radiuses = (flipValue1 / 2) / (amountCircles)
+  let p = 0
+  let color = 'red'
+  while (p < flipValue1 / 2) {
+    if (color === 'red') {
+      color = 'blue'
+    } else {
+      color = 'red'
     }
+    drawFilledCircle(width / 2, height / 2, flipValue2 / 2 - p, color)
+    p += radiuses
   }
 }
 concentricCircles(13);
