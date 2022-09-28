@@ -71,11 +71,11 @@ const fillWithCirclesRand = (radius, probability) => {
 
 const concentricCircles = (amountCircles) => {
   if (width >= height) {
-    var flipValue1 = height
-    var flipValue2 = width
+    let flipValue1 = height
+    let flipValue2 = width
   } else {
-    var flipValue1 = width
-    var flipValue2 = height
+    let flipValue1 = width
+    let flipValue2 = height
   }
   drawFilledCircle(width / 2, height / 2, flipValue1 / 2, 'blue')
   const radiuses = (flipValue1 / 2) / (amountCircles)
@@ -91,7 +91,7 @@ const concentricCircles = (amountCircles) => {
     p += radiuses
   }
 }
-concentricCircles(13);
+//concentricCircles(13);
 //I'm thinking of a solution to the if/else massive loop problem, so I'll leave this as is for now
 
 const checkerboard = (n) => {
@@ -134,4 +134,4 @@ const notReallyCurved = (lines) => {
     drawLine(0, height - (position * (height / lines)), height - (position * (height / lines)), height, 0)
   }
 }
-//notReallyCurved(50);
+notReallyCurved(50);
