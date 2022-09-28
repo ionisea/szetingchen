@@ -89,7 +89,7 @@ const concentricCircles = (amountCircles) => {
     } else {
       color = 'red'
     }
-    drawFilledCircle(width / 2, height / 2, flipValue2 / 2 - p, color)
+    drawFilledCircle(width / 2, height / 2, flipValue1 / 2 - p, color)
     p += radiuses
   }
 }
