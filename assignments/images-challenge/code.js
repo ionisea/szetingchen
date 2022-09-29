@@ -89,12 +89,13 @@ const checkerboard = (n) => {
   const smallerValue = Math.min(width, height)
   const largerValue = Math.max(width, height)
   const squareSide = smallerValue / n
-  const extra = (largerValue - smallerValue) / 2
+  const widthExtra = (width-largerValue)/ 2
+  const heightExtra = (height-largerValue)/2
   drawFilledRect(extra, 0, smallerValue, smallerValue, 'red')
   let startpos = 0
   for (let i = 0; i < smallerValue - squareSide / (squareSide + 1); i += squareSide) {
     for (let j = startpos; j < largerValue; j += 2 * squareSide) {
-      drawFilledRect(i+extra, j, squareSide, squareSide, 'blue')
+      drawFilledRect(i+widthExtra, j+heightExtra, squareSide, squareSide, 'blue')
     }
     if (startpos == 0) {
       startpos += squareSide
