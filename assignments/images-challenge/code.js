@@ -89,13 +89,13 @@ const checkerboard = (n) => {
   const smallerValue = Math.min(width, height)
   const largerValue = Math.max(width, height)
   const squareSide = smallerValue / n
-  const widthExtra = (width-smallerValue)/ 2
-  const heightExtra = (height-smallerValue)/2
+  const widthExtra = (width - smallerValue) / 2
+  const heightExtra = (height - smallerValue) / 2
   drawFilledRect(Math.max(widthExtra, heightExtra), 0, smallerValue, smallerValue, 'black')
   let startpos = 0
   for (let i = 0; i < smallerValue - squareSide / (squareSide + 1); i += squareSide) {
     for (let j = startpos; j < largerValue; j += 2 * squareSide) {
-      drawFilledRect(i+widthExtra, j+heightExtra, squareSide, squareSide, 'white')
+      drawFilledRect(i + widthExtra, j + heightExtra, squareSide, squareSide, 'white')
     }
     if (startpos == 0) {
       startpos += squareSide
@@ -104,11 +104,28 @@ const checkerboard = (n) => {
     }
   }
 }
-//checkerboard(8); //currently set to 
+//checkerboard(8); //currently set to a chessboard (black/white)
 
 const notReallyCurved = (lines) => {
-  for (let position = 0; position != lines+1; position++) {
+  for (let position = 0; position != lines + 1; position++) {
     drawLine(0, height - (position * (height / lines)), height - (position * (height / lines)), height, 0)
   }
 }
-notReallyCurved(25);
+//notReallyCurved(25);
+
+const squareOfCircles = (radius, color) =>{
+  const diameter = 2*radius
+  const cNum = Math.floor(height/diameter)
+  const cExtra = (height - (diameter*cNum))/2+radius
+  let xCheese;
+  for(let xPos = (width - height+cExtra)/2;xPos < width - ((width - height)- cExtra)/2-radius; xPos += diameter){
+    drawCircle(xPos, height - cExtra, radius, color)
+    drawCircle (xPos, cExtra, radius, color)
+    xCheese = xPos
+  }
+  for(let yPos = cExtra+diameter; yPos < height-cExtra; yPos += diameter){
+    drawCircle((width-height+cExtra)/2,yPos, radius, color)
+    drawCircle(xCheese, yPos, radius, color)
+  }
+}
+squareOfCircles(20, 'blue');
