@@ -70,23 +70,18 @@ const fillWithCirclesRand = (radius, probability) => {
 //fillWithCirclesRand (23, 0.2);
 
 const concentricCircles = (amountCircles) => {
-  let flipValue;
-  if (width >= height) {
-    flipValue = height
-  } else {
-    flipValue = width
-  }
-  drawFilledCircle(width / 2, height / 2, flipValue / 2, 'blue')
-  const radiuses = (flipValue / 2) / (amountCircles)
+  let largestDiameter = Math.min (width, height)
+  drawFilledCircle(width / 2, height / 2, largestDiameter / 2, 'blue')
+  const radiuses = (largestDiameter / 2) / (amountCircles)
   let p = 0
   let color = 'red'
-  while (p < flipValue / 2) {
+  while (p < largestDiameter / 2) {
     if (color === 'red') {
       color = 'blue'
     } else {
       color = 'red'
     }
-    drawFilledCircle(width / 2, height / 2, flipValue / 2 - p, color)
+    drawFilledCircle(width / 2, height / 2, largestDiameter / 2 - p, color)
     p += radiuses
   }
 }
