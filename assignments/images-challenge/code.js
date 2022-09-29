@@ -86,35 +86,20 @@ const concentricCircles = (amountCircles) => {
 //concentricCircles(13);
 
 const checkerboard = (n) => {
-  if (height <= width) {
-    const squareSide = height / n
-    const widthextra = (width - height) / 2
-    drawFilledRect(widthextra, 0, height, height, 'red')
-    let startpos = 0
-    for (let x = 0; x < height - squareSide / (squareSide + 1); x += squareSide) {
-      for (let y = startpos; y < height; y += 2 * squareSide) {
-        drawFilledRect(x + widthextra, y, squareSide, squareSide, 'blue')
-      }
-      if (startpos == 0) {
-        startpos += squareSide
-      } else {
-        startpos -= squareSide
-      }
+  const smallerValue = Math.min(width, height)
+  const largerValue = Math.max(width, height)
+  const squareSide = smallerValue / n
+  const extra = (largerValue - smallerValue) / 2
+  drawFilledRect(extra, 0, smallerValue, smallerValue, 'red')
+  let startpos = 0
+  for (let i = 0; i < smallerValue - squareSide / (squareSide + 1); i += squareSide) {
+    for (let j = startpos; j < smallerValue; j += 2 * squareSide) {
+      drawFilledRect(x + extra, y + extra, squareSide, squareSide, 'blue')
     }
-  } else {
-    const squareSide = width / n;
-    const heightextra = (height - width) / 2
-    drawFilledRect(0, heightextra + 0, width, width, 'red')
-    let startpos = 0
-    for (let y = 0; y < width - squareSide / (squareSide + 1); y += squareSide) {
-      for (let x = startpos; x < width; x += 2 * squareSide) {
-        drawFilledRect(x, y + heightextra, squareSide, squareSide, 'blue')
-      }
-      if (startpos == 0) {
-        startpos += squareSide
-      } else {
-        startpos -= squareSide
-      }
+    if (startpos == 0) {
+      startpos += squareSide
+    } else {
+      startpos -= squareSide
     }
   }
 }
