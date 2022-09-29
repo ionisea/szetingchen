@@ -171,4 +171,4 @@ const x = 0
 const y = 0 
 const maxiterations = 10000
 const zoom = 1 
-drawmandel(maxiterations, height, height, x, y, 23, 'black')
+drawmandel(maxiterations, height, height, x, y, 2, 'black')
