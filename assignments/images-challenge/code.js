@@ -130,7 +130,6 @@ const squareOfCircles = (radius, color) =>{
 }
 //squareOfCircles(20, 'blue');
 
-//thx Luke
 const z_sqr = (x,y) =>{
   return [x**2 - y**2, 2*x*y];
 }
@@ -172,3 +171,4 @@ const y = 0
 const maxiterations = 10000
 const zoom = 1 
 drawmandel(maxiterations, height, height, x, y, 2, 'black')
+//thx Luke
