@@ -70,23 +70,20 @@ const fillWithCirclesRand = (radius, probability) => {
 //fillWithCirclesRand (23, 0.2);
 
 const concentricCircles = (amountCircles) => {
-  let largestDiameter = Math.min (width, height)
+  let largestDiameter = Math.min(width, height)
   drawFilledCircle(width / 2, height / 2, largestDiameter / 2, 'blue')
   const radiuses = (largestDiameter / 2) / (amountCircles)
-  let p = 0
   let color = 'red'
-  while (p < largestDiameter / 2) {
+  for (let p = 0; p < largestDiameter / 2; p += radiuses) {
     if (color === 'red') {
       color = 'blue'
     } else {
       color = 'red'
     }
     drawFilledCircle(width / 2, height / 2, largestDiameter / 2 - p, color)
-    p += radiuses
   }
 }
 concentricCircles(13);
-//I'm thinking of a solution to the if/else massive loop problem, so I'll leave this as is for now
 
 const checkerboard = (n) => {
   if (height <= width) {
