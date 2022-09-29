@@ -94,7 +94,7 @@ const checkerboard = (n) => {
   let startpos = 0
   for (let i = 0; i < smallerValue - squareSide / (squareSide + 1); i += squareSide) {
     for (let j = startpos; j < smallerValue; j += 2 * squareSide) {
-      drawFilledRect(x + extra, y + extra, squareSide, squareSide, 'blue')
+      drawFilledRect(i + extra, j + extra, squareSide, squareSide, 'blue')
     }
     if (startpos == 0) {
       startpos += squareSide
