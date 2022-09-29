@@ -104,7 +104,7 @@ const checkerboard = (n) => {
     }
   }
 }
-checkerboard(9);
+checkerboard(70);
 
 const notReallyCurved = (lines) => {
   for (let position = 0; position != lines + 1; position++) {
