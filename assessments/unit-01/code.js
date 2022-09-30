@@ -92,3 +92,7 @@ const yesIfEven = (num) => {
     return 'yes'
   }
 }
+
+const countXs = (s) => {
+  return s.search([/x/])
+}
