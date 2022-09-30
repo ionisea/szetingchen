@@ -104,15 +104,16 @@ const checkerboard = (n) => {
     }
   }
 }
-checkerboard(8); //currently set to a chessboard (black/white)
+//checkerboard(8); //currently set to a chessboard (black/white)
 
 const notReallyCurved = (lines) => {
   for (let position = 0; position != lines + 1; position++) {
     drawLine(0, height - (position * (height / lines)), height - (position * (height / lines)), height, 0)
   }
 }
-//notReallyCurved(25);
+notReallyCurved(25);
 
+//ignore anything past this, squareOfCircles is Ion's code, and drawmandel is Luke's code
 const squareOfCircles = (radius, color) =>{
   const diameter = 2*radius
   const cNum = Math.floor(height/diameter)
