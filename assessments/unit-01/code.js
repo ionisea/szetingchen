@@ -50,9 +50,13 @@ const getsSpeedingTicket = (mph, isCopGrouchy) => {
 }
 
 const moreThanTwiceAsLong = (a, b) => {
-  if (a.length(a) > 2*b.length(b)) {
+  if (a.length > 2*b.length) {
     return true
   } else {
     return false
   }
+}
+
+const aFartherThanB = (a, b, c) => {
+
 }
