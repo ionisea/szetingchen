@@ -77,7 +77,7 @@ const upDown = (s) => {
   return (s.toUpperCase() + s.toLowerCase())
 }
 
-const everyOther (s) => {
+const everyOther = (s) => {
   return s
 }
 
