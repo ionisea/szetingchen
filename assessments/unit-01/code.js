@@ -96,3 +96,15 @@ const yesIfEven = (num) => {
 const countXs = (s) => {
   return s.search([/x/])
 }
+
+const timesTable = (num) => {
+  return num
+}
+
+const containsX = (s) => {
+  if (s.search([/x/]) >= 0) {
+    return doesContainX
+  } else {
+    return doesNotContainX
+  }
+}
