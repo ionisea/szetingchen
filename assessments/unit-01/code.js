@@ -8,4 +8,4 @@ const emit = (a, b, product) => {
 const averageWeight = (totalWeight, numItems) => {
   return (totalWeight/numItems)
 }
-averageWeight (1000, 50)
+averageWeight (1000, 20)
