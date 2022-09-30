@@ -84,3 +84,11 @@ const everyOther = (s) => {
 const upDownLastCharacter = (s) => {
   return s[s.length-1].toUpperCase()+s[s.length-1]
 }
+
+const yesIfEven = (num) => {
+  if (num/2 > Math.floor(num/2)) {
+    return false
+  } else {
+    return true
+  }
+}
