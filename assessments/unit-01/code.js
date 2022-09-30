@@ -16,3 +16,7 @@ const hypotenuse = (a, b) => {
 const maxRadius = (widthOfArea, heightOfArea) => {
   return (Math.min (widthOfArea, heightOfArea))/2
 }
+
+const numCircles = (radius, widthOfArea) => {
+  return Math.floor (widthOfArea/radius)
+}
