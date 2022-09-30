@@ -28,3 +28,7 @@ const offset = (widthOfArea, widthOfFigure) => {
 const canSleepIn = (isWeekday, onVacation) => {
   return !isWeekday || onVacation
 }
+
+const canGoToProm = (isASenior, invitedBySenior, onExclusionList) => {
+  return isASenior || invitedBySenior &&! onExclusionList
+}
