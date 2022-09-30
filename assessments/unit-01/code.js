@@ -87,8 +87,8 @@ const upDownLastCharacter = (s) => {
 
 const yesIfEven = (num) => {
   if (num/2 > Math.floor(num/2)) {
-    return false
+    return 'no'
   } else {
-    return true
+    return 'yes'
   }
 }
