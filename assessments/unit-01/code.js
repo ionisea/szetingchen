@@ -10,5 +10,5 @@ const averageWeight = (totalWeight, numItems) => {
 }
 
 const hypotenuse = (a, b) => {
-  return Math.sqrt (a**2 + b**2)
+  return Math.sqrt(a**2 + b**2)
 }
