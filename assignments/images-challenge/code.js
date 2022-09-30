@@ -104,7 +104,7 @@ const checkerboard = (n) => {
     }
   }
 }
-//checkerboard(8); //currently set to a chessboard (black/white)
+checkerboard(8); //currently set to a chessboard (black/white)
 
 const notReallyCurved = (lines) => {
   for (let position = 0; position != lines + 1; position++) {
