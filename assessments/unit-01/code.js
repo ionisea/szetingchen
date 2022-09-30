@@ -103,8 +103,8 @@ const timesTable = (num) => {
 
 const containsX = (s) => {
   if (s.search([/aeiou/]) >= 0) {
-    return doesContainX
+    return 'doesContainX'
   } else {
-    return doesNotContainX
+    return 'doesNotContainX'
   }
 }
