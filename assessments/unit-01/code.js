@@ -25,3 +25,6 @@ const offset = (widthOfArea, widthOfFigure) => {
   return (widthOfArea-((Math.floor(widthOfArea/widthOfFigure))*widthOfFigure))/2
 }
 
+const canSleepIn = (isWeekday, onVacation) => {
+  return !isWeekday || onVacation
+}
