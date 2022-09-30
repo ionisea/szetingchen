@@ -33,4 +33,18 @@ const canGoToProm = (isASenior, invitedBySenior, onExclusionList) => {
   return isASenior || invitedBySenior &&! onExclusionList
 }
 
-const 
+const getsSpeedingTicket = (mph, isCopGrouchy) => {
+  if (isCopGrouchy === true) {
+    if (mph > 70) {
+      return true
+    } else {
+      return false
+    }
+  } else {
+    if (mph > 65) {
+      return true
+    } else {
+      return false
+    }
+  }
+}
