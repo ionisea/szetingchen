@@ -57,6 +57,6 @@ const moreThanTwiceAsLong = (a, b) => {
   }
 }
 
-const test = ('a') => {
-  return a.length()
+const test = (a) => {
+  return a.length('foobar')
 }
