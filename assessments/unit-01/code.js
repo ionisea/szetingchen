@@ -24,3 +24,4 @@ const numCircles = (radius, widthOfArea) => {
 const offset = (widthOfArea, widthOfFigure) => {
   return (widthOfArea-((Math.floor(widthOfArea/widthOfFigure))*widthOfFigure))/2
 }
+
