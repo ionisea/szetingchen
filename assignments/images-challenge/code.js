@@ -78,7 +78,7 @@ const concentricCircles = (amountCircles) => {
     drawFilledCircle(width / 2, height / 2, largestDiameter / 2 - p, color)
   }
 }
-concentricCircles(13);
+//concentricCircles(13);
 
 const checkerboard = (n) => {
   const smallerValue = Math.min(width, height)
@@ -92,14 +92,10 @@ const checkerboard = (n) => {
     for (let j = startpos; j < largerValue; j += 2 * squareSide) {
       drawFilledRect(i + widthExtra, j + heightExtra, squareSide, squareSide, 'white')
     }
-    if (startpos == 0) {
-      startpos += squareSide
-    } else {
-      startpos -= squareSide
-    }
+    startpos = startpos === 0 ? squareSide : 0
   }
 }
-//checkerboard(8); //currently set to a chessboard (black/white)
+checkerboard(8); //currently set to a chessboard (black/white)
 
 const notReallyCurved = (lines) => {
   const gap = height/lines
