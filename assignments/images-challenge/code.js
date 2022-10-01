@@ -56,8 +56,7 @@ const fillWithCirclesRand = (radius, probability) => {
   while (y < height - yextra) {
     let x = 0
     while (x < width - xextra) {
-      let rand = Math.random()
-      if (rand > probability) {
+      if (Math.random() > probability) {
         drawCircle(x + radius + xextra / 2, y + radius + yextra / 2, radius, 'blue')
       } else {
         drawFilledCircle(x + radius + xextra / 2, y + radius + yextra / 2, radius, 'blue')
@@ -67,7 +66,7 @@ const fillWithCirclesRand = (radius, probability) => {
     y += diameter
   }
 }
-//fillWithCirclesRand (23, 0.2);
+fillWithCirclesRand (23, 0.5);
 
 const concentricCircles = (amountCircles) => {
   let largestDiameter = Math.min(width, height)
@@ -113,7 +112,7 @@ const notReallyCurved = (lines) => {
     drawLine(0, shift, shift, height, 'black')
   }
 }
-notReallyCurved(25);
+//notReallyCurved(25);
 
 //ignore anything past this, squareOfCircles is Ion's code, and drawmandel is Luke's code
 const squareOfCircles = (radius, color) =>{
