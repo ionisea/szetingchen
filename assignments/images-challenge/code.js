@@ -22,7 +22,7 @@ const lineOfAltCircles = (radius) => {
     x += diameter
   }
 }
-lineOfAltCircles (23);
+//lineOfAltCircles (23);
 
 const fillWithCircles = (radius) => {
   const diameter = 2 * radius
@@ -118,7 +118,7 @@ const squareOfCircles = (radius, color) =>{
     drawCircle(xCheese, yPos, radius, color)
   }
 }
-//squareOfCircles(20, 'blue');
+squareOfCircles(20, 'blue');
 
 const z_sqr = (x,y) =>{
   return [x**2 - y**2, 2*x*y];
