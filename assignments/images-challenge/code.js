@@ -17,16 +17,12 @@ const lineOfAltCircles = (radius) => {
   let color = 'blue'
   let x = 0
   while (x < width - extra) {
-    if (color === 'red') {
-      color = 'blue'
-    } else {
-      color = 'red'
-    }
+    color = color === 'blue' ? 'red' : 'blue'
     drawFilledCircle(x + radius + extra / 2, height / 2, radius, color)
     x += diameter
   }
 }
-//lineOfAltCircles (23);
+lineOfAltCircles (23);
 
 const fillWithCircles = (radius) => {
   const diameter = 2 * radius
@@ -95,7 +91,7 @@ const checkerboard = (n) => {
     startpos = startpos === 0 ? squareSide : 0
   }
 }
-checkerboard(8); //currently set to a chessboard (black/white)
+//checkerboard(8); //currently set to a chessboard (black/white)
 
 const notReallyCurved = (lines) => {
   const gap = height/lines
