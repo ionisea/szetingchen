@@ -66,7 +66,7 @@ const fillWithCirclesRand = (radius, probability) => {
     y += diameter
   }
 }
-fillWithCirclesRand (23, 0.5);
+//fillWithCirclesRand (23, 0.5);
 
 const concentricCircles = (amountCircles) => {
   let largestDiameter = Math.min(width, height)
@@ -74,15 +74,11 @@ const concentricCircles = (amountCircles) => {
   const radiuses = (largestDiameter / 2) / (amountCircles)
   let color = 'red'
   for (let p = 0; p < largestDiameter / 2; p += radiuses) {
-    if (color === 'red') {
-      color = 'blue'
-    } else {
-      color = 'red'
-    }
+    color = color === 'red' ? 'blue' : 'red'
     drawFilledCircle(width / 2, height / 2, largestDiameter / 2 - p, color)
   }
 }
-//concentricCircles(13);
+concentricCircles(13);
 
 const checkerboard = (n) => {
   const smallerValue = Math.min(width, height)
