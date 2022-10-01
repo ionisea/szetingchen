@@ -107,8 +107,10 @@ const checkerboard = (n) => {
 //checkerboard(8); //currently set to a chessboard (black/white)
 
 const notReallyCurved = (lines) => {
-  for (let position = 0; position != lines + 1; position++) {
-    drawLine(0, height - (position * (height / lines)), height - (position * (height / lines)), height, 0)
+  const gap = height/lines
+  for (let p = 0; p != lines + 1; p++) {
+    const shift = height - p * gap
+    drawLine(0, shift, shift, height, 'black')
   }
 }
 notReallyCurved(25);
