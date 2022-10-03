@@ -74,7 +74,7 @@ const concentricCircles = (amountCircles) => {
     drawFilledCircle(width / 2, height / 2, largestDiameter / 2 - p, color)
   }
 }
-//concentricCircles(13);
+concentricCircles(13);
 
 const checkerboard = (n) => {
   const smallerValue = Math.min(width, height)
@@ -118,7 +118,7 @@ const squareOfCircles = (radius, color) =>{
     drawCircle(xCheese, yPos, radius, color)
   }
 }
-squareOfCircles(20, 'blue');
+//squareOfCircles(20, 'blue');
 
 const z_sqr = (x,y) =>{
   return [x**2 - y**2, 2*x*y];
