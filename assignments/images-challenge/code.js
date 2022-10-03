@@ -107,15 +107,15 @@ const squareOfCircles = (radius, color) => {
   let xCheese;
   for (let xPos = (width - height + cExtra) / 2; xPos < width - ((width - height) - cExtra) / 2 - radius; xPos += diameter) {
     drawCircle(xPos + cExtra / 2, height - cExtra, radius, color)
-    drawCircle(xPos + cExtra/2, cExtra, radius, color)
+    drawCircle(xPos + cExtra / 2, cExtra, radius, color)
     xCheese = xPos
   }
   for (let yPos = cExtra + diameter; yPos < height - cExtra; yPos += diameter) {
     drawCircle((width - height + 2 * cExtra) / 2, yPos, radius, color)
-    drawCircle(xCheese+ cExtra/2, yPos, radius, color)
+    drawCircle(xCheese + cExtra / 2, yPos, radius, color)
   }
 }
-squareOfCircles(20, 'blue');
+squareOfCircles(45, 'blue');
 
 const z_sqr = (x, y) => {
   return [x ** 2 - y ** 2, 2 * x * y];
