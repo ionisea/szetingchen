@@ -20,7 +20,7 @@ const lineOfAltCircles = (radius) => {
     drawFilledCircle(x + radius + extra / 2, height / 2, radius, color)
   }
 }
-lineOfAltCircles (23);
+//lineOfAltCircles (23);
 
 const fillWithCircles = (radius) => {
   const diameter = 2 * radius
@@ -100,7 +100,6 @@ const notReallyCurved = (lines) => {
 }
 //notReallyCurved(25);
 
-//ignore anything past this, squareOfCircles is Ion's code, and drawmandel is Luke's code
 const squareOfCircles = (radius, color) =>{
   const diameter = 2*radius
   const cNum = Math.floor(height/diameter)
@@ -116,7 +115,7 @@ const squareOfCircles = (radius, color) =>{
     drawCircle(xCheese, yPos, radius, color)
   }
 }
-//squareOfCircles(20, 'blue');
+squareOfCircles(20, 'blue');
 
 const z_sqr = (x,y) =>{
   return [x**2 - y**2, 2*x*y];
