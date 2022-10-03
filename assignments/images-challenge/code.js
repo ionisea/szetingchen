@@ -103,7 +103,7 @@ const notReallyCurved = (lines) => {
 const squareOfCircles = (radius, color) =>{
   const diameter = 2*radius
   const cNum = Math.floor(height/diameter)
-  const cExtra = (height - (diameter*cNum))/2+radius
+  const cExtra = (height - (diameter*cNum))/radius
   let xCheese;
   for(let xPos = (width - height+cExtra)/2;xPos < width - ((width - height)- cExtra)/2-radius; xPos += diameter){
     drawCircle(xPos, height - cExtra, radius, color)
