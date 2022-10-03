@@ -92,7 +92,7 @@ const checkerboard = (n) => {
 //checkerboard(8); //currently set to a chessboard (black/white)
 
 const notReallyCurved = (lines) => {
-  const gap = height/lines
+  const gap = height / lines
   for (let p = 0; p != lines + 1; p++) {
     const shift = height - p * gap
     drawLine(0, shift, shift, height, 'black')
@@ -100,62 +100,62 @@ const notReallyCurved = (lines) => {
 }
 //notReallyCurved(25);
 
-const squareOfCircles = (radius, color) =>{
-  const diameter = 2*radius
-  const cNum = Math.floor(height/diameter)
-  const cExtra = (height - (diameter*cNum))/2+radius
+const squareOfCircles = (radius, color) => {
+  const diameter = 2 * radius
+  const cNum = Math.floor(height / diameter)
+  const cExtra = (height - Math.floor(diameter * cNum)) / 2 + radius
   let xCheese;
-  for(let xPos = (width - height+cExtra)/2;xPos < width - ((width - height)- cExtra)/2-radius; xPos += diameter){
+  for (let xPos = (width - height + cExtra) / 2; xPos < width - ((width - height) - cExtra) / 2 - radius; xPos += diameter) {
     drawCircle(xPos, height - cExtra, radius, color)
-    drawCircle (xPos, cExtra, radius, color)
+    drawCircle(xPos, cExtra, radius, color)
     xCheese = xPos
   }
-  for(let yPos = cExtra+diameter; yPos < height-cExtra; yPos += diameter){
-    drawCircle((width-height+cExtra)/2,yPos, radius, color)
+  for (let yPos = cExtra + diameter; yPos < height - cExtra; yPos += diameter) {
+    drawCircle((width - height + cExtra) / 2, yPos, radius, color)
     drawCircle(xCheese, yPos, radius, color)
   }
 }
 squareOfCircles(20, 'blue');
 
-const z_sqr = (x,y) =>{
-  return [x**2 - y**2, 2*x*y];
+const z_sqr = (x, y) => {
+  return [x ** 2 - y ** 2, 2 * x * y];
 }
-const f = (z, c) =>{
+const f = (z, c) => {
   return [z_sqr(z[0], z[1])[0] + c[0], z_sqr(z[0], z[1])[1] + c[1]]
 }
-const isPixelInSet = (c, iterations) =>{
-  let z=[0,0]
-  let i=0 
-  for(i; i<iterations; i++){
-    z=f(z, c);
-    if(!isFinite(z[0])||!isFinite(z[1])){
-    return i
+const isPixelInSet = (c, iterations) => {
+  let z = [0, 0]
+  let i = 0
+  for (i; i < iterations; i++) {
+    z = f(z, c);
+    if (!isFinite(z[0]) || !isFinite(z[1])) {
+      return i
     }
   }
-  if(z[0]>2||z[1]>2){
+  if (z[0] > 2 || z[1] > 2) {
     return i
   }
   return 0
 }
-const drawmandel = (iterations, bx, by, centerx, centery, zoom, c) =>{
-  const ofx=-((centerx/(width/bx))*zoom);
-  const ofy=((centery/(height/by))*zoom);
+const drawmandel = (iterations, bx, by, centerx, centery, zoom, c) => {
+  const ofx = -((centerx / (width / bx)) * zoom);
+  const ofy = ((centery / (height / by)) * zoom);
   let xm;
   let ym;
-  drawLine(by/2, 0, bx/2, by, 'black')
-  drawLine(0, by/2, bx, by/2, 'black')
-  for(let y=-ofy; y<=by-ofy; y++){
-    for(let x=-ofx; x<=bx-ofx; x++){
-      xm=(-2-(ofx/bx))/zoom+((4/zoom)/bx)*x
-      ym=(2+(ofy/by))/zoom-((4/zoom)/by)*y
+  drawLine(by / 2, 0, bx / 2, by, 'black')
+  drawLine(0, by / 2, bx, by / 2, 'black')
+  for (let y = -ofy; y <= by - ofy; y++) {
+    for (let x = -ofx; x <= bx - ofx; x++) {
+      xm = (-2 - (ofx / bx)) / zoom + ((4 / zoom) / bx) * x
+      ym = (2 + (ofy / by)) / zoom - ((4 / zoom) / by) * y
       let pixelinset = isPixelInSet([xm, ym], iterations)
-      pixelinset===0 ? drawLine(x+ofx, y+ofy, x+1+ofx, y+ofy, c) : drawLine(x+ofx, y+ofy, x+1+ofx, y+ofy, 'hsl(' + (pixelinset*2) + ', 100%, 50%)')
+      pixelinset === 0 ? drawLine(x + ofx, y + ofy, x + 1 + ofx, y + ofy, c) : drawLine(x + ofx, y + ofy, x + 1 + ofx, y + ofy, 'hsl(' + (pixelinset * 2) + ', 100%, 50%)')
     }
   }
 }
-const x = 0 
-const y = 0 
+const x = 0
+const y = 0
 const maxiterations = 10000
-const zoom = 1 
+const zoom = 1
 //drawmandel(maxiterations, height, height, x, y, 2, 'black')
 //thx Luke
