@@ -15,14 +15,12 @@ const lineOfAltCircles = (radius) => {
   const dist = Math.floor(width / diameter) * diameter
   const extra = width - dist
   let color = 'blue'
-  let x = 0
-  while (x < width - extra) {
+  for (let x = 0; x < width - extra; x += diameter) {
     color = color === 'blue' ? 'red' : 'blue'
     drawFilledCircle(x + radius + extra / 2, height / 2, radius, color)
-    x += diameter
   }
 }
-//lineOfAltCircles (23);
+lineOfAltCircles (23);
 
 const fillWithCircles = (radius) => {
   const diameter = 2 * radius
@@ -74,7 +72,7 @@ const concentricCircles = (amountCircles) => {
     drawFilledCircle(width / 2, height / 2, largestDiameter / 2 - p, color)
   }
 }
-concentricCircles(13);
+//concentricCircles(13);
 
 const checkerboard = (n) => {
   const smallerValue = Math.min(width, height)
