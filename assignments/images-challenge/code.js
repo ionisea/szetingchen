@@ -102,11 +102,10 @@ const notReallyCurved = (lines) => {
 
 const squareOfCircles = (radius, color) => {
   const diameter = 2 * radius
-  const cNum = Math.floor(height / diameter)
-  const cExtra = (height - (diameter * cNum)) / 2
-  for (let xPos = (width - height + diameter) / 2; xPos < (width + height) / 2; xPos += diameter) {
-    drawCircle(xPos, height - radius - cExtra, radius, color)
-    drawCircle(xPos, radius, radius, color)
+  const heightExtra = (Math.floor(height/diameter))/2
+  for (let xPos = (width - height + diameter) / 2 + heightExtra; xPos < (width + height) / 2 +heightExtra; xPos += diameter) {
+    drawCircle(xPos, height - radius + heightExtra, radius, color)
+    drawCircle(xPos, radius + heightExtra, radius, color)
   }
   for (let yPos = 3 * radius; yPos < height - diameter; yPos += diameter) {
     drawCircle((width - height + diameter) / 2, yPos, radius, color)
