@@ -100,20 +100,20 @@ const notReallyCurved = (lines) => {
 }
 //notReallyCurved(25);
 
-const squareOfCircles = (radius, color) =>{
-  const diameter = 2*radius
-  const cNum = Math.floor(height/diameter)
-  const cExtra = (height - (diameter*cNum))/2
-  for(let xPos = (width - height)/2+cExtra+radius;xPos < width - ((width - height))/2-cExtra; xPos += diameter){
+const squareOfCircles = (radius, color) => {
+  const diameter = 2 * radius
+  const cNum = Math.floor(height / diameter)
+  const cExtra = (height - (diameter * cNum)) / 2
+  for (let xPos = (width - height) / 2 + cExtra + radius; xPos < width - ((width - height)) / 2 - cExtra; xPos += diameter) {
     drawCircle(xPos, height - cExtra - radius, radius, color)
-    drawCircle (xPos, cExtra+radius, radius, color)
+    drawCircle(xPos, cExtra + radius, radius, color)
   }
-  for(let yPos = cExtra+radius+diameter; yPos < height-cExtra-diameter; yPos += diameter){
-    drawCircle((width-height)/2+cExtra+radius,yPos, radius, color)
-    drawCircle((width-height)/2+height - cExtra - radius, yPos, radius, color)
+  for (let yPos = cExtra + radius + diameter; yPos < height - cExtra - diameter; yPos += diameter) {
+    drawCircle((width - height) / 2 + cExtra + radius, yPos, radius, color)
+    drawCircle((width - height) / 2 + height - cExtra - radius, yPos, radius, color)
   }
 }
-squareOfCircles(6,'blue');
+squareOfCircles(6, 'blue');
 
 const z_sqr = (x, y) => {
   return [x ** 2 - y ** 2, 2 * x * y];
