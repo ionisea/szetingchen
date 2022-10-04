@@ -104,13 +104,13 @@ const squareOfCircles = (radius, color) => {
   const diameter = 2 * radius
   const cNum = Math.floor(height / diameter)
   const cExtra = (height - (diameter * cNum)) / 2
-  for (let xPos = (width - height + diameter)/2 + cExtra; xPos < (width + height)/2- cExtra; xPos += diameter) {
+  for (let xPos = (width - height + diameter) / 2; xPos < (width + height) / 2; xPos += diameter) {
     drawCircle(xPos, height - radius - cExtra, radius, color)
-    drawCircle(xPos, cExtra + radius, radius, color)
+    drawCircle(xPos, radius, radius, color)
   }
-  for (let yPos = cExtra + 3*radius; yPos < height - cExtra - diameter; yPos += diameter) {
-    drawCircle((width - height + diameter)/2 + cExtra, yPos, radius, color)
-    drawCircle((width + height - diameter)/2 - cExtra, yPos, radius, color)
+  for (let yPos = 3 * radius; yPos < height - diameter; yPos += diameter) {
+    drawCircle((width - height + diameter) / 2, yPos, radius, color)
+    drawCircle((width + height - diameter) / 2, yPos, radius, color)
   }
 }
 squareOfCircles(35, 'blue');
