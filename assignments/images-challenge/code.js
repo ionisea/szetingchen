@@ -83,7 +83,7 @@ const checkerboard = (n, color1, color2) => {
   drawFilledRect(Math.max(widthExtra, heightExtra), 0, smallerValue, smallerValue, color1)
   let startpos = 0
   for (let i = 0; i < smallerValue - squareSide / (squareSide -1); i += squareSide) {
-    for (let j = startpos; j < largerValue; j += 2 * squareSide) {
+    for (let j = startpos; j < smallerValue; j += 2 * squareSide) {
       drawFilledRect(i + widthExtra, j + heightExtra, squareSide, squareSide, color2)
     }
     startpos = startpos === 0 ? squareSide : 0
