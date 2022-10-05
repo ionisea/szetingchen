@@ -112,7 +112,7 @@ const squareOfCircles = (radius, color) => {
     drawCircle((width + height - diameter) / 2 + heightExtra, yPos, radius, color)
   }
 }
-//squareOfCircles(45, 'blue');
+squareOfCircles(45, 'blue');
 
 const z_sqr = (x, y) => {
   return [x ** 2 - y ** 2, 2 * x * y];
