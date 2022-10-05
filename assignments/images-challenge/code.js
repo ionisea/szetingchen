@@ -82,7 +82,7 @@ const checkerboard = (n, color1, color2) => {
   const heightExtra = (height - smallerValue) / 2
   drawFilledRect(Math.max(widthExtra, heightExtra), 0, smallerValue, smallerValue, color1)
   let startpos = 0
-  for (let i = 0; i < smallerValue - squareSide / (squareSide -1); i += squareSide) {
+  for (let i = 0; i < smallerValue - squareSide / (squareSide - 1); i += squareSide) {
     for (let j = startpos; j < largerValue; j += 2 * squareSide) {
       drawFilledRect(i + widthExtra, j + heightExtra, squareSide, squareSide, color2)
     }
@@ -102,10 +102,10 @@ const notReallyCurved = (lines) => {
 
 const squareOfCircles = (radius, color) => {
   const diameter = 2 * radius
-  const heightExtra = (Math.floor(height/diameter))/2
-  for (let xPos = (width - height + diameter) / 2 + heightExtra; xPos < (width + height) / 2 -heightExtra; xPos += diameter) {
+  const heightExtra = (Math.floor(height / diameter)) / 2
+  for (let xPos = (width - height + diameter) / 2 + heightExtra; xPos < (width + height) / 2 - heightExtra; xPos += diameter) {
     drawCircle(xPos, height - radius - heightExtra, radius, color)
-    drawCircle(xPos, radius + heightExtra, radius, color)
+    drawCircle(xPos + diameter, radius + heightExtra, radius, color)
   }
   for (let yPos = 3 * radius + heightExtra; yPos < height - diameter + heightExtra; yPos += diameter) {
     drawCircle((width - height + diameter) / 2 - heightExtra, yPos, radius, color)
