@@ -106,7 +106,7 @@ const squareOfCircles = (radius, color) => {
     drawCircle(xPos + heightExtra, height - radius, radius, color)
     drawCircle(xPos, radius + heightExtra, radius, color)
   }
-  for (let yPos = 3 * radius + heightExtra; yPos < height - diameter+ heightExtra; yPos += diameter) {
+  for (let yPos = 3 * radius; yPos < height - diameter+ heightExtra; yPos += diameter) {
     drawCircle((width - height + diameter) / 2 - heightExtra, yPos, radius, color)
     drawCircle((width + height - diameter) / 2 + heightExtra, yPos, radius, color)
   }
@@ -145,7 +145,8 @@ const drawmandel = (iterations, bx, by, centerx, centery, zoom, c) => {
       xm = (-2 - (ofx / bx)) / zoom + ((4 / zoom) / bx) * x
       ym = (2 + (ofy / by)) / zoom - ((4 / zoom) / by) * y
       let pixelinset = isPixelInSet([xm, ym], iterations)
-      pixelinset === 0 ? drawLine(x + ofx, y + ofy, x + 1 + ofx, y + ofy, c) : drawLine(x + ofx, y + ofy, x + 1 + ofx, y + ofy, 'hsl(' + (pixelinset * 2) + ', 100%, 50%)')
+      pixelinset === 0 ? drawLine
+      (x + ofx, y + ofy, x + 1 + ofx, y + ofy, c) : drawLine(x + ofx, y + ofy, x + 1 + ofx, y + ofy, 'hsl(' + (pixelinset * 2) + ', 100%, 50%)')
     }
   }
 }
