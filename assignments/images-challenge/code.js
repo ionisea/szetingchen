@@ -76,19 +76,20 @@ const concentricCircles = (amountCircles) => {
 
 const checkerboard = (n, color1, color2) => {
   const smallerValue = Math.min(width, height)
+  const largerValue = Math.max(width, height)
   const squareSide = smallerValue / n
   const widthExtra = (width - smallerValue) / 2
   const heightExtra = (height - smallerValue) / 2
   drawFilledRect(Math.max(widthExtra, heightExtra), 0, smallerValue, smallerValue, color1)
   let startpos = 0
   for (let i = 0; i < smallerValue - squareSide / (squareSide -1); i += squareSide) {
-    for (let j = startpos; j < smallerValue; j += 2 * squareSide) {
+    for (let j = startpos; j < largerValue; j += 2 * squareSide) {
       drawFilledRect(i + widthExtra, j + heightExtra, squareSide, squareSide, color2)
     }
     startpos = startpos === 0 ? squareSide : 0
   }
 }
-//checkerboard(15, 'black', 'white'); //currently set to a chessboard (black/white)
+//checkerboard(12, 'black', 'white'); //currently set to a chessboard (black/white)
 
 const notReallyCurved = (lines) => {
   const gap = height / lines
@@ -102,13 +103,13 @@ const notReallyCurved = (lines) => {
 const squareOfCircles = (radius, color) => {
   const diameter = 2 * radius
   const heightExtra = (Math.floor(height/diameter))/2
-  for (let xPos = (width - height + diameter) / 2 + heightExtra; xPos < (width + height) / 2; xPos += diameter) {
-    drawCircle(xPos + heightExtra, height - radius, radius, color)
+  for (let xPos = (width - height + diameter) / 2 + heightExtra; xPos < (width + height) / 2 -heightExtra; xPos += diameter) {
+    drawCircle(xPos, height - radius - heightExtra, radius, color)
     drawCircle(xPos, radius + heightExtra, radius, color)
   }
-  for (let yPos = 3 * radius; yPos < height - diameter+ heightExtra; yPos += diameter) {
-    drawCircle((width - height + diameter) / 2 - heightExtra, yPos, radius, color)
-    drawCircle((width + height - diameter) / 2 + heightExtra, yPos, radius, color)
+  for (let yPos = 3 * radius + heightExtra; yPos < height - diameter + heightExtra; yPos += diameter) {
+    drawCircle((width - height + diameter) / 2 - heightExtra, yPos - heightExtra, radius, color)
+    drawCircle((width + height - diameter) / 2 + heightExtra, yPos + heightExtra, radius, color)
   }
 }
 squareOfCircles(45, 'blue');
@@ -145,8 +146,7 @@ const drawmandel = (iterations, bx, by, centerx, centery, zoom, c) => {
       xm = (-2 - (ofx / bx)) / zoom + ((4 / zoom) / bx) * x
       ym = (2 + (ofy / by)) / zoom - ((4 / zoom) / by) * y
       let pixelinset = isPixelInSet([xm, ym], iterations)
-      pixelinset === 0 ? drawLine
-      (x + ofx, y + ofy, x + 1 + ofx, y + ofy, c) : drawLine(x + ofx, y + ofy, x + 1 + ofx, y + ofy, 'hsl(' + (pixelinset * 2) + ', 100%, 50%)')
+      pixelinset === 0 ? drawLine(x + ofx, y + ofy, x + 1 + ofx, y + ofy, c) : drawLine(x + ofx, y + ofy, x + 1 + ofx, y + ofy, 'hsl(' + (pixelinset * 2) + ', 100%, 50%)')
     }
   }
 }
