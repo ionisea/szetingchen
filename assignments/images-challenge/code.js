@@ -89,7 +89,7 @@ const checkerboard = (n, color1, color2) => {
     startpos = startpos === 0 ? squareSide : 0
   }
 }
-checkerboard(12, 'black', 'white'); //currently set to a chessboard (black/white)
+checkerboard(13, 'black', 'white'); //currently set to a chessboard (black/white)
 
 const notReallyCurved = (lines) => {
   const gap = height / lines
