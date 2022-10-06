@@ -1,2 +1,2 @@
 const array1 = ['ionc', 'lukebad', 69]
-array1[0]
+const array2 = ['tic', 'tac', 'bo']
