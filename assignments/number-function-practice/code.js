@@ -26,4 +26,4 @@ const row7 = timesTable[6].map(x => x * 7)
 const row8 = timesTable[7].map(x => x * 8)
 const row9 = timesTable[8].map(x => x * 9)
 
-console.log (row5 [2])
+console.log (row5 [1])
