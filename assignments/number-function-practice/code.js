@@ -19,7 +19,7 @@ const timesTable = [
   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
 ]
 const row0 = timesTable[0].map(x => x * 0)
-const row0 = timesTable[1].map(x => x * 1)
+const row1 = timesTable[1].map(x => x * 1)
 const row2 = timesTable[2].map(x => x * 2)
 const row3 = timesTable[3].map(x => x * 3)
 const row4 = timesTable[4].map(x => x * 4)
