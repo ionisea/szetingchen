@@ -1,4 +1,6 @@
-const array1 = ['ionc', 'lukebad', 69]
-array1.push('szetingworst')
-array1[6] = 'bad'
-console.log(array1[7])
+const array1 = [
+  ['X', 'O', 'X']
+  ['O', 'X', 'O']
+  ['X', 'O', 'X']
+]
+console.log(array1[0][2])
