@@ -4,3 +4,4 @@ const array1 = [
   ['X', 'O', 'X'],
 ]
 console.log(array1[0][2])
+console.pop()
