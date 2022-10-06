@@ -113,10 +113,11 @@ const squareOfCircles = (radius, color) => {
     drawCircle((width - height) / 2 + height - cExtra - radius, yPos, radius, color)
   }
 }
-squareOfCircles(6, 'red');
+//squareOfCircles(6, 'red');
 //Yes, I know this code is way too complicated, but I'm not sure how to simplify it using math. 
 //I also just want to work on arrays now lol
 
+/*
 const z_sqr = (x, y) => {
   return [x ** 2 - y ** 2, 2 * x * y];
 }
@@ -158,4 +159,4 @@ const y = 0
 const maxiterations = 10000
 const zoom = 1
 //drawmandel(maxiterations, height, height, x, y, 2, 'black')
-//thx Luke
+*/
