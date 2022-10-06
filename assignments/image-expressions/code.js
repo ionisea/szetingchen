@@ -55,3 +55,7 @@
 // in a /* and then */ like the instruction above.)
 
 drawFilledCircle (width/2, height/2, 50, 'blue')
+drawRect (width/4, 50, width/2, 100, 'red')
+drawCircle (55, height - 50, 30, 'blue')
+drawCircle (width - 70, height -150, 30, 'blue')
+drawLine (55, height - 50, width - 70, height -150, 'black')
