@@ -17,5 +17,5 @@ const timesTable = [
   [1, 2, 3, 4, 5, 6, 7, 8, 9],
   [1, 2, 3, 4, 5, 6, 7, 8, 9],
 ]
-timesTable[1].map(x => x * 2)
-console.log (timesTable[1])
+const row2 = timesTable[1].map(x => x * 2)
+console.log (row2 [3])
