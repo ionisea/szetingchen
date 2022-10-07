@@ -80,12 +80,10 @@ const checkerboard = (n, color1, color2) => {
   const widthExtra = (width - bigSquareSide) / 2
   const heightExtra = (height - bigSquareSide) / 2
   drawFilledRect(Math.max(widthExtra, heightExtra), 0, bigSquareSide, bigSquareSide, color1)
-  let startpos = 0
-  for (let i = 0; i < bigSquareSide - squareSide / (squareSide - 1); i += squareSide) {
-    for (let j = startpos; j < bigSquareSide; j += 2 * squareSide) {
-      drawFilledRect(i + widthExtra, j + heightExtra, squareSide, squareSide, color2)
+  for (let i = 0; i < n; i++) {
+    for (let j = i % 2; j < n; j += 2) {
+      drawFilledRect(j * squareSide + widthExtra, i * squareSide + heightExtra, squareSide, squareSide, color2)
     }
-    startpos = startpos === 0 ? squareSide : 0
   }
 }
 checkerboard(8, 'black', 'white'); //currently set to a chessboard (black/white)
