@@ -47,3 +47,7 @@ const firstClassPostage = (weight) => {
 const weightOnJupiter = (weight) => {
   return weight * (JUPITER_GRAVITY/EARTH_GRAVITY)
 }
+
+const gravity = (mass1, mass2, distance) => {
+  return G*((mass1*mass2)/(distance**2))
+}
