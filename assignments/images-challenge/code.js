@@ -75,15 +75,14 @@ const concentricCircles = (amountCircles) => {
 //concentricCircles(13);
 
 const checkerboard = (n, color1, color2) => {
-  const smallerValue = Math.min(width, height)
-  const largerValue = Math.max(width, height)
-  const squareSide = smallerValue / n
-  const widthExtra = (width - smallerValue) / 2
-  const heightExtra = (height - smallerValue) / 2
-  drawFilledRect(Math.max(widthExtra, heightExtra), 0, smallerValue, smallerValue, color1)
+  const bigSquareSide = Math.min(width, height)
+  const squareSide = bigSquareSide / n
+  const widthExtra = (width - bigSquareSide) / 2
+  const heightExtra = (height - bigSquareSide) / 2
+  drawFilledRect(Math.max(widthExtra, heightExtra), 0, bigSquareSide, bigSquareSide, color1)
   let startpos = 0
-  for (let i = 0; i < smallerValue - squareSide / (squareSide - 1); i += squareSide) {
-    for (let j = startpos; j < smallerValue; j += 2 * squareSide) {
+  for (let i = 0; i < bigSquareSide - squareSide / (squareSide - 1); i += squareSide) {
+    for (let j = startpos; j < bigSquareSide; j += 2 * squareSide) {
       drawFilledRect(i + widthExtra, j + heightExtra, squareSide, squareSide, color2)
     }
     startpos = startpos === 0 ? squareSide : 0
