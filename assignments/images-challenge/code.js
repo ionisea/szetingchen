@@ -95,7 +95,7 @@ const notReallyCurved = (lines) => {
     drawLine(0, shift, shift, height, 'black')
   }
 }
-//notReallyCurved(25);
+notReallyCurved(25);
 
 const squareOfCircles = (radius, color) => {
   const diameter = 2 * radius
