@@ -1,6 +1,6 @@
 const timesTable = (row) => {
   const numbers = []
-  for (let x = 0; x < row + 1; x++) {
+  for (let x = 1; x < row; x++) {
     numbers.push (x)
   }
   for (const element of numbers) {
