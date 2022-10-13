@@ -7,4 +7,4 @@ const timesTable = (row) => {
     console.log(element)
   }
 }
-timesTable(10);
+timesTable(9);
