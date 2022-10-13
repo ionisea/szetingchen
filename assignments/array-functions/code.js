@@ -7,4 +7,4 @@ const squares = (num) => {
     console.log(element*element)
   }
 }
-squares(100);
+squares(300);
