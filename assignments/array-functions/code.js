@@ -4,7 +4,7 @@ const timesTable = (row) => {
     numbers.push (x)
   }
   for (const element of numbers) {
-    const print = numbers.map(element * row)
+    const print = numbers.map(element)
     console.log (print)
   }
 }
