@@ -3,5 +3,5 @@ const timesTable = (row) = {
   for(const element of numbers) {
     console.log(element * row)
   }
-}
+};
 timesTable (9);
