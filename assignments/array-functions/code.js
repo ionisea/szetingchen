@@ -5,7 +5,7 @@ const timesTable = (row) => {
   }
   for (const element of numbers) {
     const print = numbers.map(element * row)
-      console.log (print)
+    console.log (print)
   }
 }
 timesTable(9);
