@@ -5,4 +5,4 @@ const timesTable = (rows, columns) => {
     console.log(print)
   }
 }
-timesTable(32, 32)
+timesTable(9, 9)
