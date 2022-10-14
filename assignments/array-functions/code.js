@@ -1,10 +1,5 @@
-const squares = (num) => {
-  const numbers = []
-  for (let x = 1; x < num + 1; x++) {
-    numbers.push (x)
-  }
-  for (const element of numbers) {
-    console.log(element*element)
-  }
+const timesTable = (rows) => {
+  const numbers = Array(rows).fill().map((_, i) => i + 1)
+  console.log (numbers)
 }
-squares(300);
+timesTable (9)
