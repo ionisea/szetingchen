@@ -16,3 +16,11 @@ const countTens = (array) => {
   }
   return num
 }
+
+const sum = (array) => {
+  add = 0
+  for (const element of array) {
+    sum += element
+  }
+  return add
+}
