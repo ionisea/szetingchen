@@ -10,7 +10,9 @@ const timesTable = (rows, columns) => {
 const countTens = (array) => {
   let num = 0
   for (const element in array) {
+    if (element == 10) {
       num++
+    }
   }
   return num
 }
