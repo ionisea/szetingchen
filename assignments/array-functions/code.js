@@ -8,11 +8,11 @@ const timesTable = (rows, columns) => {
 //timesTable(9, 9)
 
 const countTens = (array) => {
+  let num = 0
   for (const element in array) {
-    let count = 0
     if (element === 10) {
-      count += 1
+      num++
     }
-    return count
+    return num
   }
 }
