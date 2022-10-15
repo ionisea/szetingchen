@@ -24,3 +24,13 @@ const sum = (array) => {
   }
   return add
 }
+
+const evens = (array) => {
+  const evenArray = []
+  for (const element of array) {
+    if (element % 2 == 0) {
+      evenArray.push(element)
+    }
+  }
+  return evenArray
+}
