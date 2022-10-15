@@ -34,3 +34,9 @@ const evens = (array) => {
   }
   return evenArray
 }
+
+const anyOverOneHundred = (array) => {
+  for (const element of array) {
+    element > 100 ? true : false
+  }
+}
