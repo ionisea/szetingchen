@@ -5,9 +5,9 @@ const timesTable = (rows, columns) => {
     console.log(print)
   }
 }
-//timesTable(9, 9)
+timesTable(9, 9)
 
-/*
+
 const countTens = (array) => {
   let num = 0
   for (const element of array) {
@@ -17,7 +17,6 @@ const countTens = (array) => {
   }
   return num
 }
-*/
 
 const sum = (array) => {
   let add = 0
@@ -56,4 +55,3 @@ const pyramid = (num) => {
   }
   return array
 }
-const countTens=(arr)=>{("CAMUL"+arr.join("CAMUL")+"CAMUL").match(/CAMUL10CAMUL/g).length}
