@@ -43,7 +43,7 @@ const anyOverOneHundred = (array) => {
       any++
     }
   }
-  return any > 0 ? true : true
+  return any > 0 ? true : false
 }
 
 const pyramid = (num) => {
