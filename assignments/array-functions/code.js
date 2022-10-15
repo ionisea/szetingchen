@@ -42,5 +42,5 @@ const anyOverOneHundred = (array) => {
       any++
     }
   }
-  any > 0 ? true : false
+  return any > 0 ? true : false
 }
