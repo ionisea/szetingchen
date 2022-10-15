@@ -20,7 +20,7 @@ const countTens = (array) => {
 const sum = (array) => {
   add = 0
   for (const element of array) {
-    sum += element
+    add += element
   }
   return add
 }
