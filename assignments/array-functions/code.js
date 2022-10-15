@@ -1,6 +1,6 @@
 const timesTable = (rows, columns) => {
-  const numbers = Array(rows).fill().map((_, i) => i + 1)
-  for (let i = 1; i <= columns; i++) {
+  const numbers = Array(columns).fill().map((_, i) => i + 1)
+  for (let i = 1; i <= rows; i++) {
     const print = numbers.map(x => x * i)
     console.log(print)
   }
