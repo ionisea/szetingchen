@@ -13,6 +13,6 @@ const countTens = (array) => {
     if (element === 10) {
       num++
     }
-    return num
   }
+  return num
 }
