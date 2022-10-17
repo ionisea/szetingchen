@@ -5,6 +5,7 @@
 // is called an anonymous function. We'll discuss this in more detail in a few
 // weeks but for now you can just adapt this code.
 
+for (let turn = 0; turn < 9; turn++) {
 registerOnclick((x, y) => {
   drawText('X', x, y, 'black', Math.min(width, height) * 0.3);
 });
@@ -12,3 +13,4 @@ registerOnclick((x, y) => {
 registerOnclick((x, y) => {
   drawText('O', x, y, 'black', Math.min(width, height) * 0.3);
 });
+}
