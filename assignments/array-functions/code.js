@@ -51,5 +51,5 @@ const pyramid = (num) => {
 }
 
 const countTens = (array) => {
-  return ("CAMUL" + array.join("CAMUL") + "CAMUL").match(/CAMUL10CAMUL/g).length
+  return ("s" + array.join("s") + "s").match(/s10s/g).length
 }
