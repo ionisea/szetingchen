@@ -7,6 +7,6 @@
 
 let player = 'X'
 registerOnclick((x, y) => {
-  drawText('X', x, y, 'black', Math.min(width, height) * 0.3);
+  drawText(player, x, y, 'black', Math.min(width, height) * 0.3);
   player = 'X' ? player = 'X' : player = 'O'
 });
