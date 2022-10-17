@@ -5,15 +5,13 @@ const timesTable = (rows, columns) => {
     console.log(print)
   }
 }
-timesTable(10, 9)
+//timesTable(10, 9)
 
 
 const countTens = (array) => {
   let num = 0
   for (const element of array) {
-    if (element == 10) {
-      num++
-    }
+    element == 10 ? num += 1 : num
   }
   return num
 }
