@@ -9,8 +9,8 @@ const min = Math.min(width, height)
 const max = Math.max(width, height)
 
 for (let lines = 0; lines < 4; lines++) {
-  drawLine (max/2 -min/2 + (lines*min/3), min, max/2 - min/2 + (lines*min/3), 0, 'black', 2)
-  drawLine (max/2 - min/2 + (lines*min/3), lines*min/3, max/2 - min/2 - (lines*min/3), lines*min/3, 'black', 2)
+  drawLine(max / 2 - min / 2 + (lines * min / 3), min, max / 2 - min / 2 + (lines * min / 3), 0, 'black', 2)
+  drawLine(max / 2 - min / 2, lines * min / 3, max / 2 - min / 2 - (lines * min / 3), lines * min / 3, 'black', 2)
 }
 
 /*
