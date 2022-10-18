@@ -7,16 +7,17 @@
 
 const min = Math.min(width, height)
 const max = Math.max(width, height)
-const ticTacToe = (start)
+
 for (let lines = 0; lines < 4; lines++) {
   drawLine(max / 2 - min / 2 + (lines * min / 3), min, max / 2 - min / 2 + (lines * min / 3), 0, 'black', 2)
   drawLine(max / 2 - min / 2, lines * min / 3, max / 2 + min / 2, lines * min / 3, 'black', 2)
 }
-
+let turns = 0
 let player = 'X'
-for (let turns = 0; turns < 9; turns++)
 registerOnclick((x, y) => {
+  if (turns < 9) {
     drawText(player, x - 25, y + 25, 'black', Math.min(width, height) * 0.3);
     player == 'X' ? player = 'O' : player = 'X'
+    turns++
   }
 });
