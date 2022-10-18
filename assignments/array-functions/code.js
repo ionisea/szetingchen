@@ -8,7 +8,7 @@ const timesTable = (rows, columns) => {
 //timesTable(10, 9)
 
 
-const count = (array) => {
+const countTens = (array) => {
   let num = 0
   for (const element of array) {
     element == 10 ? num += 1 : num
@@ -48,8 +48,4 @@ const pyramid = (num) => {
     }
   }
   return array
-}
-
-const countTens = (array) => {
-  return ("s" + array.join("s") + "s").match(/s10s/g).length
 }
