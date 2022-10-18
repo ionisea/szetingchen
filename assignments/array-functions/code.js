@@ -33,11 +33,7 @@ const evens = (array) => {
 }
 
 const anyOverOneHundred = (array) => {
-  let any = 0
-  for (const element of array) {
-    element > 100 ? any++ : any
-  }
-  return any > 0
+  return array.find (element => element > 100)
 }
 
 const pyramid = (num) => {
