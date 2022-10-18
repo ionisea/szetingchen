@@ -14,14 +14,15 @@ for (let lines = 0; lines < 4; lines++) {
 }
 
 const board = [
-  [], [], [],
-  [], [], [],
-  [], [], [],
+  [[], [], []],
+  [[], [], []],
+  [[], [], []],
 ]
 
 let turns = 0
 let player = 'X'
 registerOnclick((x, y) => {
+  let 
   if (turns < 9) {
     drawText(player, x - (min/10), y + (min/10), 'black', min * 0.3);
     player == 'X' ? player = 'O' : player = 'X'
