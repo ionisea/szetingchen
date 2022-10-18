@@ -23,7 +23,7 @@ let turns = 0
 let player = 'X'
 registerOnclick((x, y) => {
   if (turns < 9) {
-    drawText(player, x - (min/10), y + (min/10), 'black', Math.min(width, height) * 0.3);
+    drawText(player, x - (min/10), y + (min/10), 'black', min * 0.3);
     player == 'X' ? player = 'O' : player = 'X'
     turns++
   }
