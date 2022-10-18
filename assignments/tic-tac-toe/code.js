@@ -14,9 +14,9 @@ for (let lines = 0; lines < 4; lines++) {
 }
 
 let player = 'X'
-for (let turns = 0; turns < 9; turns++) {
-  registerOnclick((x, y) => {
+registerOnclick((x, y) => {
+  for (let turns = 0; turns < 9; turns++) {
     drawText(player, x - 25, y + 25, 'black', Math.min(width, height) * 0.3);
     player == 'X' ? player = 'O' : player = 'X'
-  });
-}
+  }
+});
