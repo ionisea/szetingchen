@@ -5,7 +5,7 @@ const timesTable = (rows, columns) => {
     console.log(print)
   }
 }
-//timesTable(10, 9)
+timesTable(10, 9)
 
 
 const countTens = (array) => {
