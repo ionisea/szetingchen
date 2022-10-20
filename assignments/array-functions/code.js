@@ -7,6 +7,7 @@ const timesTable = (rows, columns) => {
 }
 timesTable(10, 9)
 
+const exponents = (exponent, rows, columns)
 
 const countTens = (array) => {
   let num = 0
