@@ -19,7 +19,7 @@ const fibonacci = (num) => {
   for (let i = 0; i < num - 2; i++) {
     array.push(array[i] + array[i + 1])
   }
-  return array[num]
+  return array
 }
 
 const countTens = (array) => {
