@@ -6,7 +6,7 @@ const timesTable = (rows, columns) => {
   }
 }
 
-const exponents = (rows, columns) => {
+const exponentsTable = (rows, columns) => {
   const num = Array(columns).fill().map((_, i) => i + 1)
   for (let i = 1; i <= rows; i++) {
     const print = num.map(x => x ** i)
