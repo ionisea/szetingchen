@@ -5,9 +5,13 @@ const timesTable = (rows, columns) => {
     console.log(print)
   }
 }
-timesTable(10, 9)
 
-const exponents = (exponent, rows, columns)
+const exponents = (rows, columns) = {
+  const num = Array(columns).fill().map((_, i) => i + 1)
+  for (let i = 1; i <= rows; i++) {
+
+  }
+}
 
 const countTens = (array) => {
   let num = 0
