@@ -30,6 +30,6 @@ registerOnclick((x, y) => {
   }
 });
 
-const xPos = 0
-const yPos = 0
+const xPos = 1
+const yPos = 2
 drawText(player, max/2-min/2 - min*0.1 + (min * xPos/3)+min/6, min*0.1 + min*yPos/3 + min/6, 'black', min * 0.3)
