@@ -19,5 +19,5 @@
   "true",
   "The sum of the elements of the array.",
   "Produces a new array containing all the words in words in uppercase.",
-  "It does nothing. It gives an error because words is not defined. "
+  "It starts by creating a array named result that is empty. It then starts a loop that loops xs.length times, and each time it goes through that loop it adds an element to result. For each iteration of the loop, it adds an element of array xs to array result in reverse order, starting from the end of array xs and ending with the start. Array result now has all the elements of array xs in reverse order, which the function returns."
 ]
