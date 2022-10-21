@@ -16,12 +16,13 @@ const exponentsTable = (rows, columns) => {
 
 const fibonacci = (num) => {
   const array = [1, 1]
-  for (let i = 0; i < num - 2; i++) {
+  for (let i = 0; i < num - 1; i++) {
     array.push(array[i] + array[i + 1])
   }
   return array
 }
 //only works for num >= 2
+//to get the xth fibonacci number: fibonacci (x
 
 const countTens = (array) => {
   let num = 0
