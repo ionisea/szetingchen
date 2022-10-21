@@ -20,7 +20,7 @@ const board = [
 ]
 
 let turns = 0
-let player = 'X'
+let player = 'O'
 registerOnclick((x, y) => {
   if (turns < 9) {
     drawText(player, x - (min / 10), y + (min / 10), 'black', min * 0.3);
