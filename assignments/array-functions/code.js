@@ -22,7 +22,7 @@ const fibonacci = (num) => {
   return array
 }
 //only works for num >= 2
-//to get the xth fibonacci number: fibonacci (x
+//to get the xth fibonacci number: fibonacci(x)[x]
 
 const countTens = (array) => {
   let num = 0
