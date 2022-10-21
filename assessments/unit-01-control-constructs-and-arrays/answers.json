@@ -16,7 +16,7 @@
   "0",
   "xs[2][1]",
   "300",
-  null,
+  "true",
   "The sum of the elements of the array.",
   "Produces a new array containing all the words in words in uppercase."
 ]
