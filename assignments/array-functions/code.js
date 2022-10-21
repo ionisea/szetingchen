@@ -15,7 +15,7 @@ const exponentsTable = (rows, columns) => {
 }
 
 const fibonacci = (num) => {
-  const array = [0, 1, 1]
+  const array = [0, 1]
   for (let i = 0; i < num; i++) {
     array.push(array[i] + array[i + 1])
   }
