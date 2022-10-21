@@ -24,8 +24,8 @@ let player = 'X'
 registerOnclick((x, y) => {
   if (turns < 9) {
     drawText(player, x - (min / 10), y + (min / 10), 'black', min * 0.3)
+    turns++
     console.log('player:' + player, 'turn:' + turns, 'coords: ' + (width / x), (height / y))
     player == 'X' ? player == 'O' : player == 'X'
-    turns++
   }
 });
