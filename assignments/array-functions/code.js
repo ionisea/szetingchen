@@ -21,6 +21,7 @@ const fibonacci = (num) => {
   }
   return array
 }
+//only works for num >= 2
 
 const countTens = (array) => {
   let num = 0
