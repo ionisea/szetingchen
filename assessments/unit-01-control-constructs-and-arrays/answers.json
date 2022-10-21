@@ -19,5 +19,5 @@
   "true",
   "The sum of the elements of the array.",
   "Produces a new array containing all the words in words in uppercase.",
-  "const foo = (xs) => { (this line creates a function named foo which takes in a array xs). let result = [] (this line creates a array named result that is empty). for (let i = 0; i < xs.length; i++) { (this line is a loop that runs xs.length times). result.push(words[xs.length-i]) (this line adds words to the result array from the xs array"
+  "It does nothing. It gives an error because words is not defined. "
 ]
