@@ -18,11 +18,11 @@ const fibonacci = (num) => {
   if (num == 0) {
     return 'stop being dumb'
   } else {
-  const array = [0, 1]
-  for (let i = 0; i < num - 1; i++) {
-    array.push(array[i] + array[i + 1])
-  }
-  return array
+    const array = [0, 1]
+    for (let i = 0; i < num - 1; i++) {
+      array.push(array[i] + array[i + 1])
+    }
+    return array
   }
 }
 //to get the xth fibonacci number: fibonacci(x)[x]
