@@ -25,7 +25,7 @@ registerOnclick((x, y) => {
   if (turns < 9) {
     drawText(player, x - (min / 10), y + (min / 10), 'black', min * 0.3)
     turns++
-    console.log('player:' + player, 'turn:' + turns, 'coords: ' + Math.ceil((3*width) / (2*x)), Math.ceil((3*height) / (2*y)))
+    console.log('player:' + player, 'turn:' + turns, 'coords: ' + Math.ceil((3 * width) / (2 * x)), Math.ceil((3 * height) / (2 * y)))
     player == 'O' ? player = 'X' : player = 'O'
   }
 });
