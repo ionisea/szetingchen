@@ -41,13 +41,13 @@ const sum = (array) => {
 const evens = (array) => {
   const evenArray = []
   for (const element of array) {
-    element % 2 == 0? evenArray.push(element) : evenArray
+    element % 2 == 0 ? evenArray.push(element) : evenArray
   }
   return evenArray
 }
 
 const anyOverOneHundred = (array) => {
-  return array.find (element => element > 100) ? true : false
+  return array.find(element => element > 100) ? true : false
 }
 
 const pyramid = (num) => {
