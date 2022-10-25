@@ -22,7 +22,7 @@ registerOnclick((x, y) => {
         if (Math.random < 0.5) {
         console.log(Math.random() + 'fujk yu')
        } else {
-        console.log(-(Math.random() + 'fokin hel'))
+        console.log((Math.random() + 'fokin hel'))
        }
     } else {
       y < 1 / 3 * height ? yPos = 0 : y < 2 / 3 * height ? yPos = 1 : yPos = 2;
