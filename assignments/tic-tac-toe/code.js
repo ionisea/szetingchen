@@ -14,7 +14,7 @@ for (let editConst = 0; editConst <= 1; editConst += 1 / 3) {
 let turns = 0;
 let xPos;
 let yPos;
-let player = 'X';
+let player = '⬜';
 registerOnclick((x, y) => {
   if (turns < 9) {
     if (x < max / 2 - min / 2 || x > max / 2 + min / 2) {
@@ -26,8 +26,8 @@ registerOnclick((x, y) => {
       coordArray[yPos][xPos].push(player)
       turns++
       console.log('turn: ' + turns, 'coords: ', x, y)
-      drawText(player, max / 2 - min / 2 - min * 0.1 + min / 6 + (min * xPos / 3), min * 0.1 + min / 6 + min * yPos / 3, 'black', min * 0.3)
-      player == 'X' ? player = 'O' : player = 'X';
+      drawText(player, max / 2 - min / 2 - min * 0.15 + min / 6 + (min * xPos / 3), min * 0.11 + min / 6 + min * yPos / 3, 'black', min * 0.3)
+      player == '⬜' ? player = '⬛' : player = '⬜';
       console.log(coordArray)
     }
   }
