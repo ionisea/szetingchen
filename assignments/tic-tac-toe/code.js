@@ -1,6 +1,6 @@
 const coordArray = [
   [[], [], []],
-  [[], ['X'], []],
+  [[], [], []],
   [[], [], []],
 ]
 const max = Math.max(width, height)
