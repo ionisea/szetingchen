@@ -1,4 +1,4 @@
-drawFilledRect (0, 0, 500,600, 'rgba(115,215,255,1)')
+drawFilledRect (0, 0, width, height, 'rgba(115,215,255,1)')
 drawFilledRect (0,(2*height/3)+(height/6), width, (2*height/3), 'rgba(0, 64, 0, 1')
 let rect = 1000
 while (rect>= 2*height/3) {
