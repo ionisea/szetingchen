@@ -42,7 +42,7 @@ registerOnclick((x, y) => {
     } else if (x < max / 2 + min / 2) {
       xPos = xPosConst + 2 / 3 * min
     }
-    console.log('turn: ' + turns, 'coords: ', xPos, yPos)
+    console.log('turn: ' + turns, 'coords: ', x, y)
     drawText(player, xPos, yPos, 'black', min * 0.27);
     player == 'X' ? player = 'O' : player = 'X';
   }
