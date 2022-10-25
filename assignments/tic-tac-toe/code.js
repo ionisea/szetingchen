@@ -45,7 +45,7 @@ registerOnclick((x, y) => {
       xPos = xPosConst + 2 / 3 * min
     }
     console.log('turn: ' + turns, 'coords: ', x, y)
-    drawText(player, xPos, yPos, 'black', min * 0.33);
+    drawText(player, xPos, yPos, 'black', min * 0.3);
     player == 'X' ? player = 'O' : player = 'X';
   }
 });
