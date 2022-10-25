@@ -1,4 +1,4 @@
-drawFilledRect (0, 0, width, height, 'rgba(115,215,255,1)')
+drawFilledRect (0, 0, width, height, 'rgba(115,255,255,1)')
 const coordArray = [
   [[], [], []],
   [[], [], []],
