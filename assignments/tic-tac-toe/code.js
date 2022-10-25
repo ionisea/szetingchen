@@ -19,7 +19,7 @@ registerOnclick((x, y) => {
     if (x < max / 2 - min / 2 || x > max / 2 + min / 2) {
       return console.log('dumbass')
     }
-    if (x < max / 2 - min / 2 + min/3) {
+    if (x < max / 2 - min / 6) {
       xPos = 0
     } else if (x < max / 2 + min/ 6) {
       xPos = 1
