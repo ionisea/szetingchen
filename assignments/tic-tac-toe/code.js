@@ -25,7 +25,6 @@ let yPos;
 registerOnclick((x, y) => {
   if (turns < 9) {
     turns++
-    console.log('turn: ' + turns, 'coords: ', x, y)
     if (y < 1 / 3 * height) {
       yPos = yPosConst
     } else if (y < 2 / 3 * height) {
