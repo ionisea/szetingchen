@@ -19,6 +19,7 @@ registerOnclick((x, y) => {
     if (x < max / 2 - min / 2 || x > max / 2 + min / 2) {
       return console.log('dumbass')
     }
+    /*
     if (x < max / 2 - min / 6) {
       xPos = 0
     } else if (x < max / 2 + min/ 6) {
@@ -26,8 +27,9 @@ registerOnclick((x, y) => {
     } else if (x < max / 2 + min / 2) {
       xPos = 2
     }
+    */
     y < 1 / 3 * height ? yPos = 0 : y < 2 / 3 * height ? yPos = 1 : yPos = 2;
-    //x < max / 2 - min / 2 + 1 / 3 * min ? xPos = 0 :  x < max / 2 + min * 1 / 6
+    x < max / 2 - min /6 ? xPos = 0 :  x < max / 2 + min/ 6 ? xPos = 1 : xPos = 2
     console.log(coordArray[yPos][xPos])
     turns++
     console.log('turn: ' + turns, 'coords: ', x, y)
