@@ -21,7 +21,7 @@ registerOnclick((x, y) => {
     }
     y < 1 / 3 * height ? yPos = 0 : y < 2 / 3 * height ? yPos = 1 : yPos = 2;
     x < max / 2 - min / 6 ? xPos = 0 : x < max / 2 + min / 6 ? xPos = 1 : xPos = 2
-    if (coordArray[yPos][xPos] == '' || '[') {
+    if (coordArray[yPos][xPos] ==! 'X' || 'O') {
       coordArray[yPos][xPos].push(player)
     }
     turns++
