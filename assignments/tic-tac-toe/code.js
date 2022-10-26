@@ -20,7 +20,7 @@ registerOnclick((x, y) => {
   if (x < max / 2 - min / 2 || x > max / 2 + min / 2) {
     // this is the lag machine
     let ree = []
-    for (let i = 0; i < 250000000; i++) {
+    for (let i = 0; i < 250000; i++) {
       ree.push(Math.random)
     }
     console.log (Math.max(ree)/Math.min(ree))
