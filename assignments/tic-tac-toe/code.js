@@ -31,7 +31,7 @@ registerOnclick((x, y) => {
       pee = Math.random()
       lee > pee ? lee = pee : 1
     }
-
+    console.log(lee)
   } else {
     y < 1 / 3 * height ? yPos = 0 : y < 2 / 3 * height ? yPos = 1 : yPos = 2;
     x < max / 2 - min / 6 ? xPos = 0 : x < max / 2 + min / 6 ? xPos = 1 : xPos = 2
