@@ -19,12 +19,11 @@ let player = player1;
 registerOnclick((x, y) => {
   if (x < max / 2 - min / 2 || x > max / 2 + min / 2) {
     // this is the lag machine
-    for (let i = 0; i < 250000; i++)
-      if (Math.random() < 0.5) {
-        console.log(Math.random() + '  fujk yu')
-      } else {
-        console.log((-1) * (Math.random()) + '   fokin hel')
-      }
+    for (let i = 0; i < 250000; i++) {
+      ree = Math.random()/Math.random()
+      funny < ree ? funny = ree : 0;
+    }
+    console.log (funny)
   } else {
     y < 1 / 3 * height ? yPos = 0 : y < 2 / 3 * height ? yPos = 1 : yPos = 2;
     x < max / 2 - min / 6 ? xPos = 0 : x < max / 2 + min / 6 ? xPos = 1 : xPos = 2
