@@ -22,7 +22,7 @@ registerOnclick((x, y) => {
     let ree = 0;
     let yee = 0;
     for (let i = 0; i < 250000; i++) {
-      ree = Math.random
+      ree = Math.random()
       yee > ree ? ree = yee : 0
     }
     console.log(yee)
