@@ -21,7 +21,7 @@ registerOnclick((x, y) => {
     // this is the lag machine
     let ree = 0
     let funny = 0
-    for (let i = 0; i < 250000; i++) {
+    for (let i = 0; i < 25000000; i++) {
       ree = Math.random()/Math.random()
       funny < ree ? funny = ree : 0;
     }
