@@ -19,6 +19,8 @@ let player = player1;
 registerOnclick((x, y) => {
   if (x < max / 2 - min / 2 || x > max / 2 + min / 2) {
     // this is the lag machine
+    let ree = 0
+    let funny = 0
     for (let i = 0; i < 250000; i++) {
       ree = Math.random()/Math.random()
       funny < ree ? funny = ree : 0;
