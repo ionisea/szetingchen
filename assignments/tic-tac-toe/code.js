@@ -1,3 +1,6 @@
+const player1 = '⬜'
+const player2 = '⬛'
+
 drawFilledRect(0, 0, width, height, 'rgba(115,175,255,1)')
 const coordArray = [
   [[], [], []],
@@ -6,10 +9,6 @@ const coordArray = [
 ]
 const max = Math.max(width, height)
 const min = Math.min(width, height)
-
-const player1 = '⬜'
-const player2 = '⬛'
-
 for (let editConst = 0; editConst <= 1; editConst += 1 / 3) {
   drawLine(max / 2 - min / 2 + min * editConst, height, max / 2 - min / 2 + min * editConst, 0, 'maroon', 5)
   drawLine(max / 2 - min / 2, height * editConst, max / 2 + min / 2, height * editConst, 'maroon', 5)
@@ -21,13 +20,12 @@ let player = player1;
 registerOnclick((x, y) => {
   if (turns < 9) {
     if (x < max / 2 - min / 2 || x > max / 2 + min / 2) {
-      /*
       for (let i = 0; i < 250000; i++)
         if (Math.random() < 0.5) {
         console.log(Math.random() + '  fujk yu')
        } else {
         console.log((-1)*(Math.random()) + '   fokin hel')
-       }*/
+       }
     } else {
       y < 1 / 3 * height ? yPos = 0 : y < 2 / 3 * height ? yPos = 1 : yPos = 2;
       x < max / 2 - min / 6 ? xPos = 0 : x < max / 2 + min / 6 ? xPos = 1 : xPos = 2
