@@ -29,7 +29,7 @@ registerOnclick((x, y) => {
     }
     for (let i = 0; i < 250000; i++) {
       pee = Math.random()
-      lee > pee ? lee = pee : 1
+      lee > pee &&! pee == 0? lee = pee : 0
     }
     console.log(lee)
   } else {
