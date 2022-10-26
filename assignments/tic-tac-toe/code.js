@@ -40,6 +40,5 @@ registerOnclick((x, y) => {
         console.log(coordArray)
       }
     }
-    if (coordArray == []
   }
 });
