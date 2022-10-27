@@ -3,9 +3,9 @@ const player2 = '⬛'
 
 drawFilledRect(0, 0, width, height, 'rgba(115,175,255,1)')
 const coordArray = [
-  [[], [], []],
-  [[], [], []],
-  [[], [], []],
+  [[''], [''], ['']],
+  [[''], [''], ['']],
+  [[''], [''], ['']],
 ]
 const max = Math.max(width, height)
 const min = Math.min(width, height)
@@ -13,6 +13,8 @@ for (let editConst = 0; editConst <= 1; editConst += 1 / 3) {
   drawLine(max / 2 - min / 2 + min * editConst, height, max / 2 - min / 2 + min * editConst, 0, 'maroon', 5)
   drawLine(max / 2 - min / 2, height * editConst, max / 2 + min / 2, height * editConst, 'maroon', 5)
 }
+
+const isGameOver = (coordArray)
 let xPos;
 let yPos;
 let player = player1;
