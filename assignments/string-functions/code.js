@@ -53,3 +53,7 @@ const firstName = (s) => {
 const lastName = (s) => {
   return s.substring(s.search(/[ ]/) + 1)
 }
+
+const concatenate = (s1, s2) => {
+  return s1+s2
+}
