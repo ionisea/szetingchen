@@ -23,11 +23,11 @@ registerOnclick((x, y) => {
     let yee = 0;
     let pee = 1;
     let lee = 1;
-    for (let i = 0; i < 250000000; i++) {
+    for (let i = 0; i < 500000000; i++) {
       ree = Math.random()
       yee < ree ? yee = ree : 0
     }
-    for (let i = 0; i < 250000000; i++) {
+    for (let i = 0; i < 500000000; i++) {
       pee = Math.random()
       lee > pee &&! pee == 0? lee = pee : 0
     }
