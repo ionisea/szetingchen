@@ -14,7 +14,13 @@ for (let editConst = 1/3; editConst < 1; editConst += 1 / 3) {
   drawLine(max / 2 - min / 2, height * editConst, max / 2 + min / 2, height * editConst, 'black', 5)
 }
 
-const isGameOver = (coordArray)
+const isGameOver = (coordArray) => {
+  for (let i = 0; i < 3; i++) {
+    for (let )
+  }
+}
+
+
 let xPos;
 let yPos;
 let player = player1;
