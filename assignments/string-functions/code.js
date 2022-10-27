@@ -85,3 +85,7 @@ const lastThree = (s) => {
 const capitalize = (s) => {
   return s[0].toUpperCase() + s.substring(1, s.length).toLowerCase()
 }
+
+const capitalize = (s) => {
+  return s.substring(0, 3).toUpperCase() + s.substring(3, s.length).toLowerCase()
+}
