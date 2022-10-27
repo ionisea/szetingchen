@@ -67,13 +67,17 @@ const lastCharacter = (s) => {
 }
 
 const allButFirst = (s) => {
-  return s.substring (1)
+  return s.substring(1)
 }
 
 const firstThree = (s) => {
-  return s.substring (0, 3)
+  return s.substring(0, 3)
 }
 
 const allButFirstAndList = (s) => {
-  return s.substring (1, s.length-1)
+  return s.substring(1, s.length - 1)
+}
+
+const lastThree = (s) => {
+  return s.substring(s.length - 3, s.length)
 }
