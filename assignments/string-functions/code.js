@@ -1,3 +1,3 @@
 const findFnord = (s) => {
-  s.search("fnord")
+  return s.search("fnord")
 }
