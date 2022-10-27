@@ -11,5 +11,9 @@ const firstAndLast = (s) => {
 }
 
 const swapFrontAndBack = (s) => {
-  return s.substring(s.length/2)+s.substring(0, s.length/2)
+  return s.substring(s.length / 2) + s.substring(0, s.length / 2)
+}
+
+const simplePigLatin = (s, num) => {
+  return s.substring(num) + s.substring(0, num) + 'ay'
 }
