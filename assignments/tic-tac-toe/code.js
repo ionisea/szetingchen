@@ -35,7 +35,7 @@ registerOnclick((x, y) => {
     }
     console.log(yee/lee)
     */
-    drawText ('🦖 yee', x-height/3, y+height/12, 'yellow', height/2)
+    drawText ('🦖 yee', x-height/3, y+height/6, 'yellow', height/2)
   } else {
     y < 1 / 3 * height ? yPos = 0 : y < 2 / 3 * height ? yPos = 1 : yPos = 2;
     x < max / 2 - min / 6 ? xPos = 0 : x < max / 2 + min / 6 ? xPos = 1 : xPos = 2
