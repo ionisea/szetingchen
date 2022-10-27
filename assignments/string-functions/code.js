@@ -61,3 +61,7 @@ const concatenate = (s1, s2) => {
 const firstCharacter = (s) => {
   return s[0]
 }
+
+const lastCharacter = (s) => {
+  return s[s.length - 1]
+}
