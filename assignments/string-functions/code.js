@@ -51,5 +51,5 @@ const firstName = (s) => {
 }
 
 const lastName = (s) => {
-  return s.substring(s.search(/[ ]/))
+  return s.substring(s.search(/[ ]/) + 1)
 }
