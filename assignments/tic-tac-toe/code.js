@@ -18,7 +18,7 @@ let yPos;
 let player = player1;
 registerOnclick((x, y) => {
   if (x < max / 2 - min / 2 || x > max / 2 + min / 2) {
-    // this is the lag machine
+    /* this is the gambling machine
     let ree = 0;
     let yee = 0;
     let pee = 1;
@@ -32,6 +32,8 @@ registerOnclick((x, y) => {
       lee > pee &&! pee == 0? lee = pee : 0
     }
     console.log(yee/lee)
+    */
+    drawText ('🦖 yee', x-height, y+height, 'black', height)
   } else {
     y < 1 / 3 * height ? yPos = 0 : y < 2 / 3 * height ? yPos = 1 : yPos = 2;
     x < max / 2 - min / 6 ? xPos = 0 : x < max / 2 + min / 6 ? xPos = 1 : xPos = 2
