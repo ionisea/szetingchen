@@ -47,8 +47,7 @@ const upDownLastCharacter = (s) => {
 }
 
 const firstName = (s) => {
-  const space = s.search (/[ ]/)
-  return s.substring (0, space)
+  //const space = s.search (/[ ]/)
+  return s.substring (0, s.search(/[ ]/))
 }
 
-const 
