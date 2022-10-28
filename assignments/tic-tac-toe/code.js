@@ -18,10 +18,16 @@ const isGameOver = (coordArray) => {
   for (let i = 0; i < 3; i++) {
     for (let x = 0; x < 3; x++) {
       if (coordArray[i][x] == '') {
-        
+        return false
+      } else {
+        return true
       }
     }
   }
+}
+
+if (isGameOver == true) {
+  return ree
 }
 
 
