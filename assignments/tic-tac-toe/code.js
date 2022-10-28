@@ -27,9 +27,8 @@ const isGameOver = (coordArray) => {
 }
 
 if (isGameOver == true) {
-  return ree
+  console.log(ree)
 }
-
 
 let xPos;
 let yPos;
