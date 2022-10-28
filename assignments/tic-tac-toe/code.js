@@ -1,5 +1,5 @@
-const player1 = '⬜'
-const player2 = '⬛'
+const player1 = 'X'
+const player2 = 'O'
 
 drawFilledRect(0, 0, width, height, 'rgba(115,175,255,1)')
 const coordArray = [
