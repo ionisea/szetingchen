@@ -16,7 +16,11 @@ for (let editConst = 1/3; editConst < 1; editConst += 1 / 3) {
 
 const isGameOver = (coordArray) => {
   for (let i = 0; i < 3; i++) {
-    for (let )
+    for (let x = 0; x < 3; x++) {
+      if (coordArray[i][x] == '') {
+        
+      }
+    }
   }
 }
 
