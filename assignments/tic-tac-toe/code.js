@@ -21,7 +21,7 @@ const isGameOver = (player1, player2) => {
   for (let a = 0; a < 3; a++) {
     for (let b = 0; b < 3; b++) {
       if (array[a][b] !== '') {
-         if (coordArray[a][1] == (player1 || player2) && coordArray[a][2] == (player1 || player2) && coordArray[a][2] == (player1 || player2)) {
+         if (coordArray[a][0] == (player1 || player2) && coordArray[a][1] == (player1 || player2) && coordArray[a][2] == (player1 || player2)) {
            gameOver = true
          }
       }
