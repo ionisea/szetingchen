@@ -15,15 +15,22 @@ for (let editConst = 1/3; editConst < 1; editConst += 1 / 3) {
 }
 
 const isGameOver = (coordArray) => {
-  for (let i = 0; i < 3; i++) {
-    for (let x = 0; x < 3; x++) {
-      if (coordArray[i][x] == '') {
-        isGameOver == false
-      } else {
-        isGameOver == true
-      }
+  let moves;
+  let gameOver;
+  for (const element of coordArray){
+    if (element ==! '') {
+      moves += 0
+    } else {
+      moves++
     }
   }
+  if (moves >= 9) {
+    gameOver == true
+  }
+}
+
+if (gameOver == true) {
+  console.log(ree)
 }
 
 let xPos;
@@ -57,6 +64,7 @@ registerOnclick((x, y) => {
       drawText(player, max / 2 - min / 2 - min * 0.15 + min / 6 + (min * xPos / 3), min * 0.11 + min / 6 + min * yPos / 3, 'black', min * 0.3)
       player == player1 ? player = player2 : player = player1;
       console.log(coordArray)
+      isGameOver;
     }
   }
 });
