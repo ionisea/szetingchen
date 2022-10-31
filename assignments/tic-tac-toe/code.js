@@ -30,7 +30,7 @@ const isGameOver = (array) => {
 }
 
 if (gameOver = true) {
-  console.log(ree)
+  console.log('ree')
 }
 
 let xPos;
