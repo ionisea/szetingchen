@@ -3,9 +3,9 @@ const player2 = 'O'
 
 drawFilledRect(0, 0, width, height, 'rgba(115,175,255,1)')
 const coordArray = [
-  [[''], [''], ['']],
-  [[''], [''], ['']],
-  [[''], [''], ['']],
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', ''],
 ]
 const max = Math.max(width, height)
 const min = Math.min(width, height)
@@ -14,27 +14,25 @@ for (let editConst = 1 / 3; editConst < 1; editConst += 1 / 3) {
   drawLine(max / 2 - min / 2, height * editConst, max / 2 + min / 2, height * editConst, 'black', 5)
 }
 
-
-const isGameOver = (player1, player2) => {
-  let moves = 0
-  let gameOver = false
-  for (let a = 0; a < 3; a++) {
-    for (let b = 0; b < 3; b++) {
-      if (array[a][b] !== '') {
-         if (coordArray[a][0] == (player1 || player2) && coordArray[a][1] == (player1 || player2) && coordArray[a][2] == (player1 || player2)) {
-           gameOver = true
-         }
-      }
-    }
-  }
-}
+//gameOver => 
+//diagonals
+coordArray[0][0] == player && coordArray[1][1] == player && coordArray[2][2] == player
+coordArray[2][0] == player && coordArray[1][1] == player && coordArray[0][2] == player
+//rows
+coordArray[0][0] == player && coordArray[0][1] == player && coordArray[0][2] == player
+coordArray[1][0] == player && coordArray[1][1] == player && coordArray[1][2] == player
+coordArray[2][0] == player && coordArray[2][1] == player && coordArray[2][2] == player
+//columns
+coordArray[0][0] == player && coordArray[1][0] == player && coordArray[2][0] == player
+coordArray[0][1] == player && coordArray[1][1] == player && coordArray[2][1] == player
+coordArray[0][2] == player && coordArray[1][2] == player && coordArray[2][2] == player
 
 let xPos;
 let yPos;
 let player = player1;
 registerOnclick((x, y) => {
   if (x < max / 2 - min / 2 || x > max / 2 + min / 2) {
-    /* this is the gambling machine
+    /* //this is the gambling machine
     let ree = 0;
     let yee = 0;
     let pee = 1;
