@@ -14,10 +14,10 @@ for (let editConst = 1/3; editConst < 1; editConst += 1 / 3) {
   drawLine(max / 2 - min / 2, height * editConst, max / 2 + min / 2, height * editConst, 'black', 5)
 }
 
-const isGameOver = (coordArray) => {
+const isGameOver = (array) => {
   let moves;
   let gameOver;
-  for (const element of coordArray){
+  for (const element of array){
     if (element ==! '') {
       moves += 0
     } else {
@@ -64,7 +64,7 @@ registerOnclick((x, y) => {
       drawText(player, max / 2 - min / 2 - min * 0.15 + min / 6 + (min * xPos / 3), min * 0.11 + min / 6 + min * yPos / 3, 'black', min * 0.3)
       player == player1 ? player = player2 : player = player1;
       console.log(coordArray)
-      isGameOver;
+      isGameOver(coordArray);
     }
   }
 });
