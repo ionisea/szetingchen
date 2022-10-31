@@ -26,10 +26,6 @@ const isGameOver = (coordArray) => {
   }
 }
 
-if (isGameOver == true) {
-  console.log(ree)
-}
-
 let xPos;
 let yPos;
 let player = player1;
