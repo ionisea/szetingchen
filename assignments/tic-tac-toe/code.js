@@ -17,20 +17,13 @@ for (let editConst = 1 / 3; editConst < 1; editConst += 1 / 3) {
 
 const isGameOver = (array) => {
   let moves = 0
-  for (const element of array) {
-    if (element == ! '') {
-      moves += 0
-    } else {
-      moves++
+  let gameOver = false
+  for (let a = 0; a < 3; a++) {
+    for (let b = 0; b < 3; b++) {
+      if (array[a][b] !== '') {
+
+      }
     }
-  }
-  if (moves = 9) {
-    gameOver = true
-  } else {
-    gameOver = false
-  }
-  if (gameOver = true) {
-    console.log ('ree')
   }
 }
 
@@ -61,7 +54,6 @@ registerOnclick((x, y) => {
     if (coordArray[yPos][xPos] == '') {
       coordArray[yPos][xPos].pop()
       coordArray[yPos][xPos].push(player)
-      console.log('coords: ', x, y)
       drawText(player, max / 2 - min / 2 - min * 0.15 + min / 6 + (min * xPos / 3), min * 0.11 + min / 6 + min * yPos / 3, 'black', min * 0.3)
       player == player1 ? player = player2 : player = player1;
       console.log(coordArray)
