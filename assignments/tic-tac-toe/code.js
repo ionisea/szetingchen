@@ -17,7 +17,6 @@ for (let editConst = 1 / 3; editConst < 1; editConst += 1 / 3) {
 
 const isGameOver = (array) => {
   let moves = 0
-  let gameOver = false
   for (const element of array) {
     if (element == ! '') {
       moves += 0
