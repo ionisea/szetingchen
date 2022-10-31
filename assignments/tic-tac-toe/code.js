@@ -14,9 +14,9 @@ for (let editConst = 1/3; editConst < 1; editConst += 1 / 3) {
   drawLine(max / 2 - min / 2, height * editConst, max / 2 + min / 2, height * editConst, 'black', 5)
 }
 
+let gameOver = false;
 const isGameOver = (array) => {
   let moves;
-  let gameOver;
   for (const element of array){
     if (element ==! '') {
       moves += 0
@@ -25,11 +25,11 @@ const isGameOver = (array) => {
     }
   }
   if (moves >= 9) {
-    gameOver == true
+    gameOver = true
   }
 }
 
-if (gameOver == true) {
+if (gameOver = true) {
   console.log(ree)
 }
 
