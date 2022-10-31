@@ -24,7 +24,7 @@ const isGameOver = (array) => {
       moves++
     }
   }
-  if (moves >= 9) {
+  if (moves = 9) {
     gameOver = true
   }
 }
