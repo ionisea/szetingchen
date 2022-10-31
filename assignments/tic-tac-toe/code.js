@@ -29,7 +29,7 @@ const isGameOver = (array) => {
   }
 }
 
-if (gameOver = true) {
+if (gameOver = false) {
   console.log('ree')
 }
 
