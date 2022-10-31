@@ -15,13 +15,15 @@ for (let editConst = 1 / 3; editConst < 1; editConst += 1 / 3) {
 }
 
 
-const isGameOver = (array) => {
+const isGameOver = (player1, player2) => {
   let moves = 0
   let gameOver = false
   for (let a = 0; a < 3; a++) {
     for (let b = 0; b < 3; b++) {
       if (array[a][b] !== '') {
-
+         if (coordArray[a][1] == (player1 || player2) && coordArray[a][2] == (player1 || player2) && coordArray[a][2] == (player1 || player2)) {
+           gameOver = true
+         }
       }
     }
   }
