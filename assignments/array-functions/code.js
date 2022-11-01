@@ -31,13 +31,7 @@ const countTens = (array) => array.filter((x) => x == 10).reduce((acc) => acc + 
 
 const sum = (array) => array.reduce((acc, x) => acc + x, 0)
 
-const evens = (array) => {
-  const evenArray = []
-  for (const element of array) {
-    element % 2 == 0 ? evenArray.push(element) : evenArray
-  }
-  return evenArray
-}
+const evens = (array) => array.filter((x) => x % 2 == 0)
 
 const anyOverOneHundred = (array) => {
   return array.find(element => element > 100) ? true : false
