@@ -28,11 +28,7 @@ const fibonacci = (num) => {
 //to get the xth fibonacci number: fibonacci(x)[x]
 
 const countTens = (array) => {
-  let num = 0
-  for (const element of array) {
-    element == 10 ? num += 1 : num
-  }
-  return num
+  return array.filter((x) => x == 10)
 }
 
 const sum = (array) => {
