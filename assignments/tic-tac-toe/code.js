@@ -15,19 +15,17 @@ for (let editConst = 1 / 3; editConst < 1; editConst += 1 / 3) {
 }
 
 const isGameOver = (array, player) => {
-  if 
-  //diagonals
-  ((array[0][0] == player && array[1][1] == player && array[2][2] == player) ||
+  if ((array[0][0] == player && array[1][1] == player && array[2][2] == player) ||
     (array[2][0] == player && array[1][1] == player && array[0][2] == player) ||
-  //rows
   (array[0][0] == player && array[0][1] == player && array[0][2] == player) ||
   (array[1][0] == player && array[1][1] == player && array[1][2] == player) ||
   (array[2][0] == player && array[2][1] == player && array[2][2] == player) ||
-  //columns
   (array[0][0] == player && array[1][0] == player && array[2][0] == player) ||
   (array[0][1] == player && array[1][1] == player && array[2][1] == player) ||
   (array[0][2] == player && array[1][2] == player && array[2][2] == player)) {
     return player
+  } else {
+    return undefined
   }
 }
 
