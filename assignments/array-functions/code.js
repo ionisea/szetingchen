@@ -33,7 +33,7 @@ const sum = (array) => array.reduce((acc, x) => acc + x, 0)
 
 const evens = (array) => array.filter((x) => x % 2 == 0)
 
-const anyOverOneHundred = (array) => !!array.find(element => element > 100);
+const anyOverOneHundred = (array) => array.find(element => element > 100);
 
 const pyramid = (num) => {
   const array = []
