@@ -27,17 +27,9 @@ const fibonacci = (num) => {
 }
 //to get the xth fibonacci number: fibonacci(x)[x]
 
-const countTens = (array) => {
-  return array.filter((x) => x == 10).reduce((acc) => acc + 1, 0)
-}
+const countTens = (array) => array.filter((x) => x == 10).reduce((acc) => acc + 1, 0)
 
-const sum = (array) => {
-  let add = 0
-  for (const element of array) {
-    add += element
-  }
-  return add
-}
+const sum = (array) => array.reduce((acc, x) => acc + x, 0)
 
 const evens = (array) => {
   const evenArray = []
