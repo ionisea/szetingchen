@@ -14,15 +14,15 @@ for (let editConst = 1 / 3; editConst < 1; editConst += 1 / 3) {
   drawLine(max / 2 - min / 2, height * editConst, max / 2 + min / 2, height * editConst, 'black', 5)
 }
 
-const isGameOver = (player) => {
-  if ((coordArray[0][0] == player && coordArray[1][1] == player && coordArray[2][2] == player) ||
-    (coordArray[2][0] == player && coordArray[1][1] == player && coordArray[0][2] == player) ||
-  (coordArray[0][0] == player && coordArray[0][1] == player && coordArray[0][2] == player) ||
-  (coordArray[1][0] == player && coordArray[1][1] == player && coordArray[1][2] == player) ||
-  (coordArray[2][0] == player && coordArray[2][1] == player && coordArray[2][2] == player) ||
-  (coordArray[0][0] == player && coordArray[1][0] == player && coordArray[2][0] == player) ||
-  (coordArray[0][1] == player && coordArray[1][1] == player && coordArray[2][1] == player) ||
-  (coordArray[0][2] == player && coordArray[1][2] == player && coordArray[2][2] == player)) {
+const isGameOver = (winner) => {
+  if ((coordArray[0][0] == winner && coordArray[1][1] == winner && coordArray[2][2] == winner) ||
+  (coordArray[2][0] == winner && coordArray[1][1] == winner && coordArray[0][2] == winner) ||
+  (coordArray[0][0] == winner && coordArray[0][1] == winner && coordArray[0][2] == winner) ||
+  (coordArray[1][0] == winner && coordArray[1][1] == winner && coordArray[1][2] == winner) ||
+  (coordArray[2][0] == winner && coordArray[2][1] == winner && coordArray[2][2] == winner) ||
+  (coordArray[0][0] == winner && coordArray[1][0] == winner && coordArray[2][0] == winner) ||
+  (coordArray[0][1] == winner && coordArray[1][1] == winner && coordArray[2][1] == winner) ||
+  (coordArray[0][2] == winner && coordArray[1][2] == winner && coordArray[2][2] == winner)) {
     return player
   } else {
     return undefined
@@ -38,7 +38,7 @@ registerOnclick((x, y) => {
   } else {
     y < 1 / 3 * height ? yPos = 0 : y < 2 / 3 * height ? yPos = 1 : yPos = 2;
     x < max / 2 - min / 6 ? xPos = 0 : x < max / 2 + min / 6 ? xPos = 1 : xPos = 2
-    if (coordArray[yPos][xPos] == '' && player == undefined) {
+    if (coordArray[yPos][xPos] == '' && winner == undefined) {
       coordArray[yPos][xPos].pop()
       coordArray[yPos][xPos].push(player);
       drawText(player, max / 2 - min / 2 - min * 0.15 + min / 6 + (min * xPos / 3), min * 0.11 + min / 6 + min * yPos / 3, 'black', min * 0.3);
