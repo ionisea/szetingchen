@@ -14,22 +14,6 @@ for (let editConst = 1 / 3; editConst < 1; editConst += 1 / 3) {
   drawLine(max / 2 - min / 2, height * editConst, max / 2 + min / 2, height * editConst, 'black', 5)
 }
 
-const isGameOver = (array, winner) => {
-  if 
-  //diagonals
-  ((array[0][0] == winner && array[1][1] == winner && array[2][2] == winner) ||
-    (array[2][0] == winner && array[1][1] == winner && array[0][2] == winner) ||
-  //rows
-  (array[0][0] == winner && array[0][1] == winner && array[0][2] == winner) ||
-  (array[1][0] == winner && array[1][1] == winner && array[1][2] == winner) ||
-  (array[2][0] == winner && array[2][1] == winner && array[2][2] == winner) ||
-  //columns
-  (array[0][0] == winner && array[1][0] == winner && array[2][0] == winner) ||
-  (array[0][1] == winner && array[1][1] == winner && array[2][1] == winner) ||
-  (array[0][2] == winner && array[1][2] == winner && array[2][2] == winner)) {
-    return player
-  }
-}
 
 let xPos;
 let yPos;
