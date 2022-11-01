@@ -14,15 +14,15 @@ for (let editConst = 1 / 3; editConst < 1; editConst += 1 / 3) {
   drawLine(max / 2 - min / 2, height * editConst, max / 2 + min / 2, height * editConst, 'black', 5)
 }
 
-const isGameOver = (array, player) => {
-  if ((array[0][0] == player && array[1][1] == player && array[2][2] == player) ||
-    (array[2][0] == player && array[1][1] == player && array[0][2] == player) ||
-  (array[0][0] == player && array[0][1] == player && array[0][2] == player) ||
-  (array[1][0] == player && array[1][1] == player && array[1][2] == player) ||
-  (array[2][0] == player && array[2][1] == player && array[2][2] == player) ||
-  (array[0][0] == player && array[1][0] == player && array[2][0] == player) ||
-  (array[0][1] == player && array[1][1] == player && array[2][1] == player) ||
-  (array[0][2] == player && array[1][2] == player && array[2][2] == player)) {
+const isGameOver = (player) => {
+  if ((coordArray[0][0] == player && coordArray[1][1] == player && coordArray[2][2] == player) ||
+    (coordArray[2][0] == player && coordArray[1][1] == player && coordArray[0][2] == player) ||
+  (coordArray[0][0] == player && coordArray[0][1] == player && coordArray[0][2] == player) ||
+  (coordArray[1][0] == player && coordArray[1][1] == player && coordArray[1][2] == player) ||
+  (coordArray[2][0] == player && coordArray[2][1] == player && coordArray[2][2] == player) ||
+  (coordArray[0][0] == player && coordArray[1][0] == player && coordArray[2][0] == player) ||
+  (coordArray[0][1] == player && coordArray[1][1] == player && coordArray[2][1] == player) ||
+  (coordArray[0][2] == player && coordArray[1][2] == player && coordArray[2][2] == player)) {
     return player
   } else {
     return undefined
