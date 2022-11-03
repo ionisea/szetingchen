@@ -28,11 +28,7 @@ const fibonacci = (num) => {
 //to get the xth fibonacci number: fibonacci(x)[x]
 
 const countTens = (array) => array.filter((x) => x == 10).reduce((acc) => acc + 1, 0)
-
 const sum = (array) => array.reduce((acc, x) => acc + x, 0)
-
 const evens = (array) => array.filter((x) => x % 2 == 0)
-
 const anyOverOneHundred = (array) => array.filter((x) => x > 100).length > 0
-
 const pyramid = (num) => Array(num).fill().flatMap((_, i) => Array(i + 1).fill(i + 1))
