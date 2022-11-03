@@ -35,4 +35,4 @@ const evens = (array) => array.filter((x) => x % 2 == 0)
 
 const anyOverOneHundred = (array) => array.filter((x) => x > 100).length > 0
 
-const pyramid = (num) => Array(num).fill().flatMap((_, i) => Array(i + 1).fill(i))
+const pyramid = (num) => Array(num).fill().flatMap((_, i) => Array(i + 1).fill(i + 1))
