@@ -16,8 +16,8 @@ for (let editConst = 1 / 3; editConst < 1; editConst += 1 / 3) {
 
 const isGameDraw = (coordArray) => {
   let count = 0
-  for(let x = 0; x < 3; x++) {
-    for(let y = 0; y < 3; y++) {
+  for (let x = 0; x < 3; x++) {
+    for (let y = 0; y < 3; y++) {
       if (coordArray[x][y] == '') {
         count++
       }
@@ -28,15 +28,16 @@ const isGameDraw = (coordArray) => {
 
 const isWinner = (player) => {
   for (let p = 0; p <= 2; p++) {
-    (coordArray[p][0] == player) ? (coordArray[p][1] == player) ? (coordArray[p][2] == player) ? true : false : false : false;
-    (coordArray[0][p] == player) ? (coordArray[1][p] == player) ? (coordArray[2][p] == player) ? true : false : false : false;
-    (coordArray[0][0] == player) ? (coordArray[1][1] == player) ? (coordArray[2][2] == player) ? true : false : false : false;
-    (coordArray[0][2] == player) ? (coordArray[1][1] == player) ? (coordArray[2][0] == player) ? true : false : false : false;
+    (coordArray[p][0] == player) && (coordArray[p][1] == player) && (coordArray[p][2] == player)
+      (coordArray[0][p] == player) && (coordArray[1][p] == player) && (coordArray[2][p] == player)
   }
+  (coordArray[0][0] == player) && (coordArray[1][1] == player) && (coordArray[2][2] == player)
+    (coordArray[0][2] == player) && (coordArray[1][1] == player) && (coordArray[2][0] == player)
+  return
 }
 
 const isGameOver = (array, player) => {
-  return isWinner (player) || isGameDraw (array)
+  return isWinner(player) || isGameDraw(array)
 }
 
 let xPos;
@@ -52,7 +53,7 @@ registerOnclick((x, y) => {
       coordArray[yPos][xPos] = player
       drawText(player, max / 2 - min / 2 - min * 0.15 + min / 6 + (min * xPos / 3), min * 0.11 + min / 6 + min * yPos / 3, 'black', min * 0.3);
       console.log(coordArray);
-      console.log (isGameOver (coordArray, player))
+      console.log(isGameOver(coordArray, player))
       player == player1 ? player = player2 : player = player1;
     }
   }
