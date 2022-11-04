@@ -29,15 +29,15 @@ const isGameDraw = (coordArray) => {
 const isWinner = (player) => {
   for (let p = 0; p <= 2; p++) {
     (coordArray[p][0] == player) && (coordArray[p][1] == player) && (coordArray[p][2] == player)
-      (coordArray[0][p] == player) && (coordArray[1][p] == player) && (coordArray[2][p] == player)
+    (coordArray[0][p] == player) && (coordArray[1][p] == player) && (coordArray[2][p] == player)
   }
   (coordArray[0][0] == player) && (coordArray[1][1] == player) && (coordArray[2][2] == player)
-    (coordArray[0][2] == player) && (coordArray[1][1] == player) && (coordArray[2][0] == player)
+  (coordArray[0][2] == player) && (coordArray[1][1] == player) && (coordArray[2][0] == player)
   return
 }
 
 const isGameOver = (array, player) => {
-  return isWinner(player) || isGameDraw(array)
+  return isWinner(player) || isGameDraw(array) 
 }
 
 let xPos;
