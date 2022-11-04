@@ -28,10 +28,10 @@ const isGameDraw = (array) => {
 
 const isWinner = (array, player) => {
   for (p = 0; p <= 2; p++) {
-    (array[p][0] == player) ? (array[p][1] == player) ? (array[p][2] == player) ? player : false : false : false;
-    (array[0][p] == player) ? (array[1][p] == player) ? (array[2][p] == player) ? player : false : false : false;
-    (array[0][0] == player) ? (array[1][1] == player) ? (array[2][2] == player) ? player : false : false : false;
-    (array[0][2] == player) ? (array[1][1] == player) ? (array[2][0] == player) ? player : false : false : false;
+    (array[p][0] == player) ? (array[p][1] == player) ? (array[p][2] == player) ? true : false : false : false;
+    (array[0][p] == player) ? (array[1][p] == player) ? (array[2][p] == player) ? true : false : false : false;
+    (array[0][0] == player) ? (array[1][1] == player) ? (array[2][2] == player) ? true : false : false : false;
+    (array[0][2] == player) ? (array[1][1] == player) ? (array[2][0] == player) ? true : false : false : false;
   }
 }
 
