@@ -14,11 +14,11 @@ for (let editConst = 1 / 3; editConst < 1; editConst += 1 / 3) {
   drawLine(max / 2 - min / 2, height * editConst, max / 2 + min / 2, height * editConst, 'black', 5)
 }
 
-const isGameDraw = (array) => {
+const isGameDraw = (coordArray) => {
   let count = 0
   for(let x = 0; x < 3; x++) {
     for(let y = 0; y < 3; y++) {
-      if (array[x][y] == '') {
+      if (coordArray[x][y] == '') {
         count++
       }
     }
@@ -26,17 +26,17 @@ const isGameDraw = (array) => {
   return count > 0
 }
 
-const isWinner = (array, player) => {
+const isWinner = (player) => {
   for (let p = 0; p <= 2; p++) {
-    (array[p][0] == player) ? (array[p][1] == player) ? (array[p][2] == player) ? true : false : false : false;
-    (array[0][p] == player) ? (array[1][p] == player) ? (array[2][p] == player) ? true : false : false : false;
-    (array[0][0] == player) ? (array[1][1] == player) ? (array[2][2] == player) ? true : false : false : false;
-    (array[0][2] == player) ? (array[1][1] == player) ? (array[2][0] == player) ? true : false : false : false;
+    (coordArray[p][0] == player) ? (coordArray[p][1] == player) ? (coordArray[p][2] == player) ? true : false : false : false;
+    (coordArray[0][p] == player) ? (coordArray[1][p] == player) ? (coordArray[2][p] == player) ? true : false : false : false;
+    (coordArray[0][0] == player) ? (coordArray[1][1] == player) ? (coordArray[2][2] == player) ? true : false : false : false;
+    (coordArray[0][2] == player) ? (coordArray[1][1] == player) ? (coordArray[2][0] == player) ? true : false : false : false;
   }
 }
 
 const isGameOver = (array, player) => {
-  return isWinner (array, player) && isGameDraw (array)
+  return isWinner (player) && isGameDraw (array)
 }
 
 let xPos;
