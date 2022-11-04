@@ -36,7 +36,7 @@ const isWinner = (array, player) => {
 }
 
 const isGameOver = (array, player) => {
-  return isWinner (array, player) || isGameDraw (array)
+  return (isWinner (array, player) == player) || isGameDraw (array)
 }
 
 let xPos;
