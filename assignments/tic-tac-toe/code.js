@@ -52,6 +52,7 @@ registerOnclick((x, y) => {
       coordArray[yPos][xPos] = player
       drawText(player, max / 2 - min / 2 - min * 0.15 + min / 6 + (min * xPos / 3), min * 0.11 + min / 6 + min * yPos / 3, 'black', min * 0.3);
       console.log(coordArray);
+      console.log (isGameOver (coordArray, player))
       player == player1 ? player = player2 : player = player1;
     }
   }
