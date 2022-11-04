@@ -57,4 +57,3 @@ registerOnclick((x, y) => {
     }
   }
 });
-
