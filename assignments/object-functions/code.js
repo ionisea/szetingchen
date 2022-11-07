@@ -18,4 +18,6 @@ const midpoint = (o1, o2) => {
   return {"x" : (o1.x + o2.x)/2, "y" : (o1.y + o2.y)/2}
 }
 
-//const sumSalaries 
+const sumSalaries = (a) => {
+  
+}
