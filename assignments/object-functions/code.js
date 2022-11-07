@@ -18,21 +18,7 @@ const midpoint = (o1, o2) => {
   return { "x": (o1.x + o2.x) / 2, "y": (o1.y + o2.y) / 2 }
 }
 
-const sumSalaries = (a) => {
-  return a.reduce((acc, x) => acc + x.salary, 0)
-}
-
-/*
-const newHighScore = (hs, a) => {
-  let high = hs
-  for (const element of a) {
-    if (element.score > high) {
-      high = element.score
-    }
-  }
-  return high
-}
-*/
+const sumSalaries = (a) => a.reduce((acc, x) => acc + x.salary, 0)
 
 const newHighScore = (hs, ps) => ps.reduce((acc, p) => Math.max(p.score, acc), hs)
 
@@ -49,5 +35,5 @@ const summarizeBooks = (a) => {
 */
 
 const summarizeBooks = (a) => {
-  return {"titles" : Array()}
+  return {"titles" : Array(a.length).fill()}
 }
