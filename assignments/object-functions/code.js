@@ -37,11 +37,11 @@ const newHighScore = (hs, a) => {
 }
 
 const summarizeBooks = (a) => {
-  let pages = 0
-  const names = []
+  let pageTotal = 0
+  const titleList = []
   for (const element of a) {
-    names.push(element.title)
-    pages += element.pages
+    titleList.push(element.title)
+    pageTotal += element.pages
   }
-  return {"titles" : names, "pages" : pages}
+  return {"titles" : titleList, "pages" : pageTotal}
 }
