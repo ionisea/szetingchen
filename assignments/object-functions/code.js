@@ -26,6 +26,10 @@ const sumSalaries = (a) => {
   return sum
 }
 
+const sumSalaries = (a) => {
+  return a.reduce ((acc, x) => acc + x.salaries, 0)
+}
+
 const newHighScore = (hs, a) => {
   let high = hs
   for (const element of a) {
