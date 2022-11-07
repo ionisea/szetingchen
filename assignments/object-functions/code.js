@@ -22,18 +22,4 @@ const sumSalaries = (a) => a.reduce((acc, x) => acc + x.salary, 0)
 
 const newHighScore = (hs, ps) => ps.reduce((acc, p) => Math.max(p.score, acc), hs)
 
-/*
-const summarizeBooks = (a) => {
-  let pageTotal = 0
-  const titleList = []
-  for (const element of a) {
-    titleList.push(element.title)
-    pageTotal += element.pages
-  }
-  return { "titles": titleList, "pages": pageTotal }
-}
-*/
-
-const summarizeBooks = (a) => {
-  return {"titles" : a.map(x => x.title), "pages" : a.reduce((acc, x) => acc + x.pages, 0)}
-}
+const summarizeBooks = (a) => ({"titles" : a.map(x => x.title), "pages" : a.reduce((acc, x) => acc + x.pages, 0)})
