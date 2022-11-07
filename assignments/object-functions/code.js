@@ -29,8 +29,8 @@ const sumSalaries = (a) => {
 const newHighScore = (hs, a) => {
   let high = hs
   for (const element of a) {
-    if (element > high) {
-      high = element
+    if (element.score > high) {
+      high = element.score
     }
   }
   return high
