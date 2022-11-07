@@ -25,3 +25,13 @@ const sumSalaries = (a) => {
   }
   return sum
 }
+
+const newHighScore = (hs, a) => {
+  let high = hs
+  for (const element of a) {
+    if (element > high) {
+      high = element
+    }
+  }
+  return high
+}
