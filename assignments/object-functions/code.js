@@ -3,7 +3,7 @@ const getX = (o) => {
 }
 
 const point = (n1, n2) => {
-  return {"x" : n1, "y" : n2}
+  return { "x": n1, "y": n2 }
 }
 
 const emptyObject = () => {
@@ -11,11 +11,11 @@ const emptyObject = () => {
 }
 
 const distance = (o1, o2) => {
-  return Math.sqrt((o1.y - o2.y)**2 + (o1.x - o2.x)**2)
+  return Math.sqrt((o1.y - o2.y) ** 2 + (o1.x - o2.x) ** 2)
 }
 
 const midpoint = (o1, o2) => {
-  return {"x" : (o1.x + o2.x)/2, "y" : (o1.y + o2.y)/2}
+  return { "x": (o1.x + o2.x) / 2, "y": (o1.y + o2.y) / 2 }
 }
 /*
 const sumSalaries = (a) => {
@@ -27,7 +27,7 @@ const sumSalaries = (a) => {
 }
 */
 const sumSalaries = (a) => {
-  return a.reduce ((acc, x) => acc + x, 0)
+  return a.reduce((acc, x.salary) => acc + x.salary, 0)
 }
 
 const newHighScore = (hs, a) => {
@@ -47,5 +47,5 @@ const summarizeBooks = (a) => {
     titleList.push(element.title)
     pageTotal += element.pages
   }
-  return {"titles" : titleList, "pages" : pageTotal}
+  return { "titles": titleList, "pages": pageTotal }
 }
