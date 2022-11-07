@@ -36,6 +36,6 @@ const newHighScore = (hs, a) => {
   return high
 }
 
-const summarizeBooks = (a) = {
+const summarizeBooks = (a) => {
   return a
 }
