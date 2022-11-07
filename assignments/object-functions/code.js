@@ -1,3 +1,3 @@
-const getX = (a) => {
-  
+const getX = (o) => {
+  return o['x']
 }
