@@ -35,5 +35,5 @@ const summarizeBooks = (a) => {
 */
 
 const summarizeBooks = (a) => {
-  return {"titles" : Array(a.length).fill((a.title), "pages" : a.reduce((acc, x) => acc + x.pages, 0)}
+  return {"titles" : Array(a.length).fill(a.title), "pages" : a.reduce((acc, x) => acc + x.pages, 0)}
 }
