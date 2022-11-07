@@ -35,3 +35,7 @@ const newHighScore = (hs, a) => {
   }
   return high
 }
+
+const summarizeBooks = (a) = {
+  
+}
