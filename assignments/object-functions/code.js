@@ -34,7 +34,7 @@ const newHighScore = (hs, a) => {
 }
 */
 
-const newHighScore = (hs, ps) => ps.reduce((acc, p) => Math.max(p.score, acc), hs)
+const newHighScore = (hs, ps) => ps.reduce((acc, p) => Math.min(p.score, acc), hs)
 
 /*
 const summarizeBooks = (a) => {
