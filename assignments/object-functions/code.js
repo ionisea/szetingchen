@@ -27,7 +27,7 @@ const sumSalaries = (a) => {
 }
 */
 const sumSalaries = (a) => {
-  return a.reduce((acc, x) => acc + x["salary"], 0)
+  return a.reduce((acc, x) => acc + x.salary, 0)
 }
 
 const newHighScore = (hs, a) => {
