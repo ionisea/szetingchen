@@ -19,5 +19,9 @@ const midpoint = (o1, o2) => {
 }
 
 const sumSalaries = (a) => {
-  return a.reduce((acc, x) => acc + a.salaries, 0)
+  let sum = 0
+  for (const element of a) {
+    sum += element.salary
+  }
+  return sum
 }
