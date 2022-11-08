@@ -49,7 +49,7 @@ registerOnclick((x, y) => {
       player == player1 ? player = player2 : player = player1;
       turns++
       if (turns == 9 && isWinner (player) == undefined) {
-        drawText('Draw', max / 2, min / 2, min / 2, 'black')
+        drawText('Draw', max / 3, min / 3, min / 2, 'black')
       }
     }
   }
