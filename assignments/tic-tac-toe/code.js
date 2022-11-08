@@ -45,9 +45,9 @@ registerOnclick((x, y) => {
     if (coordArray[yPos][xPos] == '') {
       coordArray[yPos][xPos] = player
       drawText(player, max / 2 - min / 2 - min * 0.15 + min / 6 + (min * xPos / 3), min * 0.11 + min / 6 + min * yPos / 3, 'black', min * 0.3);
+      turns++
       console.log(isWinner(player), turns)
       player == player1 ? player = player2 : player = player1;
-      turns++
       if (turns == 9 && isWinner (player) == undefined) {
         drawText('Draw', max / 3, min / 3, min / 2, 'black')
       }
