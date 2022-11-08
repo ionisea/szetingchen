@@ -48,6 +48,9 @@ registerOnclick((x, y) => {
       console.log(isWinner(player), turns)
       player == player1 ? player = player2 : player = player1;
       turns++
+      if (turns == 9 && isWinner (player) == undefined) {
+        drawText('Draw', max / 2, min / 2, min / 2, 'black')
+      }
     }
   }
 });
