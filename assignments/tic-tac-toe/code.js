@@ -48,7 +48,6 @@ registerOnclick((x, y) => {
       turns++
       console.log(isWinner(player), turns)
       player == player1 ? player = player2 : player = player1
-      }
     }
   }
 });
