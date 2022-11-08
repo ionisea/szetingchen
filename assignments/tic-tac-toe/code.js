@@ -26,17 +26,17 @@ const winnerLine = (win) => {
 const isWinner = (player) => {
   for (let p = 0; p <= 2; p++) {
     if ((coordArray[p][0] == player) && (coordArray[p][1] == player) && (coordArray[p][2] == player)) {
-      return { player: player, winType: 'h', winLoca: p }
+      return ({ player: player, winType: 'h', winLoca: p })
     }
     if ((coordArray[0][p] == player) && (coordArray[1][p] == player) && (coordArray[2][p] == player)) {
-      return { player: player, winType: 'v', winLoca: p }
+      return ({ player: player, winType: 'v', winLoca: p })
     }
   }
   if ((coordArray[0][0] == player) && (coordArray[1][1] == player) && (coordArray[2][2] == player)) {
-    return { player: player, winType: 'd', winLoca: 0 }
+    return ({ player: player, winType: 'd', winLoca: 0 })
   }
   if ((coordArray[0][2] == player) && (coordArray[1][1] == player) && (coordArray[2][0] == player)) {
-    return { player: player, winType: 'd', winLoca: 1 }
+    return ({ player: player, winType: 'd', winLoca: 1 })
   }
 }
 
