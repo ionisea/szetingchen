@@ -19,18 +19,16 @@ const isWinner = (player) => {
   for (let p = 0; p <= 2; p++) {
     if ((coordArray[p][0] == player) && (coordArray[p][1] == player) && (coordArray[p][2] == player)) {
       return player + 'h'
-    } else if ((coordArray[0][p] == player) && (coordArray[1][p] == player) && (coordArray[2][p] == player)) {
+    }
+    if ((coordArray[0][p] == player) && (coordArray[1][p] == player) && (coordArray[2][p] == player)) {
       return player + 'v'
-    } else {
-      return undefined
     }
   }
   if ((coordArray[0][0] == player) && (coordArray[1][1] == player) && (coordArray[2][2] == player)) {
     return player + 'd1'
-  } else if ((coordArray[0][2] == player) && (coordArray[1][1] == player) && (coordArray[2][0] == player)) {
+  }
+  if ((coordArray[0][2] == player) && (coordArray[1][1] == player) && (coordArray[2][0] == player)) {
     return player + 'd2'
-  } else {
-    return undefined
   }
 }
 
