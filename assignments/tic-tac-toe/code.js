@@ -19,7 +19,7 @@ for (let editConst = 1 / 3; editConst < 1; editConst += 1 / 3) {
 
 const winnerLine = (win) => {
   if (win.winType == 'h') {
-    drawLine(leftEnd,)
+    drawLine(leftEnd, win.winLoca * (min / 3) + min / 6, rightEnd, win.winLoca * (min / 3) + (min / 6), 'black', 8)
   }
 }
 
