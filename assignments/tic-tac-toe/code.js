@@ -48,7 +48,7 @@ registerOnclick((x, y) => {
       turns++
       console.log(isWinner(player), turns)
       player == player1 ? player = player2 : player = player1;
-      if (turns == 9 && isWinner (player) == undefined) {
+      if (turns == 8 && isWinner (player) == undefined) {
         drawText('Draw', max / 3, min / 3, min / 2, 'black')
       }
     }
