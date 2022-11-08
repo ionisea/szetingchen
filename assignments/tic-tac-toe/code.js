@@ -18,10 +18,10 @@ for (let editConst = 1 / 3; editConst < 1; editConst += 1 / 3) {
 const isWinner = (player) => {
   for (let p = 0; p <= 2; p++) {
     if ((coordArray[p][0] == player) && (coordArray[p][1] == player) && (coordArray[p][2] == player)) {
-      return player + 'h'
+      return player + 'h' + p
     }
     if ((coordArray[0][p] == player) && (coordArray[1][p] == player) && (coordArray[2][p] == player)) {
-      return player + 'v'
+      return player + 'v' + p
     }
   }
   if ((coordArray[0][0] == player) && (coordArray[1][1] == player) && (coordArray[2][2] == player)) {
