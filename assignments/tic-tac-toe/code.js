@@ -43,8 +43,7 @@ const isWinner = (player) => {
   }
   if ((coordArray[0][0] == player) && (coordArray[1][1] == player) && (coordArray[2][2] == player)) {
     return ({ player: player, winType: 'd', winLoca: 0 })
-  }
-  if ((coordArray[0][2] == player) && (coordArray[1][1] == player) && (coordArray[2][0] == player)) {
+  } else if ((coordArray[0][2] == player) && (coordArray[1][1] == player) && (coordArray[2][0] == player)) {
     return ({ player: player, winType: 'd', winLoca: 1 })
   }
 }
