@@ -23,7 +23,7 @@ const winnerLine = (win) => {
   } else if (win.winType == 'h') {
     drawLine(end1, win.winLoca * (min / 3) + min / 6, end2, win.winLoca * (min / 3) + (min / 6), 'black', 8)
   } else if (win.winType == 'v') {
-    drawLine(win.winLoca * (min / 3) + max / 2 - min / 2, 0, win.winLoca * (min / 3)  + max / 2 - min / 2, min, 'black', 8)
+    drawLine(win.winLoca * (min / 3) + max / 2 - min / 2 - min / 6, 0, win.winLoca * (min / 3)  + max / 2 - min / 2 + min / 6, min, 'black', 8)
   } else if (win.winType == 'd') {
     if (win.winLoca == 0) {
       drawLine(end1, 0, end2, min, 'black', 8)
