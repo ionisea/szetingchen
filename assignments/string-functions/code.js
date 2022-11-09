@@ -47,11 +47,11 @@ const upDownLastCharacter = (s) => {
 }
 
 const firstName = (s) => {
-  return s.substring(0, s.search(/[ ]/))
+  return s.substring(0, s.indexOf(' '))
 }
 
 const lastName = (s) => {
-  return s.substring(s.search(/[ ]/) + 1)
+  return s.substring(s.indexOf(' ') + 1)
 }
 
 const concatenate = (s1, s2) => {
