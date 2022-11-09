@@ -63,7 +63,7 @@ registerOnclick((x, y) => {
     if (coordArray[yPos][xPos] == '' && isWinner(player) == undefined) {
       player == player1 ? player = player2 : player = player1
       coordArray[yPos][xPos] = player
-      drawText(player, max / 2 - min / 2 - min * 0.2 + min / 6 + (min * xPos / 3), min * 0.11 + min / 6 + min * yPos / 3, 'black', min * 0.3);
+      drawText(player, max / 2 - min / 2 - min * 0.1 + min / 6 + (min * xPos / 3), min * 0.11 + min / 6 + min * yPos / 3, 'black', min * 0.3);
       winnerLine(isWinner(player))
       player == player1 ? player = player2 : player = player1
     }
