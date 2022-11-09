@@ -62,7 +62,7 @@ registerOnclick((x, y) => {
     if (coordArray[yPos][xPos] == '' && winner == undefined) {
       coordArray[yPos][xPos] = player
       drawText(player, max / 2 - min / 2 - min / 10 + min / 6 + (min * xPos / 3), min * 0.11 + min / 6 + min * yPos / 3, 'black', min * 0.3);
-      console.log(JSON.stringify(isWinner(player)))
+      winnerLine(isWinner(player))
       player == player1 ? player = player2 : player = player1
     }
   }
