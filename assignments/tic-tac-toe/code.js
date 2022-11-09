@@ -37,8 +37,7 @@ const isWinner = (player) => {
   for (let p = 0; p <= 2; p++) {
     if ((coordArray[p][0] == player) && (coordArray[p][1] == player) && (coordArray[p][2] == player)) {
       return ({ player: player, winType: 'h', winLoca: p })
-    }
-    if ((coordArray[0][p] == player) && (coordArray[1][p] == player) && (coordArray[2][p] == player)) {
+    } else if ((coordArray[0][p] == player) && (coordArray[1][p] == player) && (coordArray[2][p] == player)) {
       return ({ player: player, winType: 'v', winLoca: p })
     }
   }
@@ -49,7 +48,6 @@ const isWinner = (player) => {
     return ({ player: player, winType: 'd', winLoca: 1 })
   }
 }
-
 
 let xPos;
 let yPos;
