@@ -19,7 +19,7 @@ const simplePigLatin = (s, num) => {
 }
 
 const isAllUpperCase = (s) => {
-  return s.search(/[abcdefghijklmnopqrstuvwxyz]/) == -1
+  return s.toUpperCase() === s
 }
 
 const sameIgnoringCase = (s1, s2) => {
