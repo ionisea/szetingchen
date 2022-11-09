@@ -18,18 +18,18 @@ for (let editConst = 1 / 3; editConst < 1; editConst += 1 / 3) {
 }
 
 const winnerLine = (win) => {
-  if (win.winType == 'h') {
+  if (win == undefined) {
+    return 'No Winner'
+  } else if (win.winType == 'h') {
     drawLine(end1, win.winLoca * (min / 3) + min / 6, end2, win.winLoca * (min / 3) + (min / 6), 'black', 8)
   } else if (win.winType == 'v') {
     drawLine(win.winLoca * (min / 3) + min / 6, 0, win.winLoca * (min / 3) + min / 6, min, 'black', 8)
   } else if (win.winType == 'd') {
     if (win.winLoca == 0) {
-      drawLine (end1, 0, end2, min, 'black', 8)
+      drawLine(end1, 0, end2, min, 'black', 8)
     } else if (win.winLoca = 1) {
-      drawLine (end2, 0, end1, min, 'black', 8)
+      drawLine(end2, 0, end1, min, 'black', 8)
     }
-  } else {
-    return 'No Winner'
   }
 }
 
