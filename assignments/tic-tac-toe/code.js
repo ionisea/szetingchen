@@ -53,9 +53,7 @@ const isWinner = (player) => {
 let xPos;
 let yPos;
 let player = player1;
-let turns = 0
 registerOnclick((x, y) => {
-  turns++
   if (x < max / 2 - min / 2 || x > max / 2 + min / 2) {
     drawText('🦖 yee', x - height / 3, y + height / 6, 'yellow', height / 2)
   } else {
