@@ -33,19 +33,21 @@ const winnerLine = (win) => {
   }
 }
 
+let winner = {}
 const isWinner = (player) => {
   for (let p = 0; p <= 2; p++) {
     if ((coordArray[p][0] == player) && (coordArray[p][1] == player) && (coordArray[p][2] == player)) {
-      return ({ player: player, winType: 'h', winLoca: p })
+      winner = ({ player: player, winType: 'h', winLoca: p })
     } else if ((coordArray[0][p] == player) && (coordArray[1][p] == player) && (coordArray[2][p] == player)) {
-      return ({ player: player, winType: 'v', winLoca: p })
+      winner = ({ player: player, winType: 'v', winLoca: p })
     }
   }
   if ((coordArray[0][0] == player) && (coordArray[1][1] == player) && (coordArray[2][2] == player)) {
-    return ({ player: player, winType: 'd', winLoca: 0 })
+    winner = ({ player: player, winType: 'd', winLoca: 0 })
   } else if ((coordArray[0][2] == player) && (coordArray[1][1] == player) && (coordArray[2][0] == player)) {
-    return ({ player: player, winType: 'd', winLoca: 1 })
+    winner = ({ player: player, winType: 'd', winLoca: 1 })
   }
+  return winner
 }
 
 let xPos;
@@ -59,7 +61,7 @@ registerOnclick((x, y) => {
   } else {
     y < 1 / 3 * height ? yPos = 0 : y < 2 / 3 * height ? yPos = 1 : yPos = 2;
     x < max / 2 - min / 6 ? xPos = 0 : x < max / 2 + min / 6 ? xPos = 1 : xPos = 2
-    if (coordArray[yPos][xPos] == '' && isWinner(player) == undefined) {
+    if (coordArray[yPos][xPos] == '' && winner == undefined) {
       coordArray[yPos][xPos] = player
       drawText(player, max / 2 - min / 2 - min / 10 + min / 6 + (min * xPos / 3), min * 0.11 + min / 6 + min * yPos / 3, 'black', min * 0.3);
       winnerLine(isWinner(player))
