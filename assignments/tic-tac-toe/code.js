@@ -68,7 +68,7 @@ registerOnclick((x, y) => {
       turns++
       if (winner === undefined && turns === 9) {
         drawFilledRect(max / 2 - min / 2, 0, min, min, 'white')
-        drawText('Draw', 11 * (max / 30), 5 * (min / 8), 'blue', min / 2)
+        drawText('Draw', 11 * (max / 30), 5 * (min / 8), 'black', min / 2)
       }
     }
   }
