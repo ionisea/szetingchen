@@ -64,7 +64,7 @@ registerOnclick((x, y) => {
       coordArray[yPos][xPos] = player
       drawText(player, max / 2 - min / 2 + min / 20 + (min * xPos / 3), min * 0.11 + min / 6 + min * yPos / 3, 'black', min * 0.3);
       winnerLine(isWinner(player))
-      player = player === player ? player1 : player2
+      player = player === player1 ? player2 : player1
       turns++
       if (winner === undefined && turns === 9) {
         drawFilledRect(max / 2 - min / 2, 0, min, min, 'white')
