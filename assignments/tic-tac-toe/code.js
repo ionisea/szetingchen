@@ -23,7 +23,7 @@ const winnerLine = (win) => {
   } else if (win.winType == 'h') {
     drawLine(end1, win.winLoca * (min / 3) + min / 6, end2, win.winLoca * (min / 3) + (min / 6), 'black', 8)
   } else if (win.winType == 'v') {
-    drawLine(win.winLoca * (min / 3) + max / 2 - min / 2 + min / 6, 0, win.winLoca * (min / 3)  + max / 2 - min / 2 + min / 6, min, 'black', 8)
+    drawLine(win.winLoca * (min / 3) + max / 2 - min / 2 + min / 6, 0, win.winLoca * (min / 3) + max / 2 - min / 2 + min / 6, min, 'black', 8)
   } else if (win.winType == 'd') {
     if (win.winLoca == 0) {
       drawLine(end1, 0, end2, min, 'black', 8)
@@ -67,7 +67,8 @@ registerOnclick((x, y) => {
       player == player1 ? player = player2 : player = player1
       turns++
       if (winner == undefined && turns === 9) {
-        drawText('Draw', max /3, min / 2, 'blue', min / 2 )
+        drawFilledRect (0, max / 2 - 5*(min / 6), min, min, 'white')
+        drawText('Draw', max / 3, min / 2, 'blue', min / 2)
       }
     }
   }
