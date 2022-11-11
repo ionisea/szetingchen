@@ -24,3 +24,17 @@ const chessArray = [
   ['♙', '♙', '♙', '♙', '♙', '♙', '♙', '♙'],
   ['♖', '♘', '♗', '♕', '♔', '♗', '♘', '♖'],
 ]
+
+const checkerboard = (n, color1, color2) => {
+  const bigSquareSide = Math.min(width, height)
+  const squareSide = bigSquareSide / n
+  const widthExtra = (width - bigSquareSide) / 2
+  const heightExtra = (height - bigSquareSide) / 2
+  drawFilledRect(Math.max(widthExtra, heightExtra), 0, bigSquareSide, bigSquareSide, color1)
+  for (let i = 0; i < n; i++) {
+    for (let j = i % 2; j < n; j += 2) {
+      drawFilledRect(j * squareSide + widthExtra, i * squareSide + heightExtra, squareSide, squareSide, color2)
+    }
+  }
+}
+checkerboard(8, 'black', 'white');
