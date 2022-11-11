@@ -2,7 +2,18 @@ const c = document.getElementById("canvas");
 const ctx = c.getContext("2d");
 const width = screen.width
 const height = screen.height
-console.log(width, " ", height)
+const time = time.getMilliseconds()
+
+const getMousePosition = (canvas, event) =>{
+  let rect = canvas.getBoundingClientRect();
+  let x = event.clientX - rect.left;
+  let y = event.clientY - rect.top;
+  return [x, y]
+}
+c.addEventListener("mousedown", function(e)
+{
+  getMousePosition(canvasElem, e);
+});
 
 const drawLine = (x1, y1, x2, y2, color) => {
   ctx.fillStyle = color;
