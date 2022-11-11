@@ -1,23 +1,18 @@
 {
-  "name": "lonelyidiot",
+  "name": "not buggy game",
   "version": "1.0.0",
-  "description": "today is wednesday",
-  "main": "script.js",
+  "description": "group hack",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/berkeley-high-cs/LonelyIdiot.git"
+    "url": "git+https://github.com/bhs-intro-to-programming/szetingchen.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/berkeley-high-cs/LonelyIdiot/issues"
-  },
-  "homepage": "https://github.com/berkeley-high-cs/LonelyIdiot#readme",
   "dependencies": {
     "express": "^4.18.2"
   }
