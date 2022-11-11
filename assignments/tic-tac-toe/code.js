@@ -59,7 +59,7 @@ registerOnclick((x, y) => {
     drawText('🦖 yee', x - height / 3, y + height / 6, 'yellow', height / 2)
   } else {
     yPos = Math.floor(y / (height / 3))
-    xPos = Math.floor(x/(width - height/3))
+    x < max / 2 - min / 6 ? xPos = 0 : x < max / 2 + min / 6 ? xPos = 1 : xPos = 2
     if (coordArray[yPos][xPos] == '' && winner == undefined && turns < 9) {
       coordArray[yPos][xPos] = player
       drawText(player, max / 2 - 9 * (min / 20) + (min * xPos / 3), min * 0.11 + min / 6 + min * yPos / 3, 'black', min * 0.3);
