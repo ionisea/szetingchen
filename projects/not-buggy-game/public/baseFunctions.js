@@ -8,11 +8,14 @@ const getMousePosition = (canvas, event) =>{
   let rect = canvas.getBoundingClientRect();
   let x = event.clientX - rect.left;
   let y = event.clientY - rect.top;
-  return [x, y]
+  console.log(x + ", " + y)
+  drawRect(x, y, 10, 10, 'red')
 }
-c.addEventListener("mousedown", function(e)
+
+
+ctx.addEventListener("mousedown", function(e)
 {
-  getMousePosition(canvasElem, e);
+  getMousePosition(ctx, e);
 });
 
 const drawLine = (x1, y1, x2, y2, color) => {
