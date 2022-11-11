@@ -40,6 +40,12 @@ const drawText = (text, x, y, size) =>{
   ctx.fillText(text, x, y, size);
 }
 
+const clear = () =>{
+  ctx.clearRect(0, 0, width, height)
+}
+
+
+
 
 //drawText("hello", 100, 100, Math.min(width, height) * 0.25)
 //drawFilledCircle(100, 100, 10, "blue")
@@ -47,3 +53,4 @@ const drawText = (text, x, y, size) =>{
 //drawRect(100, 100, 200, 100, 'red')
 //drawFilledRect (200, 200, 100, 100, 'red')
 //drawTriangle(100, 300, 500, 300, 250, 200, 'black')
+//clear();
