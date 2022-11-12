@@ -40,7 +40,7 @@ const drawText = (text, x, y, size) =>{
   ctx.fillText(text, x, y, size);
 }
 
-//drawText("hello", 100, 100, Math.min(width, height) * 0.25)
+drawText("hello", 100, 100, Math.min(width, height) * 0.25)
 //drawFilledCircle(100, 100, 10, "blue")
 //drawLine(0, 0, 100, 20, 'red')
 //drawRect(100, 100, 200, 100, 'red')
