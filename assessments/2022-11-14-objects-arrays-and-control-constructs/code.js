@@ -59,4 +59,6 @@ const sums = (n) => {
 };
 
 const rule110 = (cells) => {
+  const array = Array(cells.length).fill(1)
+  return array
 };
