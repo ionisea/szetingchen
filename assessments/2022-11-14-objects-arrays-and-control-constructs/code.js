@@ -31,6 +31,7 @@ const updateWins = (players) => {
 };
 
 const bigWinners = (players) => {
+  return players.map(x => x.wins > 10)
 };
 
 const fillTimesTable = (table) => {
