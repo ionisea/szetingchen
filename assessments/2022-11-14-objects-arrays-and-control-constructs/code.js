@@ -27,6 +27,7 @@ const updateWins = (players) => {
       element.wins = 1
     }
   }
+  return undefined
 };
 
 const bigWinners = (players) => {
