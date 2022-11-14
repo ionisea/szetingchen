@@ -40,8 +40,10 @@ const fillTimesTable = (table) => {
 
 const sums = (n) => {
   let sumsArray = []
+  let numbers;
   for (let x = 0; x < n + 1; x++) {
-    sumsArray.push(x + sumsArray[x - 1])
+    numbers += x
+    sumsArray.push(numbers)
   }
   return sumsArray
 };
