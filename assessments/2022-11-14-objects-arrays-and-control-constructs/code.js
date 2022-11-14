@@ -39,7 +39,12 @@ const bigWinners = (players) => {
 };
 
 const fillTimesTable = (table) => {
-
+  let array = []
+  for (let x = 1; x < table.length; x++) {
+    for (let y = 1; x < table.length; y++) {
+      array.push
+    }
+  }
 };
 
 const sums = (n) => {
