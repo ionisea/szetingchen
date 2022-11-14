@@ -2,11 +2,11 @@
 // should save you some time.
 
 const area = (rect) => {
-  return rect.width*rect.height
+  return rect.width * rect.height
 };
 
 const higherPaid = (e1, e2) => {
-  return ({salary: (Math.max(e1.salary, e2.salary))})
+  return ({ salary: (Math.max(e1.salary, e2.salary)) })
 };
 
 const isSamePoint = (p1, p2) => {
@@ -14,7 +14,7 @@ const isSamePoint = (p1, p2) => {
 };
 
 const totalWithTip = (bill, tipPercentage) => {
-  return ({subtotal: bill, tip: bill*tipPercentage, total: bill+(bill*tipPercentage)})
+  return ({ subtotal: bill, tip: bill * tipPercentage, total: bill + (bill * tipPercentage) })
 };
 
 const isWinner = (player) => {
