@@ -6,7 +6,7 @@ const area = (rect) => {
 };
 
 const higherPaid = (e1, e2) => {
-  return ({salary: (Math.max(e1.salary, e2.salary))})
+  return ({ salary: (Math.max(e1.salary, e2.salary)) })
 };
 
 const isSamePoint = (p1, p2) => {
@@ -18,6 +18,7 @@ const totalWithTip = (bill, tipPercentage) => {
 };
 
 const isWinner = (player) => {
+  return player.score > 100
 };
 
 const updateWins = (players) => {
