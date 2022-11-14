@@ -43,6 +43,7 @@ const sums = (n) => {
   for (let x = 0; x < n; x++) {
     sumsArray.push(x)
   }
+  return sumsArray
 };
 
 const rule110 = (cells) => {
