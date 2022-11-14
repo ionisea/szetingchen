@@ -22,6 +22,11 @@ const isWinner = (player) => {
 };
 
 const updateWins = (players) => {
+  for (const element of players) {
+    if (isWinner(element) === true) {
+      element.wins = 1
+    }
+  }
 };
 
 const bigWinners = (players) => {
