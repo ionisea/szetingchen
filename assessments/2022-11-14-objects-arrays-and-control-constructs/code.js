@@ -6,10 +6,11 @@ const area = (rect) => {
 };
 
 const higherPaid = (e1, e2) => {
-  return Math.max(e1.salary, e2.salary)
+  return JSON.stringify(Math.max(e1.salary, e2.salary))
 };
 
 const isSamePoint = (p1, p2) => {
+  return 
 };
 
 const totalWithTip = (bill, tipPercentage) => {
