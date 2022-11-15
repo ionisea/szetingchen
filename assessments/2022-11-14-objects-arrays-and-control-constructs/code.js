@@ -62,11 +62,11 @@ const rule110 = (cells) => {
   const returned = []
   for (let i = 1; i < array.length; i++) {
     if (cells[i - 1] === 0 && cells[i] === 0 && cells[i + 1] === 0) {
-      array[i] === 0
+      array[i] == 0
     } else if (cells[i - 1] === 1 && cells[i] === 0 && cells[i + 1] === 0) {
-      array[i] === 0
+      array[i] == 0
     } else if (cells[i - 1] === 1 && cells[i] === 1 && cells[i + 1] === 1) {
-      array[i] === 0
+      array[i] == 0
     }
   }
   for (let x = 1; x < array.length - 1; x++) {
