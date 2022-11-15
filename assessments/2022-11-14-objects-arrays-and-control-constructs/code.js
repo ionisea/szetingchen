@@ -67,8 +67,6 @@ const rule110 = (cells) => {
       array[i] === 0
     } else if (cells[i - 1] === 1 && cells[i] === 1 && cells[i + 1] === 1) {
       array[i] === 0
-    } else {
-      array
     }
   }
   for (let x = 1; x < array.length - 1; x++) {
