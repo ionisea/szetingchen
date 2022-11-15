@@ -60,7 +60,7 @@ const sums = (n) => {
 const rule110 = (cells) => {
   const array = [0] + Array(cells.length).fill(1) + [0]
   for (let i = 1; i < array.length - 1; i++) {
-    if (cells[i - 1] === 0 && cells[i] === 0 && cells[i+1] === 0) {
+    if (cells[i - 1] === 0 && cells[i] === 0 && cells[i + 1] === 0) {
       array[i] === 0
     } else if (cells[i - 1] === 1 && cells[i] === 0 && cells[i + 1] === 0) {
       array[i] === 0
@@ -70,5 +70,6 @@ const rule110 = (cells) => {
       array
     }
   }
-  return array
+  let returned = JSON.stringify(array).substring(1, array.length)
+  return ([returned])
 };
