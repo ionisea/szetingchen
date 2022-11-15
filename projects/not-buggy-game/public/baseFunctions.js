@@ -6,8 +6,7 @@ const startTime = new Date();
 
 const time = () =>{
   const thisTime = new Date();
-  console.log(thisTime.getMilliseconds)
-  return thisTime.getMilliseconds - startTime.getMilliseconds;
+  return thisTime.getMilliseconds() - startTime.getMilliseconds();
 }
 
 const drawLine = (x1, y1, x2, y2, color) => {
@@ -49,12 +48,12 @@ const drawText = (text, x, y, size) =>{
 const clear = () =>{
   ctx.clearRect(0, 0, width, height)
 }
+const test = () =>{
+  if(time()>10){
+    drawText(time(), Math.random()*10, Math.random()*10, Math.min(width, height) * 0.25)
+  }
+}
 
-
-
-
-
-//drawText("hello", 100, 100, Math.min(width, height) * 0.25)
 //drawFilledCircle(100, 100, 10, "blue")
 //drawLine(0, 0, 100, 20, 'red')
 //drawRect(100, 100, 200, 100, 'red')
