@@ -33,7 +33,7 @@ for (let i = 0; i < 8; i++) {
   }
 }
 
-drawText(WHITE_KING, width / 4, height / 2, 'black', 64);
+drawText(WHITE_KING, 0, 0, 'black', 64);
 drawText(WHITE_QUEEN, width / 2, height / 2, 'black', 64);
 drawText(WHITE_ROOK, width / 2, height / 2, 'black', 64);
 drawText(WHITE_KNIGHT, width / 2, height / 2, 'black', 64);
