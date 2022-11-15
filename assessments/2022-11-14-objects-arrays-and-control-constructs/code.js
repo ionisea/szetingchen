@@ -58,6 +58,17 @@ const sums = (n) => {
 };
 
 const rule110 = (cells) => {
-  const array = Array(cells.length).fill(1)
+  const array = [0] + Array(cells.length).fill(1) + [0]
+  for (let i = 1; i < array.length - 1; i++) {
+    if (cells[i - 1] === 0 && cells[i] === 0 && cells[i+1] === 0) {
+      array[i] === 0
+    } else if (cells[i - 1] === 1 && cells[i] === 0 && cells[i + 1] === 0) {
+      array[i] === 0
+    } else if (cells[i - 1] === 1 && cells[i] === 1 && cells[i + 1] === 1) {
+      array[i] === 0
+    } else {
+      array
+    }
+  }
   return array
 };
