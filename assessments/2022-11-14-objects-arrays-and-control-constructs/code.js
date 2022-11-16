@@ -27,11 +27,10 @@ const isWinner = (player) => {
 
 const updateWins = (players) => {
   for (const element of players) {
-    if (isWinner(element) === true) {
-      element.wins = 1
+    if (isWinner(element)) {
+      element.wins += 1
     }
   }
-  return undefined
 };
 
 const bigWinners = (players) => {
