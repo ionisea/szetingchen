@@ -28,7 +28,7 @@ const isWinner = (player) => {
 const updateWins = (players) => {
   for (const element of players) {
     if (isWinner(element)) {
-      element.wins += 1
+      element.wins++
     }
   }
 };
