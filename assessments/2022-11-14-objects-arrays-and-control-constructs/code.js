@@ -69,8 +69,11 @@ const rule110 = (cells) => {
       array[i] = 0
     } 
   }
+  return array
+  /*
   for (let i = 1; i < array.length - 1; i++) {
     returned.push(array[i])
   }
   return returned
+  */
 };
