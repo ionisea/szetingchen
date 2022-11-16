@@ -58,13 +58,13 @@ const sums = (n) => {
 
 const rule110 = (cells) => {
   const zeroArray = [0]
-  const array = zeroArray.concat(Array(cells.length).fill(1)).concat(zeroArray)
+  const array = zeroArray.concat(cells).concat(zeroArray)
   for (let i = 1; i < cells.length; i++) {
-    if (cells[i - 1] === 0 && cells[i] === 0 && cells[i + 1] === 0) {
+    if (array[i - 1] === 0 && array[i] === 0 && array[i + 1] === 0) {
       array[i] = 0
-    } else if (cells[i - 1] === 1 && cells[i] === 0 && cells[i + 1] === 0) {
+    } else if (array[i - 1] === 1 && array[i] === 0 && array[i + 1] === 0) {
       array[i] = 0
-    } else if (cells[i - 1] === 1 && cells[i] === 1 && cells[i + 1] === 1) {
+    } else if (array[i - 1] === 1 && array[i] === 1 && array[i + 1] === 1) {
       array[i] = 0
     } 
   }
