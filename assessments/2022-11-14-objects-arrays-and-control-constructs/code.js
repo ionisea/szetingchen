@@ -69,5 +69,5 @@ const rule110 = (cells) => {
       array[i] = 0
     } 
   }
-  return cells
+  return reference
 };
