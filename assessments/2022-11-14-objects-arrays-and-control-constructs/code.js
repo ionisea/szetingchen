@@ -60,7 +60,7 @@ const sums = (n) => {
 const rule110 = (cells) => {
   const zeroArray = [0]
   const array = zeroArray.concat(Array(cells.length).fill(1)).concat(zeroArray)
-  for (let i = 1; i < array.length - 1; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (cells[i - 1] === 0 && cells[i] === 0 && cells[i + 1] === 0) {
       array[i] = 0
     } else if (cells[i - 1] === 1 && cells[i] === 0 && cells[i + 1] === 0) {
