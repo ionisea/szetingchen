@@ -59,6 +59,7 @@ const sums = (n) => {
 const rule110 = (cells) => {
   const zeroArray = [0]
   const array = zeroArray.concat(cells).concat(zeroArray)
+  const returned = []
   for (let i = 1; i < cells.length; i++) {
     if (array[i - 1] === 0 && array[i] === 0 && array[i + 1] === 0) {
       array[i] = 0
@@ -68,5 +69,8 @@ const rule110 = (cells) => {
       array[i] = 0
     } 
   }
-  return array
+  for (let i = 1; i < array.length + 1; i++) {
+    returned.push(array[i])
+  }
+  return returned
 };
