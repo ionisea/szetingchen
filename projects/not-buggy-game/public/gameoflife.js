@@ -1,6 +1,6 @@
 
 
-const pixSizeFactor =2
+const pixSizeFactor =20
 const timeTillUpdate = 10
 
 const declareAr = (pixSizeFactor) => {
@@ -68,11 +68,12 @@ randomPopulate(0.5, screenAr)
 
 
 let next = 0;
-const drawFrame = () => {
-  if(time()>next){
+const drawFrame = (time) => {
+  if(time>next){
     clear();
     screenAr = declareNextGen(screenAr);
     display(screenAr);
     next+=timeTillUpdate;
   }
 }
+animate(drawFrame)

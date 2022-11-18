@@ -1,12 +1,44 @@
+
 const c = document.getElementById("canvas");
 const ctx = c.getContext("2d");
 const width = screen.width
 const height = screen.height
 const startTime = new Date();
+let mouseX = null
+let mouseY = null
+const ThisCallFunc = null
 
-const time = () =>{
-  const thisTime = new Date();
-  return thisTime.getMilliseconds() - startTime.getMilliseconds();
+const animate = (drawFrame) => {
+  let running = true;
+
+  const step = () => {
+    drawFrame(performance.now());
+    maybeStep();
+  };
+
+  const maybeStep = () => {
+    if (running) {
+      requestAnimationFrame(step);
+    }
+  };
+
+  document.documentElement.onclick = (e) => {
+    running = !running;
+    maybeStep();
+  };
+
+  maybeStep();
+};
+c.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+c.addEventListener("click", () =>{
+  ThisCallFunc(mouseX, mouseY)
+});
+
+const registerOnClick = (callFunc) =>{
+  ThisCallFunc = callFunc(mouseX, mouseY);
 }
 
 const drawLine = (x1, y1, x2, y2, color) => {
@@ -47,11 +79,6 @@ const drawText = (text, x, y, size) =>{
 
 const clear = () =>{
   ctx.clearRect(0, 0, width, height)
-}
-const test = () =>{
-  if(time()>10){
-    drawText(time(), Math.random()*10, Math.random()*10, Math.min(width, height) * 0.25)
-  }
 }
 
 //drawFilledCircle(100, 100, 10, "blue")
