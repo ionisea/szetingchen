@@ -108,10 +108,6 @@ const timesTable = (num) => {
 }
 
 const containsX = (s) => {
-  if (s.search([/x/]) > 0) {
-    return 'doesNotContainX'
-  } else {
-    return 'doesContainsX'
-  }
+  return s.find('x') == -1
 }
 //outOfTime
