@@ -103,8 +103,12 @@ const countXs = (s) => {
   return count
 }
 
-const timesTable = () => {
-  return emit(9, 8, 72)
+const timesTable = (n) => {
+  for (x = 1; x <= n; x++) {
+    for (y = 1; x <= n; y++) {
+      emit(x, y, x*y)
+    }
+  }
 }
 
 const containsX = (s) => {
