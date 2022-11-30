@@ -112,6 +112,6 @@ const containsX = (s) => {
 }
 
 const sumSquares = (n) => {
-  return Array(n).fill(n+1).reduce((acc, x) => acc + (x**2), 0)
+  return Array(n).fill(n).reduce((acc, x) => acc + (x**2), 0)
 }
 //outOfTime
