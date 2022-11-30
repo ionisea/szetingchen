@@ -94,7 +94,13 @@ const yesIfEven = (num) => {
 }
 
 const countXs = (s) => {
-  return s.search([/x/])
+  let count = 0
+  for (let i = 0; i < s.length - 1; i++) {
+    if (s[i] = 'x') {
+      count++
+    }
+  }
+  return count
 }
 
 const timesTable = (num) => {
