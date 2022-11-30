@@ -105,7 +105,7 @@ const countXs = (s) => {
 
 const timesTable = (n) => {
   for (let x = 1; x <= n; x++) {
-    for (let y = 1; x <= n; y++) {
+    for (let y = 1; y <= n; y++) {
       emit(x, y, x*y)
     }
   }
