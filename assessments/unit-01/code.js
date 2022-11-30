@@ -30,7 +30,7 @@ const canSleepIn = (isWeekday, onVacation) => {
 }
 
 const canGoToProm = (isASenior, invitedBySenior, onExclusionList) => {
-  return isASenior || invitedBySenior &&! onExclusionList
+  return (isASenior || invitedBySenior) &&! onExclusionList
 }
 
 const getsSpeedingTicket = (mph, isCopGrouchy) => {
