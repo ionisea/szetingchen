@@ -96,7 +96,7 @@ const yesIfEven = (num) => {
 const countXs = (s) => {
   let count = 0
   for (let i = 0; i < s.length - 1; i++) {
-    if (s[i] = 'x') {
+    if (s[i] === 'x') {
       count++
     }
   }
