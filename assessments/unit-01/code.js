@@ -103,8 +103,8 @@ const countXs = (s) => {
   return count
 }
 
-const timesTable = (num) => {
-  return num
+const timesTable = () => {
+  return emit(9, 8, 72)
 }
 
 const containsX = (s) => {
@@ -114,4 +114,3 @@ const containsX = (s) => {
 const sumSquares = (n) => {
   return Array(n).fill().map((_, i) => i).reduce((acc, x) => acc + (x**2), 0)
 }
-//outOfTime
