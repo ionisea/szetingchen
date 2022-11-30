@@ -14,7 +14,7 @@ const hypotenuse = (a, b) => {
 }
 
 const maxRadius = (widthOfArea, heightOfArea) => {
-  return (Math.min(widthOfArea, heightOfArea)) / 2
+  return Math.min(widthOfArea, heightOfArea) / 2
 }
 
 const numCircles = (radius, widthOfArea) => {
@@ -22,7 +22,7 @@ const numCircles = (radius, widthOfArea) => {
 }
 
 const offset = (widthOfArea, widthOfFigure) => {
-  return (widthOfArea - ((Math.floor(widthOfArea / widthOfFigure)) * widthOfFigure)) / 2
+  return (widthOfArea - widthOfFigure) / 2
 }
 
 const canSleepIn = (isWeekday, onVacation) => {
