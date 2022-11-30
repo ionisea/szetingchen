@@ -74,7 +74,7 @@ const secondHalf = (s) => {
 }
 
 const upDown = (s) => {
-  return (s.toUpperCase() + s.toLowerCase())
+  return s.toUpperCase() + s.toLowerCase()
 }
 
 const everyOther = (s) => {
