@@ -7,7 +7,9 @@ const startTime = new Date();
 let mouseX = null
 let mouseY = null
 const ThisCallFunc = null
-
+c.width  = window.innerWidth;
+c.height = window.innerHeight;
+console.log(c.clientHeight)
 const animate = (drawFrame) => {
   let running = true;
 
@@ -73,13 +75,25 @@ const drawFilledCircle = (x, y, size, color) => {
   ctx.fill()
 }
 
-const drawText = (text, x, y, size) =>{
+const drawText = (text, x, y, size, color) =>{
+  ctx.font = size+"px Sans-Serif";
+  ctx.fillStyle = color;
   ctx.fillText(text, x, y, size);
 }
 
 const clear = () =>{
   ctx.clearRect(0, 0, width, height)
 }
+
+const componentToHex = (c) => {
+  var hex = c.toString(16);
+  return hex.length == 1 ? "0" + hex : hex;
+}
+
+const rgbToHex = (r, g, b) =>{
+  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
 
 //drawFilledCircle(100, 100, 10, "blue")
 //drawLine(0, 0, 100, 20, 'red')
