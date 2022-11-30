@@ -110,4 +110,8 @@ const timesTable = (num) => {
 const containsX = (s) => {
   return s.indexOf('x') !== -1
 }
+
+const sumSquares = (n) => {
+  return Array(n).fill(n+1).reduce((acc, x) => acc + (x**2), 0)
+}
 //outOfTime
