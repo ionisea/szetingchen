@@ -2,7 +2,45 @@ const c = document.getElementById("canvas");
 const ctx = c.getContext("2d");
 const width = screen.width
 const height = screen.height
-console.log(width, " ", height)
+const startTime = new Date();
+let mouseX = null
+let mouseY = null
+const ThisCallFunc = null
+c.width  = window.innerWidth;
+c.height = window.innerHeight;
+console.log(c.clientHeight)
+const animate = (drawFrame) => {
+  let running = true;
+
+  const step = () => {
+    drawFrame(performance.now());
+    maybeStep();
+  };
+
+  const maybeStep = () => {
+    if (running) {
+      requestAnimationFrame(step);
+    }
+  };
+
+  document.documentElement.onclick = (e) => {
+    running = !running;
+    maybeStep();
+  };
+
+  maybeStep();
+};
+c.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+c.addEventListener("click", () =>{
+  ThisCallFunc(mouseX, mouseY)
+});
+
+const registerOnClick = (callFunc) =>{
+  ThisCallFunc = callFunc(mouseX, mouseY);
+}
 
 const drawLine = (x1, y1, x2, y2, color) => {
   ctx.fillStyle = color;
@@ -36,13 +74,29 @@ const drawFilledCircle = (x, y, size, color) => {
   ctx.fill()
 }
 
-const drawText = (text, x, y, size) =>{
+const drawText = (text, x, y, size, color) =>{
+  ctx.font = size+"px Sans-Serif";
+  ctx.fillStyle = color;
   ctx.fillText(text, x, y, size);
 }
 
-drawText("hello", 100, 100, Math.min(width, height) * 0.25)
+const clear = () =>{
+  ctx.clearRect(0, 0, width, height)
+}
+
+const componentToHex = (c) => {
+  var hex = c.toString(16);
+  return hex.length == 1 ? "0" + hex : hex;
+}
+
+const rgbToHex = (r, g, b) =>{
+  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
+
 //drawFilledCircle(100, 100, 10, "blue")
 //drawLine(0, 0, 100, 20, 'red')
 //drawRect(100, 100, 200, 100, 'red')
 //drawFilledRect (200, 200, 100, 100, 'red')
 //drawTriangle(100, 300, 500, 300, 250, 200, 'black')
+//clear();
