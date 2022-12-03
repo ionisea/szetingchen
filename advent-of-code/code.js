@@ -21,7 +21,7 @@ const day01Part1 = (s) => {
 
 console.log(run ('day01.sample', extract))
 
-/* (done in jsfiddle)
+/* Day 1: (done in jsfiddle)
 let max1 = 0
 let max2 = 0
 let max3 = 0
@@ -43,5 +43,31 @@ for (let i in input) {
   }
 }
 
+//console.log(max1)
 console.log(max1 + max2 + max3)
+
+/* Day 2 Part 1: (Done in jsFiddle)
+let points = 0
+for (let i in input) {
+  if (input[i][0] === "A" && input[i][1] === "X") {
+  	points += (1 + 3)
+  } else if (input[i][0] === "A" && input[i][1] === "Y") {
+  	points += (2 + 6)
+  } else if (input[i][0] === "A" && input[i][1] === "Z") {
+  	points += (3 + 0)
+  } else if (input[i][0] === "B" && input[i][1] === "X") {
+  	points += (1 + 0)
+  } else if (input[i][0] === "B" && input[i][1] === "Y") {
+  	points += (2 + 3)
+  } else if (input[i][0] === "B" && input[i][1] === "Z") {
+  	points += (3 + 6)
+  } else if (input[i][0] === "C" && input[i][1] === "X") {
+  	points += (1 + 6)
+  } else if (input[i][0] === "C" && input[i][1] === "Y") {
+  	points += (2 + 0)
+  } else if (input[i][0] === "C" && input[i][1] === "Z") {
+  	points += (3 + 3)
+  }
+}
+console.log(points)
 */
