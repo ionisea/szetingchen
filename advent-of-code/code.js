@@ -14,15 +14,14 @@
 // return value in the REPL.
 
 const extract = (s) => s.split('\n').map(x => x.split(''))
-
 const day01Part1 = (s) => {
   const a = extract(s)
   let max = 0
   for (let i in a) {
     let sum = 0
     a[i] = a[i].split('\n').map(Number)
-    for (let j = 0; j < input[i].length; j++) {
-      sum += input[i][j]
+    for (let j = 0; j < a[i].length; j++) {
+      sum += a[i][j]
     }
     if (sum > max) {
       max = sum
