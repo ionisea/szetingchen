@@ -27,6 +27,7 @@ const day01Part1 = (s) => {
       max = sum
     }
   }
+  console.log(max)
   return max
 }
 
