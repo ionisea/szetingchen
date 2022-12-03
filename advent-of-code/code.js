@@ -55,7 +55,7 @@ const day01Part2 = (s) => {
   return max1 + max2 + max3
 }
 
-run('day01.sample', day01Part2)
+run('day01.input', day01Part2)
 
 /* Day 1: (done in jsfiddle)
 let max1 = 0
