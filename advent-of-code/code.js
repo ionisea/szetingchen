@@ -17,17 +17,16 @@ const extract = (s) => s.split('\n').map(x => x.split(''))
 const day01Part1 = (s) => {
   const a = extract(s)
   let max = 0
-  for (const i of a) {
+  for (let i in a) {
     let sum = 0
-    a[i] = a[i].split('\n')
+    a[i] = a[i].split('\n').map(Number)
     for (let j = 0; j < a[i].length; j++) {
-      sum += a[i][j].parseInt()
+      sum += a[i][j]
     }
     if (sum > max) {
       max = sum
     }
   }
-  console.log(max)
   return max
 }
 
