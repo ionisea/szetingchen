@@ -21,4 +21,4 @@ const day01Part1 = (s) => {
 
 }
 
-run ('day_01.sample', extract)
+run ('day01.sample', extract)
