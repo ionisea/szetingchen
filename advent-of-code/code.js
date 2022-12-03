@@ -17,25 +17,19 @@ const extract = (s) => s.split('\n\n')
 
 const day01Part1 = (s) => {
   let input = extract(s)
+  let max = 0
   for (let i in input) {
-    input[i] = input[i].split('\n')
+    let sum = 0
+    input[i] = input[i].split('\n').map(Number)
+    for (let j = 0; j < input[i].length; j++) {
+      sum += input[i][j]
+    }
+    if (sum > max) {
+      max = sum
+    }
   }
-  JSON.stringify(input)
+  return max
 } 
-day01Part1(`1000
-2000
-3000
-
-4000
-
-5000
-6000
-
-7000
-8000
-9000
-
-10000`)
 
 //run('day01.input', day01Part1)
 
