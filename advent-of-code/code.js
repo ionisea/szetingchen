@@ -15,7 +15,7 @@
 
 const extract = (s) => s.split('\n')
 
-const day01Part1 = (a) => {
+const day01Part1 = (s) => {
   return a
 }
 
