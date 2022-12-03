@@ -16,23 +16,13 @@
 const extract = (s) => s.split('\n\n')
 
 const day01Part1 = (s) => {
-  const a = extract(s)
-  let max = 0
-  for (let i in a) {
-    let sum = 0
-    a[i] = a[i].map(Number)
-    for (let j = 0; j < a[i].length; j++) {
-      sum += a[i][j]
-    }
-    if (sum > max) {
-      max = sum
-    }
+  let input = extract(s)
+  for (let i in input) {
+    input[i] = input[i].split('\n')
   }
-  console.log(a)
-  return max
-}
-
-run('day01.input', day01Part1)
+  console.log(input)
+} 
+//run('day01.input', day01Part1)
 
 /* Day 1: (done in jsfiddle)
 let max1 = 0
