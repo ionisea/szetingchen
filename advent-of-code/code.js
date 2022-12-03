@@ -16,7 +16,7 @@
 const extract = (s) => s.split('\n')
 
 const day01Part1 = (s) => {
-  return a
+  return s
 }
 
 run ('day_01.input', day01Part1)
