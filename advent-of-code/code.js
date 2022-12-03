@@ -18,7 +18,7 @@ const extract = (s) => s.split('\n')
 const day01Part1 = (s) => {
   let currentSum = 0
   let max = 0
-  
+
 }
 
-run ('day_01.input', day01Part1)
+run ('day_01.sample', extract)
