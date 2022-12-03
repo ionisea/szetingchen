@@ -14,7 +14,6 @@
 // return value in the REPL.
 
 const extract = (s) => s.split('\n\n')
-
 const day01Part1 = (s) => {
   let input = extract(s)
   let max = 0
@@ -31,7 +30,7 @@ const day01Part1 = (s) => {
   return max
 } 
 
-run('day01.input', day01Part1, 69177)
+run('day01.sample', day01Part1)
 
 /* Day 1: (done in jsfiddle)
 let max1 = 0
