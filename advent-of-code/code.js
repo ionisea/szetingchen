@@ -21,4 +21,4 @@ const day01Part1 = (s) => {
 
 }
 
-run ('day01.sample', extract)
+console.log(run ('day01.sample', extract))
