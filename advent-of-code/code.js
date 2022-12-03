@@ -31,7 +31,7 @@ const day01Part1 = (s) => {
   return max
 } 
 
-//run('day01.input', day01Part1)
+run('day01.input', day01Part1)
 
 /* Day 1: (done in jsfiddle)
 let max1 = 0
