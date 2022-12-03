@@ -15,8 +15,8 @@
 
 const extract = (s) => s.split('\n')
 
-const elfCalories = (a) => {
-  
+const day01Part1 = (a) => {
+  return a
 }
 
 run ('day_01.input', day01Part1)
