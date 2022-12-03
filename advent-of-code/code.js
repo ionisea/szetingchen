@@ -84,9 +84,37 @@ const day02Part1 = (s) => {
   return points
 }
 
+const day02Part2 = (s) => {
+  let input = day02Extract(s)
+  let points = 0
+  for (let i in input) {
+    if (input[i][0] === "A" && input[i][1] === "X") {
+      points += (3 + 0)
+    } else if (input[i][0] === "A" && input[i][1] === "Y") {
+      points += (1 + 3)
+    } else if (input[i][0] === "A" && input[i][1] === "Z") {
+      points += (2 + 6)
+    } else if (input[i][0] === "B" && input[i][1] === "X") {
+      points += (1 + 0)
+    } else if (input[i][0] === "B" && input[i][1] === "Y") {
+      points += (2 + 3)
+    } else if (input[i][0] === "B" && input[i][1] === "Z") {
+      points += (3 + 6)
+    } else if (input[i][0] === "C" && input[i][1] === "X") {
+      points += (2 + 0)
+    } else if (input[i][0] === "C" && input[i][1] === "Y") {
+      points += (3 + 3)
+    } else if (input[i][0] === "C" && input[i][1] === "Z") {
+      points += (1 + 6)
+    }
+  }
+  return points
+}
+
 run('day01.input', day01Part1, 69177)
 run('day01.input', day01Part2, 207456)
 run('day02.input', day02Part1, 8890)
+run('day02.input', day02Part2)
 
 /* Day 2 Part 1: (Done in jsFiddle)
 let points = 0
