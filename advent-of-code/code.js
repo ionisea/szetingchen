@@ -20,9 +20,9 @@ const day01Part1 = (s) => {
   for (let i in input) {
     input[i] = input[i].split('\n')
   }
-  console.log(input)
+  JSON.stringify(input)
 } 
-JSON.stringify(day01Part1(`1000
+day01Part1(`1000
 2000
 3000
 
@@ -35,7 +35,7 @@ JSON.stringify(day01Part1(`1000
 8000
 9000
 
-10000`))
+10000`)
 
 //run('day01.input', day01Part1)
 
