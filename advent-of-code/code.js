@@ -15,7 +15,8 @@
 
 const extract = (s) => s.split('\n').map(x => x.split(''))
 
-const day01Part1 = (a) => {
+const day01Part1 = (s) => {
+  const a = extract(s)
   let max = 0
   for (let i in a) {
     let sum = 0
@@ -30,7 +31,7 @@ const day01Part1 = (a) => {
   return max
 }
 
-run(extract('day01.sample'), day01Part1)
+run('day01.sample', day01Part1)
 
 /* Day 1: (done in jsfiddle)
 let max1 = 0
@@ -54,8 +55,8 @@ for (let i in input) {
   }
 }
 
-//console.log(max1)
-console.log(max1 + max2 + max3)
+Part 1: console.log(max1)
+Part 2: console.log(max1 + max2 + max3)
 */
 
 /* Day 2 Part 1: (Done in jsFiddle)
