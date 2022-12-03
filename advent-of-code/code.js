@@ -19,9 +19,9 @@ const day01Part1 = (s) => {
   let max = 0
   for (let i in a) {
     let sum = 0
-    a[i] = a[i].split('\n').map(Number)
+    a[i] = a[i].split('\n')
     for (let j = 0; j < a[i].length; j++) {
-      sum += a[i][j]
+      sum += a[i][j].parseInt
     }
     if (sum > max) {
       max = sum
