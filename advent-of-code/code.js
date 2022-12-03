@@ -22,7 +22,7 @@ const day01Part1 = (s) => {
   }
   console.log(input)
 } 
-day01Part1(`1000
+JSON.stringify(day01Part1(`1000
 2000
 3000
 
@@ -35,7 +35,7 @@ day01Part1(`1000
 8000
 9000
 
-10000`)
+10000`))
 
 //run('day01.input', day01Part1)
 
