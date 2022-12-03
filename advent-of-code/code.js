@@ -14,23 +14,34 @@
 // return value in the REPL.
 
 const extract = (s) => s.split('\n').map(i => i.split(''))
-const day01Part1 = (s) => {
-  let currentSum = 0
+
+const day01Part1 = (a) => {
   let max = 0
+  for (let i in a) {
+    let sum = 0
+    a[i] = a[i].split('\n').map(Number)
+    for (let j = 0; j < input[i].length; j++) {
+      sum += input[i][j]
+    }
+    if (sum > max) {
+      max = sum
+    }
+  }
+  return max
 }
 
-run ('day01.sample', extract)
+run('day01.sample', day01Part1(extract))
 
 /* Day 1: (done in jsfiddle)
 let max1 = 0
 let max2 = 0
 let max3 = 0
 for (let i in input) {
-	let sum = 0
-	input[i] = input[i].split('\n').map(Number)
+  let sum = 0
+  input[i] = input[i].split('\n').map(Number)
   for (let j = 0; j < input[i].length; j++) {
   sum += input[i][j]
-	}
+  }
   if (sum > max1) {
   max3 = max2
   max2 = max1
@@ -51,23 +62,23 @@ console.log(max1 + max2 + max3)
 let points = 0
 for (let i in input) {
   if (input[i][0] === "A" && input[i][1] === "X") {
-  	points += (1 + 3)
+    points += (1 + 3)
   } else if (input[i][0] === "A" && input[i][1] === "Y") {
-  	points += (2 + 6)
+    points += (2 + 6)
   } else if (input[i][0] === "A" && input[i][1] === "Z") {
-  	points += (3 + 0)
+    points += (3 + 0)
   } else if (input[i][0] === "B" && input[i][1] === "X") {
-  	points += (1 + 0)
+    points += (1 + 0)
   } else if (input[i][0] === "B" && input[i][1] === "Y") {
-  	points += (2 + 3)
+    points += (2 + 3)
   } else if (input[i][0] === "B" && input[i][1] === "Z") {
-  	points += (3 + 6)
+    points += (3 + 6)
   } else if (input[i][0] === "C" && input[i][1] === "X") {
-  	points += (1 + 6)
+    points += (1 + 6)
   } else if (input[i][0] === "C" && input[i][1] === "Y") {
-  	points += (2 + 0)
+    points += (2 + 0)
   } else if (input[i][0] === "C" && input[i][1] === "Z") {
-  	points += (3 + 3)
+    points += (3 + 3)
   }
 }
 console.log(points)
@@ -76,23 +87,23 @@ Day 2 Part 2: (done in jsFiddle)
 let points = 0
 for (let i in input) {
   if (input[i][0] === "A" && input[i][1] === "X") {
-  	points += (3 + 0)
+    points += (3 + 0)
   } else if (input[i][0] === "A" && input[i][1] === "Y") {
-  	points += (1 + 3)
+    points += (1 + 3)
   } else if (input[i][0] === "A" && input[i][1] === "Z") {
-  	points += (2 + 6)
+    points += (2 + 6)
   } else if (input[i][0] === "B" && input[i][1] === "X") {
-  	points += (1 + 0)
+    points += (1 + 0)
   } else if (input[i][0] === "B" && input[i][1] === "Y") {
-  	points += (2 + 3)
+    points += (2 + 3)
   } else if (input[i][0] === "B" && input[i][1] === "Z") {
-  	points += (3 + 6)
+    points += (3 + 6)
   } else if (input[i][0] === "C" && input[i][1] === "X") {
-  	points += (2 + 0)
+    points += (2 + 0)
   } else if (input[i][0] === "C" && input[i][1] === "Y") {
-  	points += (3 + 3)
+    points += (3 + 3)
   } else if (input[i][0] === "C" && input[i][1] === "Z") {
-  	points += (1 + 6)
+    points += (1 + 6)
   }
 }
 console.log(points)
