@@ -13,13 +13,13 @@
 // Which will load the file and pass them to your function and then print the
 // return value in the REPL.
 
-const extract = (s) => s.split('\n').map(x => x.split(''))
+const extract = (s) => s.split('\n\n')
 const day01Part1 = (s) => {
   const a = extract(s)
   let max = 0
   for (let i in a) {
     let sum = 0
-    a[i] = a[i].split('\n').map(Number)
+    a[i] = a[i].map(Number)
     for (let j = 0; j < a[i].length; j++) {
       sum += a[i][j]
     }
