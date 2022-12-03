@@ -114,7 +114,7 @@ const day02Part2 = (s) => {
 run('day01.input', day01Part1, 69177)
 run('day01.input', day01Part2, 207456)
 run('day02.input', day02Part1, 8890)
-run('day02.input', day02Part2)
+run('day02.input', day02Part2, 10238)
 
 /* Day 2 Part 1: (Done in jsFiddle)
 let points = 0
