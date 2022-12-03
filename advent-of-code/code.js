@@ -56,7 +56,7 @@ const day01Part2 = (s) => {
 }
 
 
-const day02Extract = (s) => s.split('\n').map(i => i.split(''))
+const day02Extract = (s) => s.split('\n').map(i => i.split(' '))
 const day02Part1 = (s) => {
   let input = day02Extract(s)
   let points = 0
