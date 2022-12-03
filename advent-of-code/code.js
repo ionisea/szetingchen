@@ -30,9 +30,32 @@ const day01Part1 = (s) => {
   return max
 } 
 
+const day01Part2 = (s) => {
+  let input = day01Extract(s)
+  let max1 = 0
+  let max2 = 0
+  let max3 = 0
+  for (let i in input) {
+    let sum = 0
+    input[i] = input[i].split('\n').map(Number)
+    for (let j = 0; j < input[i].length; j++) {
+      sum += input[i][j]
+    }
+    if (sum > max1) {
+      max3 = max2
+      max2 = max1
+      max1 = sum
+    } else if (sum > max2) {
+      max3 = max2
+      max2 = sum
+    } else if (sum > max3) {
+      max3 = sum
+    }
+  }
+  return max1 + max2 + max3
+}
 
-
-run('day01.sample', day01Part1)
+run('day01.sample', day01Part2)
 
 /* Day 1: (done in jsfiddle)
 let max1 = 0
