@@ -14,6 +14,7 @@
 // return value in the REPL.
 
 const extract = (s) => s.split('\n\n')
+
 const day01Part1 = (s) => {
   const a = extract(s)
   let max = 0
