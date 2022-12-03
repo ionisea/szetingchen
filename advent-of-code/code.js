@@ -13,13 +13,13 @@
 // Which will load the file and pass them to your function and then print the
 // return value in the REPL.
 
-const extract = (s) => s.split('\n')
+const extract = (s) => s.split('\n').map(i => i.split(''))
 const day01Part1 = (s) => {
   let currentSum = 0
   let max = 0
 }
 
-console.log(run ('day01.sample', extract))
+run ('day01.sample', extract)
 
 /* Day 1: (done in jsfiddle)
 let max1 = 0
@@ -45,6 +45,7 @@ for (let i in input) {
 
 //console.log(max1)
 console.log(max1 + max2 + max3)
+*/
 
 /* Day 2 Part 1: (Done in jsFiddle)
 let points = 0
@@ -67,6 +68,31 @@ for (let i in input) {
   	points += (2 + 0)
   } else if (input[i][0] === "C" && input[i][1] === "Z") {
   	points += (3 + 3)
+  }
+}
+console.log(points)
+
+Day 2 Part 2: (done in jsFiddle)
+let points = 0
+for (let i in input) {
+  if (input[i][0] === "A" && input[i][1] === "X") {
+  	points += (3 + 0)
+  } else if (input[i][0] === "A" && input[i][1] === "Y") {
+  	points += (1 + 3)
+  } else if (input[i][0] === "A" && input[i][1] === "Z") {
+  	points += (2 + 6)
+  } else if (input[i][0] === "B" && input[i][1] === "X") {
+  	points += (1 + 0)
+  } else if (input[i][0] === "B" && input[i][1] === "Y") {
+  	points += (2 + 3)
+  } else if (input[i][0] === "B" && input[i][1] === "Z") {
+  	points += (3 + 6)
+  } else if (input[i][0] === "C" && input[i][1] === "X") {
+  	points += (2 + 0)
+  } else if (input[i][0] === "C" && input[i][1] === "Y") {
+  	points += (3 + 3)
+  } else if (input[i][0] === "C" && input[i][1] === "Z") {
+  	points += (1 + 6)
   }
 }
 console.log(points)
