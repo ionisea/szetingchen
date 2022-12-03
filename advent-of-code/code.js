@@ -55,6 +55,7 @@ const day01Part2 = (s) => {
   return max1 + max2 + max3
 }
 
+//========================================================
 
 const day02Extract = (s) => s.split('\n').map(i => i.split(' '))
 const day02Part1 = (s) => {
@@ -109,6 +110,22 @@ const day02Part2 = (s) => {
     }
   }
   return points
+}
+
+//=====================================================
+
+const day03Extract = (s) => s.split('\n')
+const day03Part1 = (s) => {
+  let input = day03Extract(s)
+  const compartment1 = []
+  const compartment2 = []
+  for (let i in input) {
+    compartment1.push(input[i].substring(0, input[i].length / 2))
+    compartment2.push(input[i].length / 2)
+  }
+  for (let x = 0; x < compartment1.length; x++) {
+    //find if any letter matches (case sensitive)
+  }
 }
 
 run('day01.input', day01Part1, 69177)
