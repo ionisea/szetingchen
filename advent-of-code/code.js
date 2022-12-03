@@ -17,7 +17,7 @@ const extract = (s) => s.split('\n').map(x => x.split(''))
 const day01Part1 = (s) => {
   const a = extract(s)
   let max = 0
-  for (let i in a) {
+  for (const i in a) {
     let sum = 0
     a[i] = a[i].split('\n')
     for (let j = 0; j < a[i].length; j++) {
