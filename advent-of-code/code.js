@@ -55,8 +55,8 @@ const day01Part2 = (s) => {
   return max1 + max2 + max3
 }
 
-run('day01.input', day01Part1)
-run('day01.input', day01Part2)
+run('day01.input', day01Part1, 69177)
+run('day01.input', day01Part2, 207456)
 
 /* Day 1: (done in jsfiddle)
 let max1 = 0
