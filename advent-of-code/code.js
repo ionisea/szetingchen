@@ -13,9 +13,9 @@
 // Which will load the file and pass them to your function and then print the
 // return value in the REPL.
 
-const extract = (s) => s.split('\n\n')
+const day01Extract = (s) => s.split('\n\n')
 const day01Part1 = (s) => {
-  let input = extract(s)
+  let input = day01Extract(s)
   let max = 0
   for (let i in input) {
     let sum = 0
@@ -29,6 +29,8 @@ const day01Part1 = (s) => {
   }
   return max
 } 
+
+
 
 run('day01.sample', day01Part1)
 
