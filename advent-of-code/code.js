@@ -13,7 +13,7 @@
 // Which will load the file and pass them to your function and then print the
 // return value in the REPL.
 
-const extract = (s) => s.split('\n').map(i => i.split(''))
+const extract = (s) => s.split('\n').map(x => x.split(''))
 
 const day01Part1 = (a) => {
   let max = 0
@@ -30,7 +30,7 @@ const day01Part1 = (a) => {
   return max
 }
 
-run('day01.sample', day01Part1(extract))
+run(extract('day01.sample'), day01Part1)
 
 /* Day 1: (done in jsfiddle)
 let max1 = 0
