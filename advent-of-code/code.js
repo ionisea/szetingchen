@@ -111,11 +111,11 @@ const commonItem = (s) => {
 const day03Part1 = (s) => {
   let input = day03Extract(s)
   const items = []
-  for (let i = 0; i < input.length; i++) {
+  for (let i = 0; i < input.length - 1; i++) {
     items.push(commonItem(input[i]))
   }
   for (let i = 0; i < items.length; i++) {
-    if ('abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) > -1) {
+    if ('abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) !== -1) {
       items[i] = 'abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) + 1
     } else {
       items[i] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.indexOf(items[i]) + 27
