@@ -100,7 +100,7 @@ const day02Part2 = (s) => {
 //=====================================================
 
 const day03Extract = (s) => s.trimEnd().split('\n')
-const part1CommonItem = (s) => {
+const commonItem = (s) => {
   const halfway = s.length / 2
   const [firstHalf, secondHalf] = [
     s.substring(0, halfway), s.substring(halfway)
@@ -112,7 +112,7 @@ const day03Part1 = (s) => {
   let input = day03Extract(s)
   const items = []
   for (let i = 0; i < input.length; i++) {
-    items.push(part1CommonItem(input[i]))
+    items.push(commonItem(input[i]))
   }
   for (let i = 0; i < items.length; i++) {
     if ('abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) !== -1) {
@@ -124,14 +124,11 @@ const day03Part1 = (s) => {
   return items.reduce((acc, x) => acc + x, 0)
 }
 
-const part2CommonItem = (s) => {
-
-}
 const day03Part2 = (s) => {
   let input = day03Extract(s)
   let results = '';
   input.forEach((x, index) => {
-    if (index%3 !== 0) {
+    if (index%3 !== 1) {
       results = results + x + '\n'
     }
     else {
