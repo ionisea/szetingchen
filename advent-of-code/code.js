@@ -135,6 +135,7 @@ const day03Part2 = (s) => {
       results.push(x)
     }
   })
+  results.shift
   console.log(results)
 }
 
