@@ -111,10 +111,17 @@ const commonItem = (s) => {
 const day03Part1 = (s) => {
   let input = day03Extract(s)
   const items = []
-  for (let i = 0; i < input.length; i++) {
+  for (let i in input) {
     items.push(commonItem(input[i]))
   }
-  return items
+  for (let i in items) {
+    if ('abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) !== -1) {
+      items[i] = 'abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) + 1
+    } else {
+      items[i] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.indexOf(items[i]) + 27
+    }
+  }
+  return items.reduce((acc, x) => acc + x, 0)
 }
 
 run('day01.input', day01Part1, 69177)
@@ -122,6 +129,3 @@ run('day01.input', day01Part2, 207456)
 run('day02.input', day02Part1, 8890)
 run('day02.input', day02Part2, 10238)
 run('day03.sample', day03Part1)
-
-let test = 'a'
-console.log(test.codePointAt(0))
