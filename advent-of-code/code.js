@@ -124,7 +124,9 @@ const day03Part1 = (s) => {
   return items.reduce((acc, x) => acc + x, 0)
 }
 
-const day03Part2
+const day03Part2 = (s) => {
+  
+}
 
 run('day01.input', day01Part1, 69177)
 run('day01.input', day01Part2, 207456)
