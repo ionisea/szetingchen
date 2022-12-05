@@ -99,7 +99,6 @@ const day02Part2 = (s) => {
 
 //=====================================================
 
-/*
 const day03Extract = (s) => s.split('\n')
 const commonItem = (s) => {
   const halfway = s.length / 2
@@ -116,7 +115,7 @@ const day03Part1 = (s) => {
   }
   return input
 }
-*/
+
 run('day01.input', day01Part1, 69177)
 run('day01.input', day01Part2, 207456)
 run('day02.input', day02Part1, 8890)
