@@ -109,12 +109,15 @@ const commonItem = (s) => {
   return includes[0]
 }
 const day03Part1 = (s) => {
-
+  let input = day03Extract(s)
+  for (let i in input) {
+    input[i] = commonItem(i)
+  }
+  return input
 }
 
 run('day01.input', day01Part1, 69177)
 run('day01.input', day01Part2, 207456)
 run('day02.input', day02Part1, 8890)
 run('day02.input', day02Part2, 10238)
-
-console.log(a)
+run('day03.sample', day03Part1)
