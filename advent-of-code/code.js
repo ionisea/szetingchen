@@ -100,7 +100,7 @@ const day02Part2 = (s) => {
 //=====================================================
 
 const day03Extract = (s) => s.trimEnd().split('\n')
-const commonItem = (s) => {
+const part1CommonItem = (s) => {
   const halfway = s.length / 2
   const [firstHalf, secondHalf] = [
     s.substring(0, halfway), s.substring(halfway)
@@ -112,7 +112,7 @@ const day03Part1 = (s) => {
   let input = day03Extract(s)
   const items = []
   for (let i = 0; i < input.length; i++) {
-    items.push(commonItem(input[i]))
+    items.push(part1CommonItem(input[i]))
     console.log(items)
   }
   for (let i = 0; i < items.length; i++) {
