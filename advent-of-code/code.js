@@ -118,7 +118,7 @@ const day03Part1 = (s) => {
     if ('abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) !== -1) {
       items[i] = 'abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) + 1
     } else {
-      items[i] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.indexOf(items[i]) + 27
+      items[i] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.indexOf(items[i]) + 26
     }
   }
   return items.reduce((acc, x) => acc + x, 0)
