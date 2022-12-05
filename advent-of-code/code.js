@@ -115,7 +115,7 @@ const day03Part1 = (s) => {
     items.push(commonItem(input[i]))
   }
   console.log(items)
-  for (let i = 0; i < items.length; i++) {
+  for (let i = 0; i < items.length - 1; i++) {
     if ('abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) !== -1) {
       items[i] = 'abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) + 1
     } else {
