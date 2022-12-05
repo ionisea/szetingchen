@@ -124,8 +124,21 @@ const day03Part1 = (s) => {
   return items.reduce((acc, x) => acc + x, 0)
 }
 
+const part2CommonItem = (s) => {
+
+}
 const day03Part2 = (s) => {
   let input = day03Extract(s)
+  let results = '';
+  input.forEach((x, index) => {
+    if (index%3 !== 0) {
+      results = results + x + '\n'
+    }
+    else {
+      results = results + x
+    }
+  })
+  console.log(results)
 }
 
 run('day01.input', day01Part1, 69177)
@@ -133,3 +146,4 @@ run('day01.input', day01Part2, 207456)
 run('day02.input', day02Part1, 8890)
 run('day02.input', day02Part2, 10238)
 run('day03.input', day03Part1, 8088)
+run('day03.sample', day03Part2)
