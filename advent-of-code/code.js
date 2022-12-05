@@ -126,13 +126,13 @@ const day03Part1 = (s) => {
 
 const day03Part2 = (s) => {
   let input = day03Extract(s)
-  let results = '';
+  let results = []
   input.forEach((x, index) => {
-    if (index%3 !== 1) {
-      results = results + x + '\n'
-    }
-    else {
-      results = results + x
+    if (index%3 !== 0) {
+      results.push(x)
+    } else {
+      results.push('')
+      results.push(x)
     }
   })
   console.log(results)
