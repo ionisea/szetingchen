@@ -113,7 +113,6 @@ const day03Part1 = (s) => {
   const items = []
   for (let i = 0; i < input.length - 1; i++) {
     items.push(commonItem(input[i]))
-    console.log(items)
   }
   for (let i = 0; i < items.length; i++) {
     if ('abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) !== -1) {
@@ -122,7 +121,7 @@ const day03Part1 = (s) => {
       items[i] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.indexOf(items[i]) + 27
     }
   }
-  return items
+  return items.reduce((acc, x) => acc + x, 0)
 }
 
 run('day01.input', day01Part1, 69177)
