@@ -110,10 +110,11 @@ const commonItem = (s) => {
 }
 const day03Part1 = (s) => {
   let input = day03Extract(s)
-  for (let i in input) {
-    input[i] = commonItem(i)
+  const items = []
+  for (let i = 0; i < input.length; i++) {
+    items.push(commonItem(input[i]))
   }
-  return input
+  return items
 }
 
 run('day01.input', day01Part1, 69177)
