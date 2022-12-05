@@ -115,7 +115,7 @@ const day03Part1 = (s) => {
     items.push(commonItem(input[i]))
   }
   for (let i = 0; i < items.length; i++) {
-    if ('abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) !== -1) {
+    if ('abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) > -1) {
       items[i] = 'abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) + 1
     } else {
       items[i] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.indexOf(items[i]) + 27
