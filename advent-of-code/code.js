@@ -125,7 +125,7 @@ const day03Part1 = (s) => {
 }
 
 const day03Part2 = (s) => {
-  
+  let input = day03Extract(s)
 }
 
 run('day01.input', day01Part1, 69177)
