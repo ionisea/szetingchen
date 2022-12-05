@@ -100,31 +100,20 @@ const day02Part2 = (s) => {
 //=====================================================
 
 const day03Extract = (s) => s.split('\n')
+const commonItem = (s) => {
+  const halfway = s.length / 2
+  const [firstHalf, secondHalf] = [
+    s.slice(0, halfway), s.slice(halfway)
+  ]
+  return { firstHalf, secondHalf }
+}
 const day03Part1 = (s) => {
-  let input = day03Extract(s)
-  const compartment1 = []
-  const compartment2 = []
-  const letters = []
-  for (let i in input) {
-    compartment1.push(input[i].substring(0, input[i].length / 2))
-    compartment2.push(input[i].length / 2)
-  }
-  for (let x = 0; x < compartment1.length; x++) {
-    let toPush = []
-    for (let y = 0; y < compartment1[x].length; y++) {
-      for (let z = 0; z < compartment2[x].length; z++) {
-        if (compartment1[x][y] === compartment2[x][z]) {
-          toPush.push(compartment2[x][z])
-        }
-      }
-    }
-    
-    letters.push(toPush)
-    toPush = Array(0)
-  }
+
 }
 
 run('day01.input', day01Part1, 69177)
 run('day01.input', day01Part2, 207456)
 run('day02.input', day02Part1, 8890)
 run('day02.input', day02Part2, 10238)
+
+console.log(commonItem('aiusdlfgliufdsbcsbcdbieqofabofa'))
