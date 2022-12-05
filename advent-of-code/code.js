@@ -124,4 +124,4 @@ run('day02.input', day02Part2, 10238)
 run('day03.sample', day03Part1)
 
 let test = 'a'
-console.log(test.codePointAt(1))
+console.log(test.codePointAt(0))
