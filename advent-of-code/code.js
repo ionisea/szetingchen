@@ -99,7 +99,7 @@ const day02Part2 = (s) => {
 
 //=====================================================
 
-const day03Extract = (s) => s.split('\n')
+const day03Extract = (s) => s.trimEnd().split('\n')
 const commonItem = (s) => {
   const halfway = s.length / 2
   const [firstHalf, secondHalf] = [
