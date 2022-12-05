@@ -105,7 +105,7 @@ const commonItem = (s) => {
   const [firstHalf, secondHalf] = [
     s.slice(0, halfway), s.slice(halfway)
   ]
-  const includes = [...secondHalf].filter((x) => firstHalf.includes(x))
+  const includes = [...secondHalf].find((x) => firstHalf.includes(x))
   return includes[0]
 }
 const day03Part1 = (s) => {
