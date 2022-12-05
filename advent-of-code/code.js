@@ -121,7 +121,7 @@ const day03Part1 = (s) => {
       items[i] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.indexOf(items[i]) + 27
     }
   }
-  return items[3]
+  return items[4]
 }
 
 run('day01.input', day01Part1, 69177)
