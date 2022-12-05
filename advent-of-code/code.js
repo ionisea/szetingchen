@@ -113,7 +113,6 @@ const day03Part1 = (s) => {
   const items = []
   for (let i = 0; i < input.length; i++) {
     items.push(part1CommonItem(input[i]))
-    console.log(items)
   }
   for (let i = 0; i < items.length; i++) {
     if ('abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) !== -1) {
@@ -133,4 +132,4 @@ run('day01.input', day01Part1, 69177)
 run('day01.input', day01Part2, 207456)
 run('day02.input', day02Part1, 8890)
 run('day02.input', day02Part2, 10238)
-run('day03.sample', day03Part1)
+run('day03.input', day03Part1, 8088)
