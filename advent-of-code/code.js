@@ -102,10 +102,10 @@ const day02Part2 = (s) => {
 const day03Extract = (s) => s.trimEnd().split('\n')
 const splitting = (s) => {
   const halfway = s.length/2
-  const [firstHalf, secondHalf] = [
+  const halves = [
     s.substring(0, halfway), s.substring(halfway)
   ]
-  return firstHalf, secondHalf
+  return halves
 }
 const commonItem = (s) => {
   const halfway = s.length / 2
