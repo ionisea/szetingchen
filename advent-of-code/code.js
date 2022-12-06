@@ -109,11 +109,9 @@ const splitting = (s) => {
 }
 const commonItem = (a) => {
   for (let i = 1; i < a.length; i++) {
-    a[i] = [...a[i]].filter(x => a[i - 1].includes(a[i])
+    a[i] = a[i].concat(a[i - 1])
   }
-  splitting(a)
-  for (let i = 0; i < a.length; i++) {
-  }
+  console.log(a)
 }
 const day03Part1 = (s) => {
   let input = day03Extract(s)
