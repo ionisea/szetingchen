@@ -110,7 +110,7 @@ const splitting = (s) => {
 const commonItem = (a) => {
   const matches = []
   for (let i = 1; i < a.length; a++) {
-    matches.push([...a[i]].filter((x) =>a[i - 1].contains(x)))
+    matches.push([...a[i]].filter((x) => a[i].contains(a[x - 1])))
   }
   console.log(a[0])
   return a[0]
