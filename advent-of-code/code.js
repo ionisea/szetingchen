@@ -110,7 +110,7 @@ const splitting = (s) => {
 const commonItem = (a) => {
   const matches = []
   for (let i = 1; i < a.length; a++) {
-    matches.push([...a[i]].filter((x) => JSON.stringify(a[i - 1]).contains(x)))
+    matches.push([...a[i]].filter((x) =>( JSON.stringify(a[i - 1])).contains(x)))
   }
   console.log(a[0])
   return a[0]
