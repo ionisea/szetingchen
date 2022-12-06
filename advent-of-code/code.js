@@ -101,24 +101,25 @@ const day02Part2 = (s) => {
 
 const day03Extract = (s) => s.trimEnd().split('\n')
 const splitting = (s) => {
-  const halfway = s.length / 2
+  const halfway = s.length/2
   const halves = [
     s.substring(0, halfway), s.substring(halfway)
   ]
   return halves
 }
-const commonItem = (a) => {
-  for (let i = 1; i < a.length; a++) {
-    a[i] = [...a[i]].filter(x => x.includes(JSON.stringify(a[i - 1])))
-  }
-  console.log(a[0])
-  return a[0]
+const commonItem = (s) => {
+  const halfway = s.length / 2
+  const [firstHalf, secondHalf] = [
+    s.substring(0, halfway), s.substring(halfway)
+  ]
+  //const includes = [...secondHalf].filter((x) => firstHalf.includes(x))
+  return [firstHalf, secondHalf]
 }
 const day03Part1 = (s) => {
   let input = day03Extract(s)
   const items = []
   for (let i = 0; i < input.length; i++) {
-    items.push(commonItem(splitting(input[i])))
+    items.push(commonItem(input[i]))
   }
   for (let i = 0; i < items.length; i++) {
     if ('abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) !== -1) {
@@ -127,7 +128,7 @@ const day03Part1 = (s) => {
       items[i] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.indexOf(items[i]) + 27
     }
   }
-  return items[2]
+  return items.reduce((acc, x) => acc + x, 0)
 }
 /*
 const day03Part2 = (s) => {
