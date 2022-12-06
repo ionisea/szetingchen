@@ -107,19 +107,17 @@ const splitting = (s) => {
   ]
   return halves
 }
-const commonItem = (s) => {
-  const halfway = s.length / 2
-  const [firstHalf, secondHalf] = [
-    s.substring(0, halfway), s.substring(halfway)
-  ]
-  const includes = [...secondHalf].filter((x) => firstHalf.includes(x))
-  return includes[0]
+const commonItem = (a) => {
+  for (let i = 1; i < a.length; a++) {
+    a[i] = [...a[i]].filter(x => x.contains(a[i-1]))
+  }
+  return a
 }
 const day03Part1 = (s) => {
   let input = day03Extract(s)
   const items = []
   for (let i = 0; i < input.length; i++) {
-    items.push(commonItem(input[i]))
+    items.push(commonItem(splitting(input[i])))
   }
   for (let i = 0; i < items.length; i++) {
     if ('abcdefghijklmnopqrstuvwxyz'.indexOf(items[i]) !== -1) {
