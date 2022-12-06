@@ -108,7 +108,7 @@ const splitting = (s) => {
   return halves
 }
 const commonItem = (a) => {
-  for (let i = 1; i < a.length - 1; a++) {
+  for (let i = 1; i < a.length; a++) {
     a[i] = [...a[i]].filter(x => x.includes(JSON.stringify(a[i - 1])))
   }
   console.log(a[0])
