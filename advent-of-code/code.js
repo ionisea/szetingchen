@@ -108,7 +108,7 @@ const splitting = (s) => {
   return halves
 }
 const commonItem = (a) => {
-  for (let i = 0; i < a.length; a++) {
+  for (let i = 1; i < a.length; a++) {
     a[i] = [...a[i]].filter(x => x.includes(a[i - 1]))
   }
   return a
