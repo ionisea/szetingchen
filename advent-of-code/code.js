@@ -111,7 +111,7 @@ const commonItem = (a) => {
   for (let i = 1; i < a.length - 1; a++) {
     a[i] = [...a[i]].filter(x => x.includes(a[i - 1]))
   }
-  return a
+  return a[0]
 }
 const day03Part1 = (s) => {
   let input = day03Extract(s)
