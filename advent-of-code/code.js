@@ -136,7 +136,6 @@ const day03Part2 = (s) => {
     }
   })
   results.shift()
-  console.log(results)
 }
 
 run('day01.input', day01Part1, 69177)
