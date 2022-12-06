@@ -102,17 +102,25 @@ const day02Part2 = (s) => {
 const day03Extract = (s) => s.trimEnd().split('\n')
 const splitting = (s) => {
   const halfway = s.length / 2
-  const halves = [
-    s.substring(0, halfway), s.substring(halfway)
-  ]
-  return halves
+  return ([s.substring(0, halfway), s.substring(halfway)])
 }
 const commonItem = (a) => {
+  const returnThis = []
   for (let i = 1; i < a.length; i++) {
-    a[i] = a[i].concat(a[i - 1])
+    returnThis.push()
   }
-  console.log(a)
+  return a
 }
+
+const test = (s) => {
+  const input = day03Extract(s)
+  for (let i = 0; i < input.length; i++) {
+    commonItem(splitting(input[i]))
+  }
+}
+
+run('day03.sample', test)
+/*
 const day03Part1 = (s) => {
   let input = day03Extract(s)
   const items = []
@@ -128,6 +136,7 @@ const day03Part1 = (s) => {
   }
   return items[2]
 }
+*/
 /*
 const day03Part2 = (s) => {
   let input = day03Extract(s)
@@ -148,4 +157,3 @@ run('day01.input', day01Part1, 69177)
 run('day01.input', day01Part2, 207456)
 run('day02.input', day02Part1, 8890)
 run('day02.input', day02Part2, 10238)
-run('day03.sample', day03Part1)
