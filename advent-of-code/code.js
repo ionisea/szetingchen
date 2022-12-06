@@ -126,7 +126,7 @@ const day03Part1 = (s) => {
       items[i] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.indexOf(items[i]) + 27
     }
   }
-  return items.reduce((acc, x) => acc + x, 0)
+  return items[0]
 }
 /*
 const day03Part2 = (s) => {
