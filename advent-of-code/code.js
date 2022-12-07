@@ -102,10 +102,7 @@ const day02Part2 = (s) => {
 const day03Extract = (s) => s.trimEnd().split('\n')
 const splitting = (s) => {
   const halfway = s.length / 2
-  const halves = [
-    s.substring(0, halfway), s.substring(halfway)
-  ]
-  return halves
+  return ([s.substring(0, halfway), s.substring(halfway)])
 }
 const compare = (s1, s2) => {
   const letters = [...s2].filter((x) => s1.includes(x))
