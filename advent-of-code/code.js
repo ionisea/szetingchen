@@ -117,7 +117,7 @@ const commonItem = (a) => {
   for (let i = 0; i < a.length; i++) {
     p[0] = compare(a[i], a[0])
   }
-  return a[0]
+  return p[0]
 }
 const day03Part1 = (s) => {
   let input = day03Extract(s)
