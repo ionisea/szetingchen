@@ -107,9 +107,15 @@ const splitting = (s) => {
   ]
   return halves
 }
+const compare = (s1, s2) => {
+  const returnThis = [...s2].filter((x) => x.contains(s1))
+  for (let i = 0; i < returnThis.length; i++) {
+    returnThis[]
+  }
+}
 const commonItem = (a) => {
   const p = Array(1).fill().map(() => null)
-  for (let i = 0; i < a.length; a++) {
+  for (let i = 0; i < a.length; i++) {
     p[0] = compare(a[i], a[0])
   }
   return a[0]
