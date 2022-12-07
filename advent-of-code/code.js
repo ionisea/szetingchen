@@ -102,25 +102,18 @@ const day02Part2 = (s) => {
 const day03Extract = (s) => s.trimEnd().split('\n')
 const splitting = (s) => {
   const halfway = s.length / 2
-  return ([s.substring(0, halfway), s.substring(halfway)])
+  const halves = [
+    s.substring(0, halfway), s.substring(halfway)
+  ]
+  return halves
 }
 const commonItem = (a) => {
-  const returnThis = []
-  for (let i = 1; i < a.length; i++) {
-    returnThis.push()
+  const p = Array(1).fill().map(() => null)
+  for (let i = 0; i < a.length; a++) {
+    p[0] = compare(a[i], a[0])
   }
-  return a
+  return a[0]
 }
-
-const test = (s) => {
-  const input = day03Extract(s)
-  for (let i = 0; i < input.length; i++) {
-    commonItem(splitting(input[i]))
-  }
-}
-
-run('day03.sample', test)
-/*
 const day03Part1 = (s) => {
   let input = day03Extract(s)
   const items = []
@@ -136,7 +129,6 @@ const day03Part1 = (s) => {
   }
   return items[2]
 }
-*/
 /*
 const day03Part2 = (s) => {
   let input = day03Extract(s)
@@ -157,3 +149,5 @@ run('day01.input', day01Part1, 69177)
 run('day01.input', day01Part2, 207456)
 run('day02.input', day02Part1, 8890)
 run('day02.input', day02Part2, 10238)
+run('day03.input', day03Part1, 8088)
+run('day03.sample', day03Part2)
