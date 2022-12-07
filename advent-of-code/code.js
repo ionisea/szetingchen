@@ -108,10 +108,9 @@ const splitting = (s) => {
   return halves
 }
 const compare = (s1, s2) => {
-  const returnThis = [...s2].filter((x) => x.contains(s1))
-  for (let i = 0; i < returnThis.length; i++) {
-    returnThis[]
-  }
+  const letters = [...s2].filter((x) => x.contains(s1))
+  const concat = letters.join('')
+  return concat
 }
 const commonItem = (a) => {
   const p = Array(1).fill().map(() => null)
