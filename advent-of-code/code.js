@@ -113,9 +113,10 @@ const compare = (s1, s2) => {
   return concat
 }
 const commonItem = (a) => {
-  const p = Array(1).fill().map(() => null)
+  const p = []
+  p.push(a[0])
   for (let i = 0; i < a.length; i++) {
-    p[0] = compare(a[i], a[0])
+    p[0] = compare(a[i], p[0])
   }
   return p[0]
 }
