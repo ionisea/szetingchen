@@ -110,7 +110,7 @@ const splitting = (s) => {
 const compare = (s1, s2) => {
   const letters = [...s2].filter((x) => s1.includes(x))
   const concat = letters.join('')
-  return concat
+  return concat[0]
 }
 const commonItem = (a) => {
   const p = []
