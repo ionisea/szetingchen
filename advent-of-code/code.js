@@ -154,3 +154,9 @@ run('day02.input', day02Part1, 8890)
 run('day02.input', day02Part2, 10238)
 run('day03.input', day03Part1, 8088)
 //run('day03.sample', day03Part2)
+
+
+
+const vector = (angle, magnitude) => {
+  return ({angle, magnitude})
+}
