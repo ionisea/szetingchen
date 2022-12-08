@@ -168,5 +168,5 @@ const add2Vectors = (a) => {
   let y2 = Math.sin(a[1].angle) * a[1].magnitude
   let angle = Math.atan2(y1 + y2, x1 + x2)
   let mag = Math.sqrt((x1 + x2)**2 + (y1 + y2)**2)
-  return ({angle: angle, magnitude: mag})
+  return ({angle: angle * 180 / Math.PI, magnitude: mag})
 }
