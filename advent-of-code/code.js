@@ -170,3 +170,7 @@ const add2Vectors = (a) => {
   let mag = Math.sqrt((x1 + x2)**2 + (y1 + y2)**2)
   return ({angle: angle * 180 / Math.PI, magnitude: mag})
 }
+
+const addNumVectors = (a) => {
+  return a.reduce((acc, x) => add2Vectors([acc, x]), vector(0, 0))
+}
