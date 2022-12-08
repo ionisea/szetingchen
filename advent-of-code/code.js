@@ -172,5 +172,5 @@ const add2Vectors = (a) => {
 }
 
 const addNumVectors = (a) => {
-  return a.reduce((acc, x) => acc = add2Vectors([acc, x]), vector(0, 0))
+  return a.reduce((acc, x) => add2Vectors([acc, x]), vector(0, 0))
 }
