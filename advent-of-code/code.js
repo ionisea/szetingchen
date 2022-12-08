@@ -158,7 +158,7 @@ run('day03.input', day03Part1, 8088)
 
 
 const vector = (angle, magnitude) => {
-  return ({angle: angle * Math.PI / 180, magnitude})
+  return ({ angle: angle * Math.PI / 180, magnitude })
 }
 
 const add2Vectors = (a) => {
@@ -167,10 +167,10 @@ const add2Vectors = (a) => {
   let y1 = Math.sin(a[0].angle) * a[0].magnitude
   let y2 = Math.sin(a[1].angle) * a[1].magnitude
   let angle = Math.atan2(y1 + y2, x1 + x2)
-  let mag = Math.sqrt((x1 + x2)**2 + (y1 + y2)**2)
-  return ({angle: angle * 180 / Math.PI, magnitude: mag})
+  let mag = Math.sqrt((x1 + x2) ** 2 + (y1 + y2) ** 2)
+  return ({ angle: angle * 180 / Math.PI, magnitude: mag })
 }
 
 const addNumVectors = (a) => {
-  return a.reduce((acc, x) => add2Vectors([acc, x]), 0)
+  return a.reduce((acc, x) => add2Vectors([x]), vector(0, 0))
 }
