@@ -158,5 +158,9 @@ run('day03.input', day03Part1, 8088)
 
 
 const vector = (angle, magnitude) => {
-  return ({angle, magnitude})
+  return ({angle: angle * Math.PI / 180, magnitude})
+}
+
+const add2Vectors = (a) => {
+  let x1 = a[0]
 }
