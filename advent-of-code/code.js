@@ -177,6 +177,6 @@ const addNumVectors = (a, mode) => {
   } else if (mode === 'degrees') {
     const q = a.reduce((acc, x) => add2Vectors([acc, x]), vector(0, 0))
     q.angle = q.angle * 180 / Math.PI
-    return 
+    return q
   }
 }
