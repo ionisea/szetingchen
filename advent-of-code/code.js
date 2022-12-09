@@ -185,5 +185,6 @@ const EARTH_GRAVITY = 9.8
 const G = 6.6743e-11
 
 const gravAttraction = (o1, o2) => {
-  return (o1.mass * o2.mass * G) / Math.hypot(Math.abs(o1.x - o2.x), Math.abs(o1.y - o2.y))
+  const distance = Math.hypot(Math.abs(o1.position.x - o2.position.x), Math.abs(o1.position.y - o2.position.y))
+  return (o1.mass * o2.mass * G) / distance**2
 }
