@@ -180,3 +180,5 @@ const addNumVectors = (a, mode) => {
     return a.reduce((acc, x) => add2Vectors([acc, x]), vector(0, 0))
   }
 }
+
+const gravity = 9.8
