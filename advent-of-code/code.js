@@ -172,11 +172,11 @@ const add2Vectors = (a) => {
 }
 
 const addNumVectors = (a, mode) => {
-  if (mode === 'radians') {
-  return a.reduce((acc, x) => add2Vectors([acc, x]), vector(0, 0))
-  } else if (mode === 'degrees') {
+  if (mode === 'degrees') {
     const r = a.reduce((acc, x) => add2Vectors([acc, x]), vector(0, 0))
     r.angle = r.angle * 180 / Math.PI
     return r
+  } else {
+    return a.reduce((acc, x) => add2Vectors([acc, x]), vector(0, 0))
   }
 }
