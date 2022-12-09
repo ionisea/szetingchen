@@ -171,6 +171,12 @@ const add2Vectors = (a) => {
   return ({ angle, magnitude: mag })
 }
 
-const addNumVectors = (a) => {
+const addNumVectors = (a, mode) => {
+  if (mode === 'radians') {
   return a.reduce((acc, x) => add2Vectors([acc, x]), vector(0, 0))
+  } else if (mode === 'degrees') {
+    const q = a.reduce((acc, x) => add2Vectors([acc, x]), vector(0, 0))
+    q.angle = angle * 180 / Math.PI
+    return q
+  }
 }
