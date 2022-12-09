@@ -181,4 +181,9 @@ const addNumVectors = (a, mode) => {
   }
 }
 
-const gravity = 9.8
+const EARTH_GRAVITY = 9.8
+const G = 6.6743e-11
+
+const gravAttraction = (o1, o2) => {
+  return (o1.mass * o2.mass * G) / Math.hypot(Math.abs(o1.x - o2.x), Math.abs(o1.y - o2.y))
+}
