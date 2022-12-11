@@ -196,3 +196,5 @@ const gravAttraction = (o1, o2) => {
   const distance = Math.hypot(Math.abs(o1.position.x - o2.position.x), Math.abs(o1.position.y - o2.position.y))
   return (o1.mass * o2.mass * G) / distance ** 2
 }
+
+let sampleObject = { mass: 10, type: square, position: {x: 100, y: 200}}
