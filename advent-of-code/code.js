@@ -197,4 +197,4 @@ const gravAttraction = (o1, o2) => {
   return (o1.mass * o2.mass * G) / distance ** 2
 }
 
-let sampleObject = { mass: 10, type: square, position: {x: 100, y: 200}}
+let sampleObject = { mass: 10, type: 'square', position: {x: 100, y: 200}}
