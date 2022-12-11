@@ -162,13 +162,17 @@ const vector = (angle, magnitude) => {
 }
 
 const add2Vectors = (a) => {
-  let x1 = Math.cos(a[0].angle) * a[0].magnitude
-  let x2 = Math.cos(a[1].angle) * a[1].magnitude
-  let y1 = Math.sin(a[0].angle) * a[0].magnitude
-  let y2 = Math.sin(a[1].angle) * a[1].magnitude
-  let angle = Math.atan2(y1 + y2, x1 + x2)
-  let mag = Math.sqrt((x1 + x2) ** 2 + (y1 + y2) ** 2)
+  const x1 = Math.cos(a[0].angle) * a[0].magnitude
+  const x2 = Math.cos(a[1].angle) * a[1].magnitude
+  const y1 = Math.sin(a[0].angle) * a[0].magnitude
+  const y2 = Math.sin(a[1].angle) * a[1].magnitude
+  const angle = Math.atan2(y1 + y2, x1 + x2)
+  const mag = Math.sqrt((x1 + x2) ** 2 + (y1 + y2) ** 2)
   return ({ angle, magnitude: mag })
+}
+
+const vectorMultiply = (o, n) => {
+  return { angle: o.angle, magnitude: o.magnitude * n}
 }
 
 const addNumVectors = (a, mode) => {
@@ -186,5 +190,5 @@ const G = 6.6743e-11
 
 const gravAttraction = (o1, o2) => {
   const distance = Math.hypot(Math.abs(o1.position.x - o2.position.x), Math.abs(o1.position.y - o2.position.y))
-  return (o1.mass * o2.mass * G) / distance**2
+  return (o1.mass * o2.mass * G) / distance ** 2
 }
