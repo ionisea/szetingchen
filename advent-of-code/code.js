@@ -172,7 +172,11 @@ const add2Vectors = (a) => {
 }
 
 const vectorMultiply = (o, n) => {
-  return { angle: o.angle, magnitude: o.magnitude * n}
+  if (n >= 0) {
+    return ({ angle: o.angle, magnitude: o.magnitude * n })
+  } else {
+    return ({ angle: o.angle * -1, magnitude: o.magnitude * -n })
+  }
 }
 
 const addNumVectors = (a, mode) => {
