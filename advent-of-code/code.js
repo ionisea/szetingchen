@@ -175,7 +175,7 @@ const vectorMultiply = (o, n) => {
   if (n >= 0) {
     return ({ angle: o.angle, magnitude: o.magnitude * n })
   } else {
-    return ({ angle: o.angle + Math.PI, magnitude: o.magnitude * -n })
+    return ({ angle: (o.angle + Math.PI) % (2 * Math.PI), magnitude: o.magnitude * -n })
   }
 }
 
