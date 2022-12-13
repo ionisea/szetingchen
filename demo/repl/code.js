@@ -86,6 +86,8 @@ class Rectangle {
   }
 }
 
+const rect1 = new Rectangle (10, 20, 20, 100, 200)
+
 class Circle {
   constructor(mass, radius, x, y) {
     this.mass = mass
