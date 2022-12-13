@@ -61,12 +61,55 @@ const gravAttraction = (o1, o2) => {
   return (o1.mass * o2.mass * G) / distance ** 2
 }
 
-const sampleObject = { mass: 10, x: 100, y: 200}
+const sampleObject = { mass: 10, x: 100, y: 200 }
 
 //Vector is force
 
 const objectNextPos = (object, forceVector) => {
-  const acceleration = forceVector.magnitude/object.mass
+  const acceleration = forceVector.magnitude / object.mass
   const velocity = currentVelo + acceleration
 }
 
+class Rectangle {
+  constructor(mass, width, height, x, y) {
+    this.mass = mass
+    this.width = width
+    this.height = height
+    this.x = x
+    this.y = y
+  }
+  draw() {
+    drawRect(this.x - this.width / 2, 
+    this.y - this.height / 2, 
+    this.x + this.width / 2, 
+    this.y + this.height / 2)
+  }
+}
+
+class Circle {
+  constructor(mass, radius, x, y) {
+    this.mass = mass
+    this.radius = radius
+    this.x = x
+    this.y = y
+  }
+  get draw () {
+    drawCircle(this.x, this.y, radius)
+  }
+  get mass() {
+    return this.mass
+  }
+  get 
+}
+
+const createObject = (type, mass, size, x, y) => {
+  if (type == 0) {
+    drawCircle(x, y, size)
+  } else if (type == 1) {
+    drawRect(x - size / 2, y - size / 2, x + size / 2, y + size / 2)
+  } else if (type == 2) {
+    drawTriangle(x - size / 2, y - size / 2, x, y + size / 2, x + size / 2, y - size / 2)
+  }
+  return { mass, size, type, position: { x, y } }
+}
+const obj = createObject()
