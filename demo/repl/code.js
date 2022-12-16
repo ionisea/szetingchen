@@ -49,6 +49,7 @@ const addGrav = (obj, array) => {
     obj.actingForce.push(gravAttraction(obj, element))
   }
 }
+
 const addNumVectors = (a, mode) => {
   if (mode === 'degrees') {
     const r = a.reduce((acc, x) => add2Vectors([acc, x]), vector(0, 0))
