@@ -27,5 +27,5 @@ const allTheSame = (arr) => {
 }
 
 const extractColumn = (arr, x) => {
-  return ([arr[x][0], arr[x][1], arr[x][2]])
+  return ([arr[0][x], arr[1][x], arr[2][x]])
 }
