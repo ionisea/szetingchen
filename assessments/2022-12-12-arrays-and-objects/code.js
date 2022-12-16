@@ -37,3 +37,9 @@ const recordMove = (arr, obj) => {
 const rowForMove = (arr, n) => {
   return arr[n].row
 }
+
+const placeMoves = (board, moves) => {
+  for (const element of moves) {
+    board[element.row][element.column] = element.mark
+  }
+}
