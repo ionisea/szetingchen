@@ -34,7 +34,7 @@ const addGrav = (obj, array) => {
   const gravAttraction = (o1, o2) => {
     // currently nonfunctional, need to figure out how to get angle between the two objects.
     const distance = Math.hypot(Math.abs(o1.centerX - o2.centerX), Math.abs(o1.centerX - o2.centerX))
-    const angle = Math.atan2(y2 - y1, x2 - x1)
+    const angle = Math.atan2(o2.y - o1.y, o2.x - o1.x)
     if (distance === 0) {
       return vector(0, 0)
     } else {
@@ -150,3 +150,24 @@ const drawFrame = (time) => {
 }
 
 //animate(drawFrame)
+
+//pts is an array of objects, each having a x and y value
+
+const findCentroid = (pts) => {
+  let off = pts[0];
+  let twicearea = 0;
+  let x = 0;
+  let y = 0;
+  let p1, p2;
+  let f;
+  for (let i = 0, j = pts.length - 1; i < pts.length; j = i++) {
+    p1 = pts[i];
+    p2 = pts[j];
+    f = (p1.lat - off.lat) * (p2.lng - off.lng) - (p2.lat - off.lat) * (p1.lng - off.lng);
+    twicearea += f;
+    x += (p1.lat + p2.lat - 2 * off.lat) * f;
+    y += (p1.lng + p2.lng - 2 * off.lng) * f;
+  }
+  f = twicearea * 3;
+  return ({ centerX: x / f + off.lat, centerY: y / f + off.lng });
+}
