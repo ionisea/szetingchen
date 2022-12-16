@@ -6,6 +6,6 @@ const makeBoard = () => {
   return Array(3).fill(Array(3).fill(''))
 }
 
-const makeMove = (s, row, col) => {
-  return ({mark: s, row, col})
+const makeMove = (s, row, column) => {
+  return ({mark: s, row, column})
 }
