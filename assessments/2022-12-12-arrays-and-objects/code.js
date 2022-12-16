@@ -48,6 +48,4 @@ const placeMoves = (board, moves) => {
 let moves = [];
 let board = makeBoard();
 recordMove(moves, makeMove('X', 1, 1));
-recordMove(moves, makeMove('O', 0, 0));
-recordMove(moves, makeMove('X', 0, 1));
 placeMoves(board, moves);
