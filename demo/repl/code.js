@@ -34,11 +34,7 @@ const addGrav = (obj, array) => {
   const gravAttraction = (o1, o2) => {
     // currently nonfunctional, need to figure out how to get angle between the two objects.
     const distance = Math.hypot(Math.abs(o1.centerX - o2.centerX), Math.abs(o1.centerX - o2.centerX))
-    const x1 = Math.cos(o1.angle) * o1.magnitude
-    const x2 = Math.cos(o2.angle) * o2.magnitude
-    const y1 = Math.sin(o1.angle) * o1.magnitude
-    const y2 = Math.sin(o2.angle) * o2.magnitude
-    const angle = Math.atan2(y1 + y2, x1 + x2)
+    const angle = Math.atan2(y2 - y1, x2 - x1)
     if (distance === 0) {
       return vector(0, 0)
     } else {
