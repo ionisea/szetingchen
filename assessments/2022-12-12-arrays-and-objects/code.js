@@ -43,3 +43,10 @@ const placeMoves = (board, moves) => {
     board[element.row][element.column] = element.mark
   }
 }
+
+let moves = [];
+   let board = makeBoard();
+   recordMove(moves, makeMove('X', 1, 1));
+   recordMove(moves, makeMove('O', 0, 0));
+   recordMove(moves, makeMove('X', 0, 1));
+   placeMoves(board, moves);
