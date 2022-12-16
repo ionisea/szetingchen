@@ -1,26 +1,14 @@
-/*
-// Warning! Do not call this function with numbers much bigger than 40 unless
-// you want to kill this tab.
-const fib = (n) => (n < 2 ? n : fib(n - 2) + fib(n - 1));
+// rotation code
+const rotate = (cx, cy, x, y, angle) => {
+    let radians = (Math.PI / 180) * angle;
+    cos = Math.cos(radians),
+        sin = Math.sin(radians),
+        nx = (cos * (x - cx)) + (sin * (y - cy)) + cx,
+        ny = (cos * (y - cy)) - (sin * (x - cx)) + cy;
+    return [nx, ny];
+}
 
-// This one you can safely call with as big numbers as you want though after
-// MAX_FIB_N it will return Infinity.
-const fib2 = (n) => {
-  let [a, b] = [0, 1];
-  for (let i = 0; i < n; i++) {
-    [a, b] = [b, a + b];
-    if (!isFinite(a)) break;
-  }
-  return a;
-};
-
-const MAX_FIB_N = 1476;
-
-const MAX_FIB = fib2(MAX_FIB_N);
-
-*/
-
-
+//vector manipulation
 const vector = (angle, magnitude) => {
   return ({ angle: angle * Math.PI / 180, magnitude })
 }
@@ -39,10 +27,20 @@ const vectorMultiply = (o, n) => {
   if (n >= 0) {
     return ({ angle: o.angle, magnitude: o.magnitude * n })
   } else {
-    return ({ angle: (o.angle + Math.PI) % (2 * Math.PI), magnitude: o.magnitude * -n })
+    return ({ angle: o.angle + Math.PI, magnitude: o.magnitude * -n })
   }
 }
-
+const addGrav = (obj, array) =>{
+const gravAttraction = (o1, o2) => {
+  // currently nonfunctional, need to figure out how to get angle between the two objects.
+  const distance = Math.hypot(Math.abs(o1.centerX - o2.centerX), Math.abs(o1.centerX - o2.centerX))
+  if (distance === 0) return vector(0,0)
+  else return vector(angle, (o1.mass * o2.mass * 6.6743e-11) / distance ** 2)
+}
+for (const element of array){
+  obj.actingForce.push(gravAttraction(obj, element))
+}
+}
 const addNumVectors = (a, mode) => {
   if (mode === 'degrees') {
     const r = a.reduce((acc, x) => add2Vectors([acc, x]), vector(0, 0))
@@ -53,65 +51,96 @@ const addNumVectors = (a, mode) => {
   }
 }
 
-const EARTH_GRAVITY = 9.8
-const G = 6.6743e-11
+// shape/object manipulation
+const ObjArray = []
+let CoordsArray = []
 
-const gravAttraction = (o1, o2) => {
-  const distance = Math.hypot(Math.abs(o1.position.x - o2.position.x), Math.abs(o1.position.y - o2.position.y))
-  return (o1.mass * o2.mass * G) / distance ** 2
+const getBoundOfObject = (shape)=>{
+    let currX = 0;
+    let currY = 0;
+    let array = []
+    let n;
+    for (let i = 0; i < shape.sides.length; i++) {
+        let rotatedSideCords = rotate(shape.centerX, shape.centerY, shape.centerX + shape.sides[i].xAdd, shape.centerY + shape.sides[i].yAdd, shape.rotation)
+        let numOfSidePixels = Math.floor(Math.sqrt(shape.sides[i].xAdd ** 2 + shape.sides[i].yAdd ** 2))
+        let xAddperpix = (rotatedSideCords[0] - shape.centerX) / numOfSidePixels
+        let yAddperpix = (rotatedSideCords[1] - shape.centerY) / numOfSidePixels
+
+        for (n = 0; n < numOfSidePixels; n++) {
+            array.push({ "x": shape.centerX + (currX + (xAddperpix * n)), "y": shape.centerY + (currY + (yAddperpix * n)) })
+
+        }
+        currX = currX + (xAddperpix * n);
+        currY = currY + (yAddperpix * n);
+    }
+    return array;
+}
+// registerOn.. functions are in quotes as they will not work in this environment
+//registerOnClick((x,y) =>{
+const simulateClick = (x,y) =>{
+CoordsArray.push({x, y})
+}
+//})
+
+
+class Shape {
+ constructor(mass, actingForces, coordArray){
+   this.startingX = coordArray[0].x
+   this.startingY = coordArray[0].y
+   this.sides = createSides(coordArray)
+   this.mass = mass
+   // todo this.centerX =
+   // todo this.centerY =  
+   this.rotation = 0
+   this.actingForce = [addNumVectors(actingForces)]
+ }
+ clearCoordsArray(){
+   CoordsArray = []
+ }
 }
 
-const sampleObject = { mass: 10, x: 100, y: 200 }
 
-//Vector is force
+const createSides = (array) =>{
+  const returnArray = []
+  for (let v = 0; v<array.length-1; v++){
+    returnArray.push({xMove: array[v].x - array[v+1].x, yMove: array[v].y - array[v+1].y})
+  }
+  returnArray.push({xMove: array[array.length-1].x - array[0].x, yMove: array[array.length-1].y - array[0].y})
+  return returnArray
+}
+//registerOnKeyDown((Space)=>{
+  const simulateSpacePress = (mass, actingforces) =>{
+  ObjArray.push(new Shape(mass, actingforces, CoordsArray))
+  }
+//})
 
-const objectNextPos = (object, forceVector) => {
-  const acceleration = forceVector.magnitude / object.mass
-  const velocity = currentVelo + acceleration
+// draw on canvas and make changes to shapes
+const drawShape = (shape) =>{
+      let rotaionalPercent = shape.rotation;
+      let currX = shape.x;
+      let currY = shape.y;
+      for(let i = 0; i<shape.sides.length; i++){
+        drawLine(currX, currY, currX+shape.sides[i].xAdd, currY+shape.sides[i].yAdd, 'black', ctx);
+        currX += shape.sides[i].xAdd;
+        currY += shape.sides[i].yAdd;
+      }
 }
 
-class Rectangle {
-  constructor(mass, width, height, x, y) {
-    this.mass = mass
-    this.width = width
-    this.height = height
-    this.x = x
-    this.y = y
-  }
-  draw() {
-    drawRect(this.x - this.width / 2, 
-    this.y - this.height / 2, 
-    this.x + this.width / 2, 
-    this.y + this.height / 2)
-  }
+const drawFrame = (time) => {
+  if (time > next) {
+    
+    clear();
+    for (const element of ObjArray){
+    addGravity(element, ObjArray)
+    addNumVectors(element.actingForce)
+    const objectBound = element.getBoundOfObject();
+    console.log(objectBound);
+
+    element.drawShape();
+    element.rotation = countFrame*1;
+    next += 10;
+    countFrame++;
+  }}
 }
 
-const rect1 = new Rectangle (10, 20, 20, 100, 200)
-
-class Circle {
-  constructor(mass, radius, x, y) {
-    this.mass = mass
-    this.radius = radius
-    this.x = x
-    this.y = y
-  }
-  get draw () {
-    drawCircle(this.x, this.y, radius)
-  }
-  get mass() {
-    return this.mass
-  }
-  get 
-}
-
-const createObject = (type, mass, size, x, y) => {
-  if (type == 0) {
-    drawCircle(x, y, size)
-  } else if (type == 1) {
-    drawRect(x - size / 2, y - size / 2, x + size / 2, y + size / 2)
-  } else if (type == 2) {
-    drawTriangle(x - size / 2, y - size / 2, x, y + size / 2, x + size / 2, y - size / 2)
-  }
-  return { mass, size, type, position: { x, y } }
-}
-const obj = createObject()
+//animate(drawFrame)
