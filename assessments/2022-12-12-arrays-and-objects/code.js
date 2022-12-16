@@ -39,8 +39,8 @@ const rowForMove = (arr, n) => {
 }
 
 const placeMoves = (board, moves) => {
-  for (const element of moves) {
-    board[element.row][element.column] = element.mark
+  for (let i = 0; i < moves.length; i++) {
+    board[moves[i].row][moves[i].column] = moves[i].mark
     console.log(board)
   }
 }
