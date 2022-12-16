@@ -40,7 +40,7 @@ const rowForMove = (arr, n) => {
 
 const placeMoves = (board, moves) => {
   for (let i = 0; i < moves.length; i++) {
-    board[moves[i].column][moves[i].column] = moves[i].mark
+    board[moves[i].column][moves[i].row] = moves[i].mark
     console.log(board)
   }
 }
