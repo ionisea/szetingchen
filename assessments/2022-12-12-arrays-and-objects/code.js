@@ -14,6 +14,6 @@ const placeMark = (arr, obj) => {
   arr[obj.row][obj.column] = obj.mark
 }
 
-let board = makeBoard()
-let move = makeMove('X', 1, 1)
-placeMark(board, move)
+const allTheSame = (arr) => {
+  return arr[0] === arr[1] === arr[2]
+}
