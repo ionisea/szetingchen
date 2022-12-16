@@ -15,8 +15,12 @@ const placeMark = (arr, obj) => {
 }
 
 const allTheSame = (arr) => {
-  if (arr[0] === arr[1] === arr[2]) {
-    return true
+  if (arr[0] === arr[1]) {
+    if (arr[1] === arr[2]) {
+      return true
+    } else {
+      return false
+    }
   } else {
     return false
   }
