@@ -33,3 +33,7 @@ const extractColumn = (arr, x) => {
 const recordMove = (arr, obj) => {
   arr.push(obj)
 }
+
+const rowForMove = (arr, n) => {
+  return arr[n].row
+}
