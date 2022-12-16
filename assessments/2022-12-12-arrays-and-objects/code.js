@@ -7,7 +7,7 @@ const makeBoard = () => {
 }
 
 const makeMove = (mark, row, column) => {
-  return ({mark, row, column})
+  return ({ mark, row, column })
 }
 
 const placeMark = (arr, obj) => {
@@ -15,5 +15,9 @@ const placeMark = (arr, obj) => {
 }
 
 const allTheSame = (arr) => {
-  arr[0] === arr[1] === arr[2] ? 
+  if (arr[0] === arr[1] === arr[2]) {
+    return true
+  } else {
+    return false
+  }
 }
