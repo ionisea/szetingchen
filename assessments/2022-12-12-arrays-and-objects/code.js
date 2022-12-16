@@ -10,3 +10,6 @@ const makeMove = (mark, row, column) => {
   return ({mark, row, column})
 }
 
+const placeMark = (arr, obj) => {
+  arr[obj.row][obj.column] = obj.mark
+}
