@@ -15,5 +15,5 @@ const placeMark = (arr, obj) => {
 }
 
 const allTheSame = (arr) => {
-  arr[0] === arr[1] === arr[2] ? true : false
+  arr[0] === arr[1] === arr[2] ? 
 }
