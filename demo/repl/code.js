@@ -152,7 +152,7 @@ const drawFrame = (time) => {
 //animate(drawFrame)
 
 //pts is an array of objects, each having a x and y value
-
+/*
 const findCentroid = (pts) => {
   let off = pts[0];
   let twicearea = 0;
@@ -170,4 +170,17 @@ const findCentroid = (pts) => {
   }
   f = twicearea * 3;
   return ({ centerX: x / f + off.lat, centerY: y / f + off.lng });
+}
+*/
+
+const sigma = (start, end, modifier) => {
+  const length = end - start + 1
+  const map = (v, k) => modifier ? modifier(k + start) : k + start;
+  const sum = (a, b) => a + b;
+
+  return Array.from({ length }, map).reduce(sum);
+}
+
+const findCentroid = (pts) => {
+  let
 }
