@@ -27,6 +27,14 @@ const fibonacci = (num) => {
 }
 //to get the xth fibonacci number: fibonacci(x)[x]
 
+function sigma(start, end, modifier) {
+  const length = end - start + 1;
+  const map = (v, k) => modifier ? modifier(k + start) : k + start;
+  const sum = (a, b) => a + b;
+
+  return Array.from({ length }, map).reduce(sum);
+}
+
 const countTens = (array) => array.filter((x) => x == 10).reduce((acc) => acc + 1, 0)
 const sum = (array) => array.reduce((acc, x) => acc + x, 0)
 const evens = (array) => array.filter((x) => x % 2 == 0)
