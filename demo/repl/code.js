@@ -173,11 +173,9 @@ const findCentroid = (pts) => {
 }
 */
 
-const sigma = (start, end, modifier) => {
+const sigma = (start, end) => {
   const length = end - start + 1
-  const map = (k) => modifier ? modifier(k + start) : k + start;
-  const sum = (a, b) => a + b;
-  return Array.from({ length }, map).reduce(sum);
+  return Array(length).fill(_, 0).map(i => i + start).reduce((acc, x) => acc + x, 0)
 }
 /*
 const findCentroid = (pts) => {
