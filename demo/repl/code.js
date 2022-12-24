@@ -175,7 +175,7 @@ const findCentroid = (pts) => {
 
 const sigma = (start, end) => {
   const length = end - start + 1
-  return Array(length).fill(_, 0).map(i => i + start).reduce((acc, x) => acc + x, 0)
+  return Array(length).fill().map(i => i + start).reduce((acc, x) => acc + x, 0)
 }
 /*
 const findCentroid = (pts) => {
