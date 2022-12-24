@@ -173,12 +173,23 @@ const findCentroid = (pts) => {
 }
 */
 
+/*
 const sigma = (start, end) => {
   const length = end - start + 1
-  return Array(length).fill().map((_, i) => i).map(i => i + start).reduce((acc, x) => acc + x, 0)
-}
-/*
-const findCentroid = (pts) => {
-  let
+  return Array(length).fill().map((_, i) => i).map(i => modifier).reduce((acc, x) => acc + x, 0)
 }
 */
+
+function sigma(start, end, modifier) {
+  const length = end - start + 1;
+  const map = (v, k) => modifier ? modifier(k + start) : k + start;
+  const sum = (a, b) => a + b;
+  return Array.from({ length }, map).reduce(sum);
+}
+
+const findCentroid = (pts) => {
+  const area = (sigma(0, pts.length - 1, i => (pts[i].x * pts[i + 1].y) - (pts[i + 1].x * pts[i].y))) / 2
+  const x = (sigma(0, pts.length - 1, i => (pts[i].x + pts[i + 1].x) * ((pts[i].x * pts[i + 1].y) - (pts[i + 1].x * pts[i].y)))) / (6 * area)
+  const y = (sigma(0, pts.length - 1, i => (pts[i].y + pts[i + 1].y) * ((pts[i].x * pts[i + 1].y) - (pts[i + 1].x * pts[i].y)))) / (6 * area)
+  return ({x, y})
+}
