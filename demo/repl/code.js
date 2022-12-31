@@ -180,11 +180,12 @@ const sigma = (start, end) => {
 }
 */
 
-const sigma = (start, end, modifier) => {
-  const length = end - start + 1;
-  const map = (v, k) => modifier ? modifier(k + start) : k + start;
-  const sum = (a, b) => a + b;
-  return Array.from({ length }, map).reduce(sum);
+const sigma = (start, end, funct) => {
+  let sum = 0
+  for (let n = start; n <= end; n++) {
+    sum += funct(n)
+  }
+  return sum
 }
 
 const findCentroid = (pts) => {
