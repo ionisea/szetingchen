@@ -180,7 +180,7 @@ const sigma = (start, end) => {
 }
 */
 
-function sigma(start, end, modifier) {
+const sigma = (start, end, modifier) => {
   const length = end - start + 1;
   const map = (v, k) => modifier ? modifier(k + start) : k + start;
   const sum = (a, b) => a + b;
