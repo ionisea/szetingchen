@@ -1,9 +1,9 @@
 const findFnord = (s) => {
-  return s.search("fnord")
+  return s.indexOf("fnord")
 }
 
 const stringContains = (s1, s2) => {
-  return s1.search(s2) != -1
+  return s1.indexOf(s2) != -1
 }
 
 const firstAndLast = (s) => {
@@ -19,11 +19,11 @@ const simplePigLatin = (s, num) => {
 }
 
 const isAllUpperCase = (s) => {
-  return s.search(/[abcdefghijklmnopqrstuvwxyz]/) == -1
+  return s.toUpperCase() === s
 }
 
 const sameIgnoringCase = (s1, s2) => {
-  return s1.toLowerCase() == s2.toLowerCase()
+  return s1.toLowerCase() === s2.toLowerCase()
 }
 
 const firstHalf = (s) => {
@@ -47,11 +47,11 @@ const upDownLastCharacter = (s) => {
 }
 
 const firstName = (s) => {
-  return s.substring(0, s.search(/[ ]/))
+  return s.substring(0, s.indexOf(' '))
 }
 
 const lastName = (s) => {
-  return s.substring(s.search(/[ ]/) + 1)
+  return s.substring(s.indexOf(' ') + 1)
 }
 
 const concatenate = (s1, s2) => {
