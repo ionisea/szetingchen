@@ -189,7 +189,7 @@ const sigma = (start, end, funct) => {
 }
 
 const findCentroid = (points) => {
-  const pts = points.push(points[0])
+  const pts = points
   console.log(pts)
   const area = (sigma(0, pts.length - 2, i => (pts[i].x * pts[i + 1].y) - (pts[i + 1].x * pts[i].y))) / 2
   const x = (sigma(0, pts.length - 2, i => (pts[i].x + pts[i + 1].x) * ((pts[i].x * pts[i + 1].y) - (pts[i + 1].x * pts[i].y)))) / (6 * area)
