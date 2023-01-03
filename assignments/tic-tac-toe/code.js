@@ -1,5 +1,5 @@
-const player1 = '8'
-const player2 = '9'
+const player1 = 'X'
+const player2 = 'O'
 
 const coordArray = [
   ['', '', ''],
