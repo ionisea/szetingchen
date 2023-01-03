@@ -86,7 +86,7 @@ const checkerboard = (n, color1, color2) => {
     }
   }
 }
-//checkerboard(20, 'black', 'white'); //currently set to a chessboard (black/white)
+checkerboard(20, 'black', 'white'); //currently set to a chessboard (black/white)
 
 const notReallyCurved = (lines) => {
   const gap = height / lines
@@ -95,7 +95,7 @@ const notReallyCurved = (lines) => {
     drawLine(0, shift, shift, height, 'black')
   }
 }
-notReallyCurved(25);
+//notReallyCurved(25);
 
 const squareOfCircles = (radius, color) => {
   const diameter = 2 * radius
