@@ -177,11 +177,38 @@ body.append(list);
 
 const a4 = document.createElement('p');
 
-a4.append(document.createTextNode(`
-  These are some of the main elements, but there are many more available, like <header>, <nav>, 
-  <main>, <footer>, <form>, <input>, <select>, etc.
+const code14 = document.createElement('code');
+code14.append(document.createTextNode('<header>'));
+const code15 = document.createElement('code');
+code15.append(document.createTextNode('<nav>'));
+const code16 = document.createElement('code');
+code16.append(document.createTextNode('<main>'));
+const code17 = document.createElement('code');
+code17.append(document.createTextNode('<footer>'));
+const code18 = document.createElement('code');
+code18.append(document.createTextNode('<form>'));
+const code19 = document.createElement('code');
+code19.append(document.createTextNode('<input>'));
+const code20 = document.createElement('code');
+code20.append(document.createTextNode('<select>'));
+a4.append(document.createTextNode(`These are some of the main elements, 
+but there are many more available, like
   `)
 );
+a4.append(code14);
+a4.append(', ')
+a4.append(code15);
+a4.append(', ')
+a4.append(code16);
+a4.append(', ')
+a4.append(code17);
+a4.append(', ')
+a4.append(code18);
+a4.append(', ')
+a4.append(code19);
+a4.append(', ')
+a4.append(code20);
+a4.append(', etc.')
 
 body.append(a4);
 
