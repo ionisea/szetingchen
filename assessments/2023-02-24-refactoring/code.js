@@ -103,15 +103,15 @@ const drawPicture = (horizon, base, size) => {
   const torsoY = headY + headSize / 2 + torsoSize / 2;
   const buttY = torsoY + torsoSize / 2 + buttSize / 2;
 
-  drawHead(x, headSize, headY);
+  drawHead(x, headY);
 
-  drawEyes(x, headSize, headY);
+  drawEyes(x, headY);
 
-  drawNose(x, headSize, headY);
+  drawNose(x, headY);
 
-  drawMouth(x, headSize, headY);
+  drawMouth(x, headY);
 
-  drawHat(x, headSize, headY);
+  drawHat(x, headY);
 
   // Draw the torso
   drawCircle(x, torsoY, torsoRadius + 2, 'black', 3);
