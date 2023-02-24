@@ -108,6 +108,7 @@ const drawPicture = (horizon, base, size) => {
   drawEyes(x, headSize, headY);
 
   // Draw the nose
+  const headRadius = headSize / 2
   const noseLength = headRadius * 0.8;
   drawFilledTriangle(x, headY, x + noseLength, headY + noseLength * 0.2, x, headY + noseLength * 0.3, 'orange');
 
