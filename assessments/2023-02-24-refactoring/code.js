@@ -19,13 +19,13 @@ const snowmanDimensions = (base, size) => {
   const torsoY = headY + headSize / 2 + torsoSize / 2;
   const buttY = torsoY + torsoSize / 2 + buttSize / 2;
 }
-
-const drawHead = (horizon, base, size) => {
+*/
+const drawHead = (headSize, headY) => {
   const headRadius = headSize / 2;
   drawCircle(x, headY, headRadius + 2, 'black', 3);
   drawFilledCircle(x, headY, headRadius, 'white', 3);
 }
-
+/*
 const drawEyes = () => {
   const eyeSpacing = headRadius * 0.25;
   drawFilledCircle(x - eyeSpacing, headY - eyeSpacing, 4, 'black');
@@ -102,10 +102,7 @@ const drawPicture = (horizon, base, size) => {
   const torsoY = headY + headSize / 2 + torsoSize / 2;
   const buttY = torsoY + torsoSize / 2 + buttSize / 2;
 
-  // Draw the head
-  const headRadius = headSize / 2;
-  drawCircle(x, headY, headRadius + 2, 'black', 3);
-  drawFilledCircle(x, headY, headRadius, 'white', 3);
+  drawHead(headSize, headY)
 
   // Draw the eyes
   const eyeSpacing = headRadius * 0.25;
