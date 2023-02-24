@@ -114,7 +114,6 @@ const drawPicture = (horizon, base, size) => {
   drawHat(x, headSize, headY);
 
   // Draw the torso
-  const torsoRadius = torsoSize / 2;
   drawCircle(x, torsoY, torsoRadius + 2, 'black', 3);
   drawFilledCircle(x, torsoY, torsoRadius, 'white', 3);
 
@@ -132,7 +131,6 @@ const drawPicture = (horizon, base, size) => {
   }
 
   // Draw the butt
-  const buttRadius = buttSize / 2;
   drawCircle(x, buttY, buttRadius + 2, 'black', 3);
   drawFilledCircle(x, buttY, buttRadius, 'white', 3);
 };
