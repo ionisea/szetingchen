@@ -20,35 +20,30 @@ const snowmanDimensions = (base, size) => {
   const buttY = torsoY + torsoSize / 2 + buttSize / 2;
 }
 */
-const drawHead = (x, headSize, headY) => {
-  const headRadius = headSize / 2;
+const drawHead = (x, headY) => {
   drawCircle(x, headY, headRadius + 2, 'black', 3);
   drawFilledCircle(x, headY, headRadius, 'white', 3);
 }
 
-const drawEyes = (x, headSize, headY) => {
-  const headRadius = headSize / 2
+const drawEyes = (x, headY) => {
   const eyeSpacing = headRadius * 0.25;
   drawFilledCircle(x - eyeSpacing, headY - eyeSpacing, 4, 'black');
   drawFilledCircle(x + eyeSpacing, headY - eyeSpacing, 4, 'black');
 }
 
-const drawNose = (x, headSize, headY) => {
-  const headRadius = headSize / 2
+const drawNose = (x, headY) => {
   const noseLength = headRadius * 0.8;
   drawFilledTriangle(x, headY, x + noseLength, headY + noseLength * 0.2, x, headY + noseLength * 0.3, 'orange');
 }
 
-const drawMouth = (x, headSize, headY) => {
-  const headRadius = headSize / 2
+const drawMouth = (x, headY) => {
   for (let i = 0; i < 5; i++) {
     const dy = -2 * (2.1 ** Math.abs(i - 2));
     drawFilledCircle(x - (i - 2.3) * headRadius * 0.21, headY + headRadius * 0.65 + dy, 4, 'black');
   }
 }
 
-const drawHat = (x, headSize, headY) => {
-  const headRadius = headSize / 2
+const drawHat = (x, headY) => {
   const brimTop = headY - headRadius * 0.9;
   const brimWidth = headRadius * 2.25;
   const brimHeight = brimWidth * 0.08;
@@ -100,6 +95,10 @@ const drawPicture = (horizon, base, size) => {
   const torsoSize = size * (torsoP / total)
   const buttSize = size * (buttP / total);
 
+  const headRadius = headSize / 2
+  const torsoRadius = torsoSize / 2
+  const buttRadius = buttSize / 2
+
   const headY = (base - size) + headSize / 2;
   const torsoY = headY + headSize / 2 + torsoSize / 2;
   const buttY = torsoY + torsoSize / 2 + buttSize / 2;
@@ -113,7 +112,7 @@ const drawPicture = (horizon, base, size) => {
   drawMouth(x, headSize, headY);
 
   drawHat(x, headSize, headY);
-  
+
   // Draw the torso
   const torsoRadius = torsoSize / 2;
   drawCircle(x, torsoY, torsoRadius + 2, 'black', 3);
