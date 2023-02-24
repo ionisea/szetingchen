@@ -109,6 +109,7 @@ const drawPicture = (horizon, base, size) => {
   drawNose(x, headSize, headY);
 
   // Draw the mouth
+  const headRadius = headSize / 2
   for (let i = 0; i < 5; i++) {
     const dy = -2 * (2.1 ** Math.abs(i - 2));
     drawFilledCircle(x - (i - 2.3) * headRadius * 0.21, headY + headRadius * 0.65 + dy, 4, 'black');
