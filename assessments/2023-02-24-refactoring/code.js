@@ -20,30 +20,30 @@ const snowmanDimensions = (base, size) => {
   const buttY = torsoY + torsoSize / 2 + buttSize / 2;
 }
 */
-const drawHead = (x, headY) => {
+const drawHead = (x, headRadius, headY) => {
   drawCircle(x, headY, headRadius + 2, 'black', 3);
   drawFilledCircle(x, headY, headRadius, 'white', 3);
 }
 
-const drawEyes = (x, headY) => {
+const drawEyes = (x, headRadius, headY) => {
   const eyeSpacing = headRadius * 0.25;
   drawFilledCircle(x - eyeSpacing, headY - eyeSpacing, 4, 'black');
   drawFilledCircle(x + eyeSpacing, headY - eyeSpacing, 4, 'black');
 }
 
-const drawNose = (x, headY) => {
+const drawNose = (x, headRadius, headY) => {
   const noseLength = headRadius * 0.8;
   drawFilledTriangle(x, headY, x + noseLength, headY + noseLength * 0.2, x, headY + noseLength * 0.3, 'orange');
 }
 
-const drawMouth = (x, headY) => {
+const drawMouth = (x, headRadius, headY) => {
   for (let i = 0; i < 5; i++) {
     const dy = -2 * (2.1 ** Math.abs(i - 2));
     drawFilledCircle(x - (i - 2.3) * headRadius * 0.21, headY + headRadius * 0.65 + dy, 4, 'black');
   }
 }
 
-const drawHat = (x, headY) => {
+const drawHat = (x, headRadius, headY) => {
   const brimTop = headY - headRadius * 0.9;
   const brimWidth = headRadius * 2.25;
   const brimHeight = brimWidth * 0.08;
@@ -103,15 +103,15 @@ const drawPicture = (horizon, base, size) => {
   const torsoY = headY + headSize / 2 + torsoSize / 2;
   const buttY = torsoY + torsoSize / 2 + buttSize / 2;
 
-  drawHead(x, headY);
+  drawHead(x, headRadius, headY);
 
-  drawEyes(x, headY);
+  drawEyes(x, headRadius, headY);
 
-  drawNose(x, headY);
+  drawNose(x, headRadius, headY);
 
-  drawMouth(x, headY);
+  drawMouth(x, headRadius, headY);
 
-  drawHat(x, headY);
+  drawHat(x, headRadius, headY);
 
   // Draw the torso
   drawCircle(x, torsoY, torsoRadius + 2, 'black', 3);
