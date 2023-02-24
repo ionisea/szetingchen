@@ -73,3 +73,15 @@ const drawPicture = (horizon, base, size) => {
 };
 
 drawPicture(height * 0.7, height * 0.9, height * 0.7);
+
+drawBackground()
+drawSnowman()
+drawHead()
+drawEyes()
+drawNose()
+drawMouth()
+drawHat()
+drawTorso()
+drawArms()
+drawButtons()
+drawButt()
