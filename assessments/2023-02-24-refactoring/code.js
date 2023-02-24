@@ -33,7 +33,7 @@ const drawEyes = (x, headSize, headY) => {
   drawFilledCircle(x + eyeSpacing, headY - eyeSpacing, 4, 'black');
 }
 
-const drawNose = (x, headSize, headY, noseLength) => {
+const drawNose = (x, headSize, headY) => {
   const headRadius = headSize / 2
   const noseLength = headRadius * 0.8;
   drawFilledTriangle(x, headY, x + noseLength, headY + noseLength * 0.2, x, headY + noseLength * 0.3, 'orange');
@@ -106,7 +106,7 @@ const drawPicture = (horizon, base, size) => {
 
   drawEyes(x, headSize, headY);
 
-  drawNose(x, headSize, headY, noseLength)
+  drawNose(x, headSize, headY);
 
   // Draw the mouth
   for (let i = 0; i < 5; i++) {
