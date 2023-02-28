@@ -30,4 +30,6 @@ const flatpairs = (arr) => {
   return arr.flatMap(x => [x, x]);
 };
 
-const 
+const allEven = (arr) => {
+  return arr.every(evens);
+};
