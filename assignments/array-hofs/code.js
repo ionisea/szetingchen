@@ -21,3 +21,7 @@ const grades = (arr) => {
 const pairs = (arr) => {
   return arr.map(x => [x, x]);
 };
+
+const flatpairs = (arr) => {
+  return arr.flatMap(x => [x, x]);
+};
