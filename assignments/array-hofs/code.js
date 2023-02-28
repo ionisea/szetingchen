@@ -37,3 +37,7 @@ const allEven = (arr) => {
 const someEven = (arr) => {
   return arr.some(x => x % 2 === 0);
 };
+
+const lengthOfNames = (arr) => {
+  return arr.filter(x => x[0].toUpperCase() === x[0]).map(x => x.length());
+};
