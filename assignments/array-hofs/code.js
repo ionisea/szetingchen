@@ -11,5 +11,5 @@ const big = (arr) => {
 };
 
 const names = (arr) => {
-  return arr.filter(x => x.names);
+  return arr.map(x => x.names);
 };
