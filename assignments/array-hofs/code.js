@@ -31,5 +31,5 @@ const flatpairs = (arr) => {
 };
 
 const allEven = (arr) => {
-  return arr.every(evens);
+  return arr.every(evens(arr));
 };
