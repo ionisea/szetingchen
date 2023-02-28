@@ -10,3 +10,6 @@ const big = (arr) => {
   return arr.filter(x => x > 100);
 };
 
+const names = (arr) => {
+  return arr.filter(x => x.names);
+};
