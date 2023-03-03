@@ -98,7 +98,7 @@ const day02Part2 = (s) => {
 }
 
 //=====================================================
-
+/*
 const day03Extract = (s) => s.trimEnd().split('\n')
 const splitting = (s) => {
   const halfway = s.length / 2
@@ -132,7 +132,7 @@ const day03Part1 = (s) => {
   }
   return items.reduce((acc, x) => acc + x, 0)
 }
-/*
+
 const day03Part2 = (s) => {
   let input = day03Extract(s)
   let results = []
@@ -148,9 +148,18 @@ const day03Part2 = (s) => {
   console.log(results)
 }
 */
+
+//======================================
+
+const day04Extract = (s) => s.trimEnd().split('/n');
+const day04Part1 = (s) => {
+  let input = day04Extract(s);
+  
+}
+
 run('day01.input', day01Part1, 69177)
 run('day01.input', day01Part2, 207456)
 run('day02.input', day02Part1, 8890)
 run('day02.input', day02Part2, 10238)
-run('day03.input', day03Part1, 8088)
+//run('day03.input', day03Part1, 8088)
 //run('day03.sample', day03Part2)
