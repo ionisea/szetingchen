@@ -21,8 +21,8 @@ const randomCharacterGenerator = () => {
     };
 };
 
-const firstGeneration = [];
 const firstGenerationGeneration = (string, numOfCases) => {
+    const firstGeneration = [];
     const cases = [];
     for (let i = 0; i < numOfCases; i++) {
         const letters = [];
@@ -31,7 +31,10 @@ const firstGenerationGeneration = (string, numOfCases) => {
         };
         cases.push(letters.reduce((str, s) => str.concat(s), ''));
     };
-    return cases;
+    for (i = 0; i < cases.length; i++) {
+        firstGeneration.push(fitness(cases[i]));
+    };
+    return firstGeneration;
 };
 
 //previousGen is an array
