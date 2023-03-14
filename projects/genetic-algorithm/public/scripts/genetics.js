@@ -12,24 +12,25 @@ const fitness = (string) => {
 };
 
 //cases being an array of strings with the string and fitness
-/*
-const quickSort = (cases) => {
+const sort = (cases) => {
     if (cases.length <= 1) {
         return cases;
     };
-    const pivot = cases[Math.floor(Math.random() * cases.length)];
+    const pivotIndex = Math.floor(Math.random() * cases.length)
+    const pivot = cases[pivotIndex];
     const left = [];
     const right = [];
     for (let i = 0; i < cases.length; i++) {
-        if (cases[i] > pivot) {
+        if (i === pivotIndex) {
+            continue;
+        } else if (cases[i].fitness > pivot) {
             left.push(cases[i]);
-        } else if (cases[i] < pivot) {
+        } else {
             right.push(cases[i]);
         };
     };
-    return quickSort(left).concat([pivot], quickSort(right));
+    return sort(left).concat([pivot], sort(right));
 };
-*/
 
 
 const randomCharacterGenerator = (string) => {
@@ -37,12 +38,12 @@ const randomCharacterGenerator = (string) => {
     return string[index];
 };
 
-const zeroGeneration = (string, numOfCases) => {
+const zeroGeneration = (stringLength, numOfCases) => {
     const zeroGen = [];
     const cases = [];
     for (let i = 0; i < numOfCases; i++) {
         const letters = [];
-        for (let j = 0; j < string.length; j++) {
+        for (let j = 0; j < stringLength; j++) {
             letters.push(randomCharacterGenerator(characters));
         };
         cases.push(letters.join(''));
@@ -50,10 +51,10 @@ const zeroGeneration = (string, numOfCases) => {
     for (i = 0; i < cases.length; i++) {
         zeroGen.push(fitness(cases[i]));
     };
-    return zeroGen;
+    return sort(zeroGen);
 };
 
-//previousGen is an array
+//previousGen is an sorted array of objects
 const nextGeneration = (previousGen) => {
 
 }
