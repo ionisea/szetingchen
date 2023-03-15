@@ -61,12 +61,25 @@ const zeroGeneration = (stringLength) => {
 const nextGeneration = (previousGen) => {
     const casesInGen = Math.round(casesPerGen / 4) * 4
     const cutOff = (casesInGen / 4) - 1;
+    const halfWord = targetString.length / 2
     const parents = previousGen.map(i => i.string).slice(0, cutOff);
     const pairedParents = [];
+    const nextGen = [];
     for (let i = 0; i < parents.length - 1; i += 2) {
-        pairedParents.push({ parent1: parents[i], parent2: parents[i + 1] });
+        pairedParents.push({
+            parent1part1: parents[i].substring(0, halfWord), 
+            parent1part2: parents[i].substring(halfWord),
+            parent2part1: parents[i + 1].substring(0, halfWord),
+            parent2part2: parents[i + 1].substring(halfWord),
+        });
     };
     for (let i = 0; i < pairedParents.length; i++) {
-
-    }
+        nextGen.push(
+            fitness(pairedParents[i].parent1part1.concat(pairedParents[i].parent1part2)),
+            fitness(pairedParents[i].parent1part1.concat(pairedParents[i].parent2part2)),
+            fitness(pairedParents[i].parent2part1.concat(pairedParents[i].parent1part2)),
+            fitness(pairedParents[i].parent2part1.concat(pairedParents[i].parent2part2)),
+        );
+    };
+    return sort(nextGen);
 };
