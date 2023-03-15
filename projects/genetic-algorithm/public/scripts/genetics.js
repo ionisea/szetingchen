@@ -1,6 +1,6 @@
 const targetString = "To be or not to be, that is the question."
 const characters = "abcdefghijlmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,./;-=' ";
-const casesPerGen = 100;
+const casesPerGen = 500;
 //Note: casesPerGen may be inaccurate because it will default to the nearest multiple of 4
 
 const fitnessCalc = (string) => {
@@ -25,7 +25,7 @@ const sort = (cases) => {
     for (let i = 0; i < cases.length; i++) {
         if (i === pivotIndex) {
             continue;
-        } else if (cases[i].fitness > pivot) {
+        } else if (cases[i].fitness > pivot.fitness) {
             left.push(cases[i]);
         } else {
             right.push(cases[i]);
@@ -51,7 +51,7 @@ const zeroGeneration = (stringLength) => {
         };
         cases.push(letters.join(''));
     };
-    for (i = 0; i < cases.length; i++) {
+    for (let i = 0; i < cases.length; i++) {
         zeroGen.push(fitnessCalc(cases[i]));
     };
     return sort(zeroGen);
@@ -83,3 +83,11 @@ const nextGeneration = (previousGen) => {
     };
     return sort(nextGen);
 };
+
+/* TEST CODE DO NOT TOUCH
+let currGen = zeroGeneration(41);
+for (let i = 0; i < 50; i++) {
+    currGen = nextGeneration(currGen);
+    console.log(currGen);
+};
+*/
