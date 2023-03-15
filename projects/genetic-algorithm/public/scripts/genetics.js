@@ -3,8 +3,8 @@ const characters = "abcdefghijlmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
 const casesPerGen = 100;
 //Note: casesPerGen may be inaccurate because it will default to the nearest multiple of 4
 
-const fitness = (string) => {
-    const fitness = 0;
+const fitnessCalc = (string) => {
+    let fitness = 0;
     for (let i = 0; i < string.length; i++) {
         if (string[i] === targetString[i]) {
             fitness++;
@@ -52,7 +52,7 @@ const zeroGeneration = (stringLength) => {
         cases.push(letters.join(''));
     };
     for (i = 0; i < cases.length; i++) {
-        zeroGen.push(fitness(cases[i]));
+        zeroGen.push(fitnessCalc(cases[i]));
     };
     return sort(zeroGen);
 };
@@ -75,10 +75,10 @@ const nextGeneration = (previousGen) => {
     };
     for (let i = 0; i < pairedParents.length; i++) {
         nextGen.push(
-            fitness(pairedParents[i].parent1part1.concat(pairedParents[i].parent1part2)),
-            fitness(pairedParents[i].parent1part1.concat(pairedParents[i].parent2part2)),
-            fitness(pairedParents[i].parent2part1.concat(pairedParents[i].parent1part2)),
-            fitness(pairedParents[i].parent2part1.concat(pairedParents[i].parent2part2)),
+            fitnessCalc(pairedParents[i].parent1part1.concat(pairedParents[i].parent1part2)),
+            fitnessCalc(pairedParents[i].parent1part1.concat(pairedParents[i].parent2part2)),
+            fitnessCalc(pairedParents[i].parent2part1.concat(pairedParents[i].parent1part2)),
+            fitnessCalc(pairedParents[i].parent2part1.concat(pairedParents[i].parent2part2)),
         );
     };
     return sort(nextGen);
