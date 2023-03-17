@@ -35,26 +35,22 @@ const sort = (cases) => {
 };
 
 
-const randomCharacterGenerator = (string) => {
-    const index = Math.floor(Math.random() * string.length);
-    return string[index];
+const randomStringGenerator = (stringLength) => {
+    const letters = [];
+    for (let i = 0; i < stringLength; i++) {
+        letters.push(characters[Math.floor(Math.random() * string.length)]);
+    };
+    return letters.join('');
 };
 
 const zeroGeneration = (stringLength) => {
     const casesInGen = Math.round(casesPerGen / 4) * 4
-    const zeroGen = [];
-    const cases = [];
-    for (let i = 0; i < casesInGen; i++) {
-        const letters = [];
-        for (let j = 0; j < stringLength; j++) {
-            letters.push(randomCharacterGenerator(characters));
-        };
-        cases.push(letters.join(''));
-    };
+    const 零 = [];
+    const cases = Array(casesInGen).fill().map(() => randomStringGenerator(stringLength));
     for (let i = 0; i < cases.length; i++) {
         zeroGen.push(fitnessCalc(cases[i]));
     };
-    return sort(zeroGen);
+    return 零.sort((a, b) => b.fitness - a.fitness);
 };
 
 //previousGen is an sorted array of objects
@@ -67,7 +63,7 @@ const nextGeneration = (previousGen) => {
     const nextGen = [];
     for (let i = 0; i < parents.length - 1; i += 2) {
         pairedParents.push({
-            parent1part1: parents[i].substring(0, halfWord), 
+            parent1part1: parents[i].substring(0, halfWord),
             parent1part2: parents[i].substring(halfWord),
             parent2part1: parents[i + 1].substring(0, halfWord),
             parent2part2: parents[i + 1].substring(halfWord),
