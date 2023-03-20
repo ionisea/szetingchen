@@ -45,12 +45,23 @@ const randomStringGenerator = (stringLength) => {
 
 const zeroGeneration = (stringLength) => {
     const casesInGen = Math.round(casesPerGen / 4) * 4
-    const 零 = [];
+    const zeroGen = [];
     const cases = Array(casesInGen).fill().map(() => randomStringGenerator(stringLength));
     for (let i = 0; i < cases.length; i++) {
         zeroGen.push(fitnessCalc(cases[i]));
     };
-    return 零.sort((a, b) => b.fitness - a.fitness);
+    return sort(zeroGen);
+};
+
+//placeholder
+const inheritance = (parent1, parent2) => {
+    const offspring = [];
+    const letters1 = parent1.string.split('');
+    const letters2 = parent2.string.split('');
+    for (let i = 0; i < letters1.length; i++) {
+        const word = []
+        
+    }
 };
 
 //previousGen is an sorted array of objects
