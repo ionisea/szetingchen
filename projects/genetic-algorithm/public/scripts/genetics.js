@@ -1,6 +1,7 @@
 const targetString = "To be or not to be, that is the question."
 const characters = "abcdefghijlmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,./;-=' ";
-const casesPerGen = 500;
+const casesPerGen = 100;
+const casesInGen = Math.round(casesPerGen / 4) * 4
 //Note: casesPerGen may be inaccurate because it will default to the nearest multiple of 4
 
 const fitnessCalc = (string) => {
@@ -38,63 +39,50 @@ const sort = (cases) => {
 const randomStringGenerator = (stringLength) => {
     const letters = [];
     for (let i = 0; i < stringLength; i++) {
-        letters.push(characters[Math.floor(Math.random() * string.length)]);
+        letters.push(characters[Math.floor(Math.random() * stringLength)]);
     };
     return letters.join('');
 };
 
 const zeroGeneration = (stringLength) => {
-    const casesInGen = Math.round(casesPerGen / 4) * 4
-    const zeroGen = [];
     const cases = Array(casesInGen).fill().map(() => randomStringGenerator(stringLength));
-    for (let i = 0; i < cases.length; i++) {
-        zeroGen.push(fitnessCalc(cases[i]));
-    };
+    const zeroGen = cases.map(i => fitnessCalc(i));
     return sort(zeroGen);
 };
 
 //placeholder
 const inheritance = (parent1, parent2) => {
-    const offspring = [];
+    const offspring = [parent1, parent2];
     const letters1 = parent1.string.split('');
     const letters2 = parent2.string.split('');
     for (let i = 0; i < letters1.length; i++) {
-        const word = []
-        
-    }
+        const word1 = [];
+        const word2 = [];
+        if (Math.random() < 0.5) {
+            word1.push(letters1[i]);
+            word2.push(letters2[i]);
+        } else {
+            word1.push(letters2[i]);
+            word2.push(letters1[i]);
+        };
+
+        offspring.push(word1.join(''), word2.join(''));
+    };
+    return offspring;
 };
 
 //previousGen is an sorted array of objects
 const nextGeneration = (previousGen) => {
-    const casesInGen = Math.round(casesPerGen / 4) * 4
-    const cutOff = (casesInGen / 4) - 1;
-    const halfWord = targetString.length / 2
-    const parents = previousGen.map(i => i.string).slice(0, cutOff);
+    const cutOff = (casesInGen / 4);
+    const parents = previousGen.slice(0, cutOff);
     const pairedParents = [];
     const nextGen = [];
-    for (let i = 0; i < parents.length - 1; i += 2) {
-        pairedParents.push({
-            parent1part1: parents[i].substring(0, halfWord),
-            parent1part2: parents[i].substring(halfWord),
-            parent2part1: parents[i + 1].substring(0, halfWord),
-            parent2part2: parents[i + 1].substring(halfWord),
-        });
-    };
-    for (let i = 0; i < pairedParents.length; i++) {
-        nextGen.push(
-            fitnessCalc(pairedParents[i].parent1part1.concat(pairedParents[i].parent1part2)),
-            fitnessCalc(pairedParents[i].parent1part1.concat(pairedParents[i].parent2part2)),
-            fitnessCalc(pairedParents[i].parent2part1.concat(pairedParents[i].parent1part2)),
-            fitnessCalc(pairedParents[i].parent2part1.concat(pairedParents[i].parent2part2)),
-        );
-    };
+    while(parents.length > pairedParents.length) {
+        //I'll figure this later, I'm trying to randomly pair parents up then run inheritance on them
+    }
     return sort(nextGen);
 };
 
-/* TEST CODE DO NOT TOUCH
+//TEST CODE DO NOT TOUCH
 let currGen = zeroGeneration(41);
-for (let i = 0; i < 50; i++) {
-    currGen = nextGeneration(currGen);
-    console.log(currGen);
-};
-*/
+console.log(currGen);
