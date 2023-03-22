@@ -1,5 +1,7 @@
-const targetString = "According to all known laws of aviation, there is no way a bee should be able to fly."
-const characters = " ,./;-='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+const list = document.getElementById("0")
+
+const targetString = "Kill All Humans. Kill ALL Humans. KILL ALL HUMANS."
+const characters = " ,./;-!='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 const casesPerGen = 750;
 const generations = 75;
 const casesInGen = Math.round(casesPerGen / 4) * 4
@@ -13,7 +15,7 @@ const fitnessCalc = (string) => {
             fitness++;
         };
     };
-    return { string, fitness }
+    return { string, fitness: fitness / targetString.length }
 };
 
 //cases being an array of strings with the string and fitness
@@ -86,11 +88,16 @@ const nextGeneration = (previousGen) => {
     };
     return sort(nextGen);
 };
+const createLi = (text) => {
+    const li = document.createElement("li");
+    li.append(text);
+    return li;
+}
 
 //TEST CODE DO NOT TOUCH
 let currGen = zeroGeneration(targetString.length);
-console.log(currGen);
-for (let i = 0; i < generations; i++) {
+while(currGen[0].fitness < 1) {
     currGen = nextGeneration(currGen);
-    console.log(currGen);
+    list.append(createLi(JSON.stringify(currGen[0])))
 };
+

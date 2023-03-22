@@ -1,24 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
 body {
-  width: 40em;
+  width: 60em;
   margin: 1in auto;
+  font-family: "Montserrat", sans-serif;
 }
-
-h1 {
-  font-family: sans-serif;
+li{
+  padding: 0.2em;
 }
-
 p {
   font-size: 18px;
-}
-
-#clicks {
-  border: 1px solid black;
-  padding: 1em;
-}
-
-#clicks p {
-  padding: 0;
-  margin: 0;
-  font-family: monospace;
-  font-size: 14px;
 }
