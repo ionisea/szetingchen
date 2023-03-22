@@ -1,7 +1,9 @@
-const targetString = "To be or not to be, that is the question."
-const characters = "abcdefghijlmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,./;-=' ";
-const casesPerGen = 100;
+const targetString = "According to all known laws of aviation, there is no way a bee should be able to fly."
+const characters = " ,./;-='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+const casesPerGen = 750;
+const generations = 75;
 const casesInGen = Math.round(casesPerGen / 4) * 4
+const printedArray = [];
 //Note: casesPerGen may be inaccurate because it will default to the nearest multiple of 4
 
 const fitnessCalc = (string) => {
@@ -35,11 +37,10 @@ const sort = (cases) => {
     return sort(left).concat([pivot], sort(right));
 };
 
-
 const randomStringGenerator = (stringLength) => {
     const letters = [];
     for (let i = 0; i < stringLength; i++) {
-        letters.push(characters[Math.floor(Math.random() * stringLength)]);
+        letters.push(characters[Math.floor(Math.random() * characters.length)]);
     };
     return letters.join('');
 };
@@ -55,9 +56,9 @@ const inheritance = (parent1, parent2) => {
     const offspring = [parent1, parent2];
     const letters1 = parent1.string.split('');
     const letters2 = parent2.string.split('');
+    const word1 = [];
+    const word2 = [];
     for (let i = 0; i < letters1.length; i++) {
-        const word1 = [];
-        const word2 = [];
         if (Math.random() < 0.5) {
             word1.push(letters1[i]);
             word2.push(letters2[i]);
@@ -65,24 +66,31 @@ const inheritance = (parent1, parent2) => {
             word1.push(letters2[i]);
             word2.push(letters1[i]);
         };
-
-        offspring.push(word1.join(''), word2.join(''));
     };
+    offspring.push(fitnessCalc(word1.join('')), fitnessCalc(word2.join('')));
     return offspring;
 };
 
 //previousGen is an sorted array of objects
 const nextGeneration = (previousGen) => {
-    const cutOff = (casesInGen / 4);
+    const cutOff = (casesInGen / 2);
     const parents = previousGen.slice(0, cutOff);
     const pairedParents = [];
     const nextGen = [];
-    while(parents.length > pairedParents.length) {
-        //I'll figure this later, I'm trying to randomly pair parents up then run inheritance on them
-    }
+    for(let i = 0; i < parents.length / 2; i++) {
+        pairedParents.push([parents[i], parents[parents.length - 1 - i]])
+    };
+    for (let i = 0; i < pairedParents.length; i++) {
+        const offspring = inheritance(pairedParents[i][0], pairedParents[i][1]);
+        nextGen.push(offspring[0], offspring[1], offspring[2], offspring[3]);
+    };
     return sort(nextGen);
 };
 
 //TEST CODE DO NOT TOUCH
-let currGen = zeroGeneration(41);
+let currGen = zeroGeneration(targetString.length);
 console.log(currGen);
+for (let i = 0; i < generations; i++) {
+    currGen = nextGeneration(currGen);
+    console.log(currGen);
+};
