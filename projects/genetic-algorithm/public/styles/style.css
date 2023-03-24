@@ -4,10 +4,11 @@ body {
   width: 60em;
   margin: 1in auto;
   font-family: "Montserrat", sans-serif;
-}
+};
 li{
   padding: 0.2em;
-}
+  font-family: "Montserrat", sans-serif;
+};
 p {
   font-size: 18px;
-}
+};

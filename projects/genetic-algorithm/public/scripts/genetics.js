@@ -1,6 +1,6 @@
 const list = document.getElementById("0")
 
-const targetString = "Kill All Humans. Kill ALL Humans. KILL ALL HUMANS."
+const targetString = "To be or not to be, that is the question."
 const characters = " ,./;-!='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 const casesPerGen = 750;
 const generations = 75;
