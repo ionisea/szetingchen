@@ -1,7 +1,9 @@
 const list = document.getElementById("0")
+const input = document.getElementById('targetInput')
+const run = document.getElementById('run')
 
 //Parameters
-const targetString = "To be or not to be, that is the question."
+let targetString = "To be or not to be, that is the question."
 const characters = " ,./;-!='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 const casesPerGen = 750;
 const generations = 75;
@@ -58,7 +60,7 @@ const zeroGeneration = (stringLength) => {
     return sort(zeroGen);
 };
 
-// ty Ion for improving this one
+// ty Ion for improving this one 
 const inheritance = (parent1, parent2) => {
     const offspring = [parent1, parent2];
     let word1 = '';
@@ -97,7 +99,7 @@ const nextGeneration = (previousGen) => {
     const parents = previousGen.slice(0, cutOff);
     const pairedParents = [];
     const nextGen = [];
-    for(let i = 0; i < parents.length / 2; i++) {
+    for (let i = 0; i < parents.length / 2; i++) {
         pairedParents.push([parents[i], parents[parents.length - 1 - i]])
     };
     for (let i = 0; i < pairedParents.length; i++) {
@@ -113,10 +115,21 @@ const createLi = (text) => {
     return li;
 }
 
+run.onclick = () => {
+    list.textContent = '';
+    targetString = input.value;
+    let currGen = zeroGeneration(targetString.length);
+    while (currGen[0].fitness < 1) {
+        currGen = nextGeneration(currGen);
+        list.append(createLi(JSON.stringify(currGen[0])));
+    };
+}
+
+/*
 //TEST CODE DO NOT TOUCH
 let currGen = zeroGeneration(targetString.length);
 while(currGen[0].fitness < 1) {
     currGen = nextGeneration(currGen);
     list.append(createLi(JSON.stringify(currGen[0])))
 };
-
+*/
